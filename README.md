@@ -14,7 +14,7 @@ Nos enfocaremos principalmente en hacer promociones con cupones de descuentos, p
 
 ·sitios de referencia:
 
-https://www.fravega.com/ /n
+https://www.fravega.com/  
 https://www.garbarino.com/
 https://electrooutlet.com.ar/
 https://ar.pinterest.com/
