@@ -1,5 +1,5 @@
-Colores :
+Colores logo :
 
-#000000
-#FFFFFF
-#008F74
+#000000;
+#FFFFFF;
+#008F74;
