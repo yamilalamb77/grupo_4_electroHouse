@@ -25,7 +25,7 @@ ___
 ___
 
 ## LOGO:
-![Logo](logo.jpeg "Logo de Electro House")
+![Logo](/desing/logo.jpeg "Logo de Electro House")
 ___
 ## INTEGRANTES:
 
