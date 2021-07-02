@@ -1,10 +1,21 @@
+## LOGO:
+
+![Logo](desing/views/logo.jpeg "Logo de Electro House" ) 
+
+
 # **Electro house**
 ## ¿Qué productos o servicios brindará nuestro sitio?
-> #### Nos enfocamos a la comercialización de artículos para el hogar, pequeños y grandes electrodomésticos.   
+> #### Nos enfocamos a la comercialización de artículos para el hogar, pequeños y grandes electrodomésticos, tales como heladeras, cocinas, televisores, equipos de música, radios, celulares, aires acondicionados, ventiladores, tablet, tostadoras, licuadoras y muchos productos más. Dedicando variedad e innovación, haciendo de este un sitio web en el cual que puedan tener variedad, donde la calidad, servicio y garantía son elementos que destacan.
+
 ## ¿Quién será nuestra audiencia objetivo?
-> #### Nuestra audiencia objetivo serán las familias y las personas adultas, cuyo fin sea hacer de su hogar, un sitio más comodo y agradable de la mano de la tecnología.  
+
+
+
+> #### Nuestra audiencia objetivo serán las familias y aquellos jóvenes adultos que sean autosuficientes, que estén en busca de hacer su hogar un lugar, más cómodo y agradable de la mano de la tecnología.
+
 ## ¿Cómo ajustaremos nuestra oferta a ese público?
-> #### Nos enfocaremos principalmente en hacer promociones con cupones de descuentos, para las fechas festivas, como día del padre, día de la madre, etc.    
+
+> #### ofrecemos ofertas especiales, descuentos y planes de financiación para que accedas a eso que tanto querés al precio más accesible también contamos con cupones de descuentos. Para fechas festivas habrá descuentos exclusivos, como día del padre, día de la madre, día del niño y principalmente para el  blackfriday.
 
 ___
 ## Sitios de referencia:
@@ -15,28 +26,31 @@ ___
 * [Musimundo](https://www.musimundo.com/)
 ___
 ## Tipografia:
-* Roboto
+* [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles)
 ---
 ## Colores:
-* FFFFFF
-* 00000
-* D6D5D5
-* 008F74
+* [FFFFFF](/desing/views/paleta.jpg "color" ) 
+* [00000](/desing/views/paleta.jpg "color")
+* [D6D5D5](/desing/views/paleta.jpg "color")
+* [008F74](/desing/views/paleta.jpg "color")
 ___
-
-## LOGO:
-![Logo](/desing/logo.jpeg "Logo de Electro House")
+___
+# **Sobre nosotros** 
+#### Somos un equipo de futuros desarrolladores Full Stack, en este caso nos estaremos orientando a la creación y diseño de una pagina web para **Electro House**. Para lograr la creación de su pagina web vamos a hemos puesto en marcha el proceso de creación usando las mejores tecnologías del desarrollo web, tanto en backend como en frontend.
 ___
 ## INTEGRANTES:
 
 * **Luis Molina**
     * 28 años  
-    * Estudiante de Programación Web
+    *  
+    * sobre mi: Estudiante de Programación Web
 
 * **Vilma Toledo**  
     * 36 años  
-    * Estudiante de Programación Web  
+    * 
+    * Sobre mi: Estudiante de Programación Web  
 * **Yamila Correa** 
     * 28 años  
-    * Estudiante de Programación Web
-
+    * Localidad: Buenos Aires
+    * Sobre mi: Estudiante de Programación Web, curiosa y autodidacta, con gran interes en la programación.
+___
