@@ -58,8 +58,7 @@ ___
     Trabajo en equipo
     Constante aprendizaje.
 
-    "Hobies" 
-
+    "Hobby"
     jugar futbol
     ir al gym
   
