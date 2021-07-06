@@ -47,8 +47,9 @@ ___
 
 * **Vilma Toledo**  
     * 36 años  
-    * 
-    * Sobre mi: Estudiante de Programación Web  
+    * Sobre mi: Estudios Secundaria: técnico personal y profesional en informática. Terciario: Técnico superior en Logística. Universidad (Unpaz)Cursando licenciatura en tecnología de gestión de la información Cursando: Licenciatura en Gestión de Tecnologías de la Información- título intermedio Analista en sistemas.   
+    * Hobby: Bailar Salsa y Bachata. 
+
 * **Yamila Correa** 
     * 28 años  
     * Localidad: Buenos Aires
