@@ -40,11 +40,29 @@ ___
 ___
 ## INTEGRANTES:
 
-* **Luis Molina**
+* **Luis Antonio Molina**
     * 28 años  
-    *  
-    * sobre mi: Estudiante de Programación Web
+    * Provincia:Bs.As(hurlingham) 
+    * sobre mi: 
+    Educación Secundaria (completa)
+    Escuela tecnica N°2 tres de febrero
+    especialidad electromecanica
 
+    Estudiante de Programación Web
+
+    "Aptitudes"
+
+    Trato agradable.
+    Comunicación efectiva.
+    Organización.
+    Trabajo en equipo
+    Constante aprendizaje.
+
+    "Hobies" 
+
+    jugar futbol
+    ir al gym
+  
 * **Vilma Toledo**  
     * 36 años  
     * 
