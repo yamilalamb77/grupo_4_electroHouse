@@ -26,7 +26,7 @@ ___
 * [Pinterest](https://ar.pinterest.com/)  Buscamos diseños para inspirarnos.
 * [Musimundo](https://www.musimundo.com/)  Nos el formato del login y user.
 ___
-## Tipografia:
+## Tipografía:
 * [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles)
 ---
 ## Colores:
@@ -55,13 +55,13 @@ ___
     * jugar futbol  
     * ir al gym  
     ___
-
-    * **Vilma Toledo**  
+* **Vilma Toledo**  
     * 36 años  
     * **Sobre mi:** Estudios Secundaria: técnico personal y profesional en informática. Terciario: Técnico superior en Logística. Universidad (Unpaz)Cursando licenciatura en tecnología de gestión de la información  
     **Cursando:**  
     * Licenciatura en Gestión de Tecnologías de la Información- título intermedio Analista en sistemas.   
-    * **Hobby:** Bailar Salsa y Bachata. 
+    **Hobby:**  
+     * Bailar Salsa y Bachata. 
     ___
 
 * **Yamila Correa** 
