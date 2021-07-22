@@ -1,0 +1,23 @@
+{
+  "name": "grupo_4_electrohouse",
+  "version": "1.0.0",
+  "description": "![Logo](desing/views/logo.jpeg \"Logo de Electro House\" )",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamilalamb77/grupo_4_electroHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yamilalamb77/grupo_4_electroHouse/issues"
+  },
+  "homepage": "https://github.com/yamilalamb77/grupo_4_electroHouse#readme"
+}
