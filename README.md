@@ -36,10 +36,13 @@ ___
 > [Retro](/retro.md "retro" ) 
 ___
 ## Colores:
-* [FFFFFF](/desing/views/paleta.jpg "color" ) 
-* [00000](/desing/views/paleta.jpg "color")
-* [D6D5D5](/desing/views/paleta.jpg "color")
-* [008F74](/desing/views/paleta.jpg "color")
+* [Blanco](/desing/views/paleta.jpg "FFFFFF" ) 
+* [Gris](/desing/views/paleta.jpg "D6D5D5")
+* [Gris claro](/desing/views/paleta.jpg "F6F6F6")
+* [Negro](/desing/views/paleta.jpg "00000")
+* [Negro claro](/desing/views/paleta.jpg "232323")
+* [Verde](/desing/views/paleta.jpg "008F74")
+
 ___
 ___
 # **Sobre nosotros** 
