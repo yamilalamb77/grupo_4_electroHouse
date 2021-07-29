@@ -1,6 +1,6 @@
 ## LOGO:
 
-![Logo](desing/views/logo.jpeg "Logo de Electro House" ) 
+![Logo](/public/images/logo.jpeg "Logo de Electro House" ) 
 
 
 # **Electro house**
@@ -36,12 +36,12 @@ ___
 > [Retro](/retro.md "retro" ) 
 ___
 ## Colores:
-* [Blanco](/desing/views/paleta.jpg "FFFFFF" ) 
-* [Gris](/desing/views/paleta.jpg "D6D5D5")
-* [Gris claro](/desing/views/paleta.jpg "F6F6F6")
-* [Negro](/desing/views/paleta.jpg "00000")
-* [Negro claro](/desing/views/paleta.jpg "232323")
-* [Verde](/desing/views/paleta.jpg "008F74")
+* [Blanco](/public/images/paleta.jpg "FFFFFF" ) 
+* [Gris](/public/images/paleta.jpg "D6D5D5")
+* [Gris claro](/public/images/paleta.jpg "F6F6F6")
+* [Negro](/public/images/paleta.jpg "00000")
+* [Negro claro](/public/images/paleta.jpg "232323")
+* [Verde](/public/images/paleta.jpg "008F74")
 
 ___
 ___
