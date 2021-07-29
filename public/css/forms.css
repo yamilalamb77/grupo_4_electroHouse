@@ -132,7 +132,8 @@ outline: none;
 
 label {
 font-size: 0.9rem;
-padding-bottom: 0.5rem;
+padding-bottom: 0.1rem;
+font-weight: 550;
 }
 
 .qp{
@@ -164,7 +165,7 @@ width: 12rem;
 
 .btn-submit {
     background: var(--lightGray);
-color: black;
+color: var(--blacklight);
 
 transition: all 1s ease; /*all es a todo los elementos que va a cambiar*/
 }
