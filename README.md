@@ -29,6 +29,12 @@ ___
 ## Tipografía:
 * [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles)
 ---
+## Trelo:
+>[Trelo](https://trello.com/b/uDzyb6rF/grupo-4-c8)
+___
+## Retro:
+> [Retro](/retro.md "retro" ) 
+___
 ## Colores:
 * [FFFFFF](/desing/views/paleta.jpg "color" ) 
 * [00000](/desing/views/paleta.jpg "color")
