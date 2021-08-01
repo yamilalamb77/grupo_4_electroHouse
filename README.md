@@ -1,6 +1,6 @@
 ## LOGO:
 
-![Logo](desing/views/logo.jpeg "Logo de Electro House" ) 
+![Logo](public/images/logo.jpeg "Logo de Electro House" ) 
 
 
 # **Electro house**
@@ -30,10 +30,10 @@ ___
 * [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles)
 ---
 ## Colores:
-* [FFFFFF](/desing/views/paleta.jpg "color" ) 
-* [00000](/desing/views/paleta.jpg "color")
-* [D6D5D5](/desing/views/paleta.jpg "color")
-* [008F74](/desing/views/paleta.jpg "color")
+* [FFFFFF](/desing/paleta.jpg "color" ) 
+* [00000](/desing/paleta.jpg "color")
+* [D6D5D5](/desing/paleta.jpg "color")
+* [008F74](/desing/paleta.jpg "color")
 ___
 ___
 # **Sobre nosotros** 
