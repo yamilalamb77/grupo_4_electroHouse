@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <title>shoppingCart</title>
-      <!--iconos de pestaña-->
-      <link rel="icon" href="/images/favicons/android-icon-96x96.png">
 </head>
 <header>
-    <div class="main-header">
-        <nav class="navigation-bar" id="navigation-bar-mobile">
+  <div class="main-header">
+      <nav class="navigation-bar" id="navigation-bar-mobile">
 
-       
-            <!-- Buscador mobile -->
+     
+          <!-- Buscador mobile -->
 
-            <form action="#" class="search-form-mobile" id="search">
+          <form action="#" class="search-form-mobile" id="search">
 
-                <input type="search" name="busqueda" id="" placeholder="Buscar producto...">
-                <button type="submit"><i class="fas fa-search"></i></button>
+              <input type="search" name="busqueda" id="" placeholder="Buscar producto...">
+              <button type="submit"><i class="fas fa-search"></i></button>
 
-            </form>
-        </nav>
-        <div class="logo">
-            <a href="home"> <img src="/images/logo/logo.jpeg" alt="">
-            </a>
-        </div>
+          </form>
+      </nav>
+      <div class="logo">
+          <a href="home"> <img src="/images/logo.jpeg" alt="">
+          </a>
+      </div>
 
-        <a class="user-login" href="login">
-        <i class="far fa-user-circle user-login"></i></a>
-        <!-- Menú de navegación mobile-->
-       
+      <a class="user-login" href="login">
+      <i class="far fa-user-circle user-login"></i></a>
+      <!-- Menú de navegación mobile-->
+     
 
 
-        <div>
-            <form action="">
-                <div class="container">
-                  
-                    <div class="btn-menu">
-                        <label for="btn-menu" class="burguer-menu-icon">☰</label>
-                  
-                <input type="checkbox" id="btn-menu">
-                <div class="container-menu">
-                    <div class="cont-menu">
-                        <nav>
-                            <a href="productdetail">TV y Sonido</a>
-                            <a href="productdetail">Heladeras y Lavado</a>
-                            <a href="productdetail">Climatización</a>
-                            <a href="productdetail">Pequeños Electros</a>
-                            <a href="enConstrucion">Contacto</a>
-                           
-                        </nav>
-                        <div> <label for="btn-menu">✖️ </label>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+      <div>
+          <form action="">
+              <div class="container">
+                
+                  <div class="btn-menu">
+                      <label for="btn-menu" class="burguer-menu-icon">☰</label>
+                
+              <input type="checkbox" id="btn-menu">
+              <div class="container-menu">
+                  <div class="cont-menu">
+                      <nav>
+                          <a href="productDetail">TV y Sonido</a>
+                          <a href="productDetail">Heladeras y Lavado</a>
+                          <a href="productDetail">Climatización</a>
+                          <a href="productDetail">Pequeños Electros</a>
+                          <a href="enConstrucion">Contacto</a>
+                         
+                      </nav>
+                      <div> <label for="btn-menu">✖️ </label>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
 
-    </div>
+  </div>
 
 </header>
+
+
 <body>
 
- 
+   
+    
+        <div class="container">
+            <h1 class="text-center">Mi carrito</h1>
+            <hr>
+        </div>
+    
     <!-- START SECTION STORE -->
     <section class="store">
         <div class="container">
@@ -80,23 +86,23 @@
 
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">heladera</h3>
-                            <img class="item-image" src="#">
+                            <h3 class="item-title">AIRE</h3>
+                            <img class="item-image" src="/images/aireacindicionado.jpg">
 
                             <div class="item-details">
-                                <h4 class="item-price">$50000</h4>
+                                <h4 class="item-price">10000$</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">tele</h3>
+                            <h3 class="item-title">CELULAR</h3>
 
-                            <img class="item-image" src="#">
+                            <img class="item-image" src="/images/celularmotorola.jpg">
 
                             <div class="item-details">
-                                <h4 class="item-price">$500000</h4>
+                                <h4 class="item-price">45000$</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
@@ -106,24 +112,24 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">celular</h3>
+                            <h3 class="item-title">LAVARROPAS</h3>
 
-                            <img class="item-image" src="#">
+                            <img class="item-image" src="/images/lavarropas dream.jpg">
 
                             <div class="item-details">
-                                <h4 class="item-price">$5000</h4>
+                                <h4 class="item-price">45.000$</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">tostadora</h3>
+                            <h3 class="item-title">SMART</h3>
 
-                            <img class="item-image" src="#">
+                            <img class="item-image" src="/images/smartTV.jpg">
 
                             <div class="item-details">
-                                <h4 class="item-price">$2000</h4>
+                                <h4 class="item-price">65.000$</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
@@ -132,22 +138,22 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">aire acondicionado</h3>
+                            <h3 class="item-title">AIRE</h3>
 
-                            <img class="item-image" src="#">
+                            <img class="item-image" src="/images/aireacindicionado.jpg">
                             <div class="item-details">
-                                <h4 class="item-price">$5000</h4>
+                                <h4 class="item-price">45.000$</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">ventilador</h3>
+                            <h3 class="item-title">TV</h3>
 
-                            <img class="item-image" src="#">
+                            <img class="item-image" src="/images/lavarropas dream.jpg">
                             <div class="item-details">
-                                <h4 class="item-price">$4000</h4>
+                                <h4 class="item-price">67.000$</h4>
                                 <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
                             </div>
                         </div>
@@ -155,14 +161,13 @@
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
     <!-- END SECTION STORE -->
     <!-- START SECTION SHOPPING CART -->
     <section class="shopping-cart">
-        <h1 class="item-title"> Mi carrito</h1>
         <div class="container">
-            
-            
+            <h1 class="text-center">CARRITO</h1>
+            <hr>
             <div class="row">
                 <div class="col-6">
                     <div class="shopping-cart-header">
@@ -238,9 +243,31 @@
         </div>
 
     </section>
- 
+    <!-- END SECTION SHOPPING CART -->
+
+
+    <!-- START FOOTER -->
+    <footer class="bg-dark p-3 mt-5">
+        <p class="text-center m-0 text-muted">Tienda video juegos</p>
+    </footer>
+    <!-- END FOOTER -->
+
+
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
     <script src="/js/shoppingCart.js"></script>
- 
+
 </body>
 
 </html>

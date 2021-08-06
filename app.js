@@ -2,7 +2,7 @@ const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
-let port = 3030;
+let port = 3000;
 
 app.use(express.static('public'));
 
@@ -25,7 +25,7 @@ app.use('/header', headerRouter); */
 
  
 
-app.get('/', (req, res) => {
+app.get('/header', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/header.html'))
 })
 
@@ -56,6 +56,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })
 
+
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/home.html'));
+})
  app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/productDetail.html'));
 })

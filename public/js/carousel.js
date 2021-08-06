@@ -1,4 +1,4 @@
-alert("vinculado")
+/* alert("vinculado") */
 
 let slideIndex = 1;
 showSlides(slideIndex)
