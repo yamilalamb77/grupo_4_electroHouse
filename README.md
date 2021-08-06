@@ -29,11 +29,20 @@ ___
 ## Tipografía:
 * [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles)
 ---
+## Trelo:
+>[Trelo](https://trello.com/b/uDzyb6rF/grupo-4-c8)
+___
+## Retro:
+> [Retro](/retro.md "retro" ) 
+___
 ## Colores:
-* [FFFFFF](/desing/paleta.jpg "color" ) 
-* [00000](/desing/paleta.jpg "color")
-* [D6D5D5](/desing/paleta.jpg "color")
-* [008F74](/desing/paleta.jpg "color")
+* [Blanco](/public/images/paleta.jpg "FFFFFF" ) 
+* [Gris](/public/images/paleta.jpg "D6D5D5")
+* [Gris claro](/public/images/paleta.jpg "F6F6F6")
+* [Negro](/public/images/paleta.jpg "00000")
+* [Negro claro](/public/images/paleta.jpg "232323")
+* [Verde](/public/images/paleta.jpg "008F74")
+
 ___
 ___
 # **Sobre nosotros** 

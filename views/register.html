@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>register</title>
+    <link rel="icon" href="/images/favicons/android-icon-96x96.png">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<header>
+    <div class="main-header">
+
+        <div class="logo">
+            <img src="/images/logo/logo.jpeg" alt="">
+        </div>
+
+       
+        <i class="far fa-user-circle user-login" ></i>
+        <!-- Menú de navegación mobile-->
+        <nav class="navigation-bar" id="navigation-bar-mobile">
+
+       
+            <!-- Buscador mobile -->
+
+            <form action="#" class="search-form-mobile" id="search">
+
+                <input type="search" name="busqueda" id="" placeholder="Buscar producto...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+
+            </form>
+        </nav>
+
+
+        <div>
+            <form action="">
+                <div class="container">
+                  
+                    <div class="btn-menu">
+                        <label for="btn-menu" class="burguer-menu-icon">☰</label>
+                  
+                <input type="checkbox" id="btn-menu">
+                <div class="container-menu">
+                    <div class="cont-menu">
+                        <nav>
+                            <a href="#">TV y Sonido</a>
+                            <a href="login">Heladeras y Lavado</a>
+                            <a href="register">Climatización</a>
+                            <a href="shoppingCart">Pequeños Electros</a>
+                            <a href="enConstrucion">Contacto</a>
+                           
+                        </nav>
+                        <div> <label for="btn-menu">✖️ </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</header>
+<body class="with-image">
+    <div class="form-container">
+        <h2><b>Registrate</b>│ ¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
+        
+        <form action="" method="">
+            <div class="form">
+                <div class="input-container">
+                    <label>Nombre:</label>
+                    <input class="input-style" type="text" name="name" >
+                    <span class="error-message">Debe ingresar su nombre</span>
+                </div>
+                <div class="input-container">
+                    <label>Apellido:</label>
+                    <input class="input-style" type="text" name="last name" >
+                    <span class="error-message">Debe ingresar su email</span>
+                </div>
+                <div class="input-container">
+                    <label>E-mail:</label>
+                    <input class="input-style" type="email" name="email" >
+                    <span class="error-message">Debe ingresar su email</span>
+                </div>
+                <div class="input-container">
+                    <label >Contraseña:</label>
+                    <input class="input-style" type="password" name="pass" >
+                    <span class="error-message">Debe ingresar su contraseña</span>
+                </div>
+                <div class="input-container">
+                    <label >Repita la contraseña:</label>
+                    <input class="input-style" type="password" name="pass2">
+                    <span class="error-message">Debe re-ingresar su contraseña</span>
+                </div>
+                <span class="qp"><a href="enConstrucion">¿Olvidaste tu contraseña?</a></span>
+                <div class="check">
+                    <label for="terms">  Acepto los <a href="/enConstrucion">términos y condiciones</a> </label>
+                    <input type="checkbox" name="terms" id="term"> 
+                    <span class="error-message">Debe aceptar los términos y condiciones</span>
+                </div>
+                <div class="button-container">
+                    <span class="error-message">Credenciales inválidas</span>
+                    <button type="submit" class="btn btn-submit">Registrarme</button>
+                </div> 
+              
+            </div>
+        </form>
+    </div>
+</body>
+</html>
