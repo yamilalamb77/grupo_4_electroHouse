@@ -7,16 +7,16 @@ let port = 3030;
 app.use(express.static('public'));
 
 /*ROUTERS*/
-headerRouter = require('.routes/headerRouter');
+/*headerRouter = require('.routes/headerRouter');
 loginRouter = require('.routes/loginRouter');
-registerRouter = require('.routes/registerRouter');
+registerRouter = require('.routes/registerRouter');*/
 
 
 
 /*ROUTES*/
-app.use('/register',registerRouter);
+/*app.use('/register',registerRouter);
 app.use('/login', loginRouter);
-app.use('/header', headerRouter);
+app.use('/header', headerRouter); */
 
 
 
@@ -28,11 +28,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })
 
-/* app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/productDetail.html'));
+app.get('/electro', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/electro.html'));
 })
 
-app.get('/productCar', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/productCar.html'));
+app.get('/heladeraylavado', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/heladeraylavado.html'));
 })
- */
+
+/* app.get('/productDetail', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/productDetail.html'));
+}) */
