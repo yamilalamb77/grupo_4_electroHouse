@@ -11,7 +11,7 @@ headerRouter = require('.routes/headerRouter');
 /*ROUTERS*/
 /*headerRouter = require('.routes/headerRouter');
 loginRouter = require('.routes/loginRouter');
-registerRouter = require('.routes/registerRouter');*/
+registerRouter = require('.routes/registerRouter'); */
 
 
 
@@ -23,7 +23,9 @@ app.use('/register',registerRouter);
 app.use('/login', loginRouter);
 app.use('/header', headerRouter); */
 
- 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/home.html'));
+})
 
 app.get('/header', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/header.html'))
@@ -50,17 +52,19 @@ app.get('/footer', (req, res) => {
 })
 
 
-
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/home.html'));
+app.get('/climatizacion', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
 })
 
 
 app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })
+app.get('/tvysonido', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/tvysonido.html'));
+})
+/* app.get('/productDetail', (req, res) => {
  app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/productDetail.html'));
-})
-app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`));
+})*/
+app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 

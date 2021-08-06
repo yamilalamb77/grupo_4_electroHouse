@@ -1,9 +1,9 @@
-*{
+/*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-}
+}*/
 root{
       --font-primary:'Roboto', sans-serif;
       --blacklight: #232323;
@@ -113,6 +113,12 @@ footer a{
 footer a:hover{
   color: #eb2f06;
 }
+
+.logo-footer {
+  width: 100%;
+  max-width: 150px;
+}
+
 @media (max-width:1100px) {
   footer .content .middle{
     padding-left: 50px;

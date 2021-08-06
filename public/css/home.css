@@ -38,6 +38,8 @@ h5 {
     flex-wrap: wrap;
     /*background-color: white;*/
     background-image: url(/imagenes/40-409499_material-wallpaper-4k.jpg);
+    justify-content: center;
+    align-items: center;
    
     
 
@@ -48,6 +50,9 @@ h5 {
     margin-bottom: 20px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: white;
+    height: 16rem;
+    min-height: 16rem;
+    max-height: 16rem;
 
 }
 
@@ -64,6 +69,7 @@ h5 {
 
 .categories .product .photo-container img.photo {
     width: 100%;
+    max-height: 200px;
     
 }
 
@@ -290,4 +296,8 @@ h5 {
         color: white;
     }
 
+}
+
+.container-footer {
+    display: flex;
 }
