@@ -2,7 +2,7 @@ const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
-let port = 3030;
+let port = 3000;
 
 app.use(express.static('public'));
 
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })
 
-app.get('/', (req, res) => {
+app.get('/header', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/header.html'))
 })
 
@@ -51,7 +51,6 @@ app.get('/footer', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/footer.html'))
 })
 
-
 app.get('/electro', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/electro.html'));
 })
@@ -60,9 +59,12 @@ app.get('/heladeraylavado', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/heladeraylavado.html'));
 })
 
-
 app.get('/climatizacion', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
+})
+
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/home.html'));
 })
 
 app.get('/tvysonido', (req, res) => {

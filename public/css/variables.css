@@ -1,0 +1,16 @@
+/*aca me traje la letra roboto, la clasica*/
+@import url('https://fonts.googleapis.com/css2? family = Roboto & display = swap');
+
+:root{
+    --roboto :  'Roboto', sans-serif;/*aca estoy guardando la tipografia.*/
+
+    /*colors*/
+
+
+--black: #000000;
+--green:#008F74;
+--gray:#F6F6F6;
+--lightBlack: #232323;
+--lightGray: #F6F6F6;
+--white: #ffffff;
+}
