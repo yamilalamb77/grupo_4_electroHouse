@@ -52,8 +52,13 @@ app.get('/footer', (req, res) => {
 })
 
 
+app.get('/electro', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/electro.html'));
+})
 
-
+app.get('/heladeraylavado', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/heladeraylavado.html'));
+})
 
 
 app.get('/climatizacion', (req, res) => {
