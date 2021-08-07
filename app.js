@@ -2,7 +2,7 @@ const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
-let port = 3000;
+let port = 3030;
 
 app.use(express.static('public'));
 

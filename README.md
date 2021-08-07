@@ -1,6 +1,6 @@
 ## LOGO:
 
-![Logo](public/images/logo.jpeg "Logo de Electro House" ) 
+![Logo](public/images/logo/logo.jpeg "Logo de Electro House" ) 
 
 
 # **Electro house**

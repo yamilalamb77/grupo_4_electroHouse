@@ -5,7 +5,7 @@ header {
     font-family: --roboto ;
 }
 
-.main-header {
+header .main-header {
     background-color: var(--lightBlack);
     display: flex;
     justify-content: space-between;
@@ -22,11 +22,11 @@ header {
 }
 
 
-.main-header .user-icons-desktop {
+header .main-header .user-icons-desktop {
      display: none;
 }
 
-.main-header .burguer-menu-icon{
+header .main-header .burguer-menu-icon{
     font-size: 30px;
      order: 0;  
     color: var(--white);
@@ -34,7 +34,7 @@ header {
 }
 
 
-.main-header .logo {
+header .main-header .logo {
     height: 55px;
     width: 60px;
        order: 1;  
@@ -42,13 +42,13 @@ header {
    
 }  
 
-.main-header .logo img {
+header .main-header .logo img {
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.main-header .user-login {
+header .main-header .user-login {
     font-size: 30px;
     order: 2;  
      color: var(--white);
@@ -57,7 +57,7 @@ header {
   
 }
 /* Botón y barra de búsqueda mobile */
-.nav_menu{
+header .nav_menu{
     order: 8; 
     display: flex;
     text-align: center;
@@ -66,7 +66,7 @@ background-color: var(--lightBlack);
 padding-bottom: 10px;
 }
 
-.search-form-mobile {
+header .search-form-mobile {
      background-color: var(--black);
     padding: 10px 20px;
     border-radius: 10px;
@@ -75,7 +75,7 @@ padding-bottom: 10px;
     justify-content: space-around;
    
 }
-.search-form-mobile input{
+header .search-form-mobile input{
     width: 85%;
     height: 19px;
     border-radius: 5px;
@@ -83,14 +83,14 @@ padding-bottom: 10px;
     border: none;
     padding-left: 7px;
 }
-.search-form-mobile button {
+header .search-form-mobile button {
     background-color: var(--black);
     border: none;
     color: var(--white);
     cursor: pointer;
     margin-left: 15px;
 }
-ch-bar input::placeholder {
+header  ch-bar input::placeholder {
     color: var(--gray);
     font-family: var(--roboto);
 }
@@ -99,38 +99,38 @@ ch-bar input::placeholder {
 
 /* Botón y menú desplegable mobile */
 
- .main-header .navigation-bar {
+header .main-header .navigation-bar {
     order: 4;
     padding: 15px;
     width: 100%;
 
 }
 
-.main-header .navigation-bar ul.menu li {
+header .main-header .navigation-bar ul.menu li {
     padding: 10px 0;
 }
 
-.main-header .navigation-bar .user-icons-mobile {
+header .main-header .navigation-bar .user-icons-mobile {
      display: flex;
     justify-content: flex-end;
     cursor: pointer;
 }
 
-.main-header .navigation-bar .user-icons-mobile i{
+header .main-header .navigation-bar .user-icons-mobile i{
     font-size: 30px;  
 }
  
-	.container{
+header .container{
 		width: 90%;
 		max-width: 1200px;
 		margin: auto;
 	}
 
-	.container .menu{
+	header .container .menu{
 		float: right;
 		line-height: 100px;
 	}
-	.container .menu a{
+	header .container .menu a{
 		display: inline-block;
 		padding: 15px;
 		line-height: normal;
@@ -141,17 +141,17 @@ ch-bar input::placeholder {
 		font-size: 15px;
 		margin-right: 5px;
 	}
-	.container .menu a:hover{
+	header .container .menu a:hover{
 		border-bottom: 2px solid #c7c7c7;
 		padding-bottom: 5px;
 	}
 	/*Fin de Estilos para el encabezado*/
 
 	/*Menù lateral para mobile*/
-	#btn-menu{
+	header 	#btn-menu{
 		display: none;
 	}
-	.container-menu{
+	header .container-menu{
 		position: absolute;
 		background: rgba(0,0,0,0.5);
 		width: 100%;
@@ -162,11 +162,11 @@ ch-bar input::placeholder {
 		opacity: 0;
 		visibility: hidden;
 	}
-	#btn-menu:checked ~ .container-menu{
+	header #btn-menu:checked ~ .container-menu{
 		opacity: 1;
 		visibility: visible;
 	}
-	.cont-menu{
+	header .cont-menu{
 		width: 100%;
 		max-width: 300px;
 		background: #1c1c1c;
@@ -176,13 +176,13 @@ ch-bar input::placeholder {
 		transform: translateX(-100%);
 	}
     
-	#btn-menu:checked ~ .container-menu .cont-menu{
+	header #btn-menu:checked ~ .container-menu .cont-menu{
 		transform: translateX(0%);
 	}
-	.cont-menu nav{
+	header .cont-menu nav{
 		transform: translateY(15%);
 	}
-	.cont-menu nav a{
+	header .cont-menu nav a{
 		display: block;
 		text-decoration: none;
 		padding: 25px;
@@ -191,12 +191,12 @@ ch-bar input::placeholder {
 		transition: all 400ms ease;
         ;
 	}
-	.cont-menu nav a:hover{
+	header .cont-menu nav a:hover{
 		border-left: 5px solid var(--green);
 		background: var(--lightBlack);
         color: var(--green);
 	}
- 	 .cont-menu  label{
+	header .cont-menu  label{
 		position: absolute;
 		right: 5px;
 		top: 10px; 
