@@ -63,15 +63,15 @@ app.get('/climatizacion', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
 })
 
-app.get('/home', (req, res) => {
+/*app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
-})
+})*/
 
 app.get('/tvysonido', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/tvysonido.html'));
 })
-/* app.get('/productDetail', (req, res) => {
+/* app.get('/productDetail', (req, res) => {*/
  app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/productDetail.html'));
-})*/
+})
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
