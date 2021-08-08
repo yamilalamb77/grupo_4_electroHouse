@@ -27,13 +27,13 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })
 
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/home.html'));
-})
 app.get('/header', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/header.html'))
 })
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/404.html'))
+})
 app.get('/shoppingCart', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/shoppingCart.html'))
 })
