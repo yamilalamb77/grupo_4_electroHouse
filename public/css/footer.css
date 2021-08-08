@@ -17,38 +17,47 @@ root{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  --font-primary:'Roboto', sans-serif;
   text-decoration: none;
 }
 .logo {
-  display: block;
-  width: 15%;
-  height: 15%;
+  /* display: block; */
+  width: 90px;
+  height: 90px;
   border-radius: 10%;
-  
 }
+
 footer{
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background:black ;
+    position: fixed;
+    height: 190px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background:#232323 ;
+    justify-content: space-around;
+    align-items: center;
+
 }
-footer .content{
+footer .content {
   max-width: 1350px;
-  margin: auto;
-  padding: 20px;
+  /* margin: auto; */
+  /* padding: 20px 0px; */
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
 }
+.lo-footer{
+  display: flex;
+  align-items: center;
+}
+
+
 footer .content p,a{
   color: #fff;
 }
-footer .content .box{
-  width: 33%;
-  transition: all 0.4s ease;
-}
+
+
 footer .content .topic{
   font-size: 22px;
   font-weight: 600;
@@ -60,13 +69,13 @@ footer .content p{
   text-align: justify;
 }
 footer .content .lower .topic{
-  margin: 24px 0 5px 0;
+  margin: 0px 0 5px 24px;
 }
 footer .content .lower i{
   padding-right: 16px;
 }
 footer .content .middle{
-  padding-left: 80px;
+  padding-left: 50px;
 }
 footer .content .middle a{
   line-height: 32px;
@@ -78,25 +87,26 @@ footer .content .right input[type="text"]{
   color: #d9d9d9;
   background: #000;
   border-radius: 5px;
-  padding-left: 10px;
+  padding-left: 0px;
   font-size: 17px;
   border: 2px solid #222222;
 }
-
 footer .content .media-icons a{
   font-size: 16px;
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   display: inline-block;
   text-align: center;
   line-height: 43px;
   border-radius: 5px;
   border: 2px solid #222222;
-  margin: 30px 5px 0 0;
-  transition: all 0.3s ease;
+  margin: 40px 5px 0 0;
+  transition: all 0.5s ease;
 }
+
 .content .media-icons a:hover{
   border-color: #eb2f06;
+  
 }
 footer .bottom{
   width: 100%;
@@ -114,10 +124,12 @@ footer a:hover{
   color: #eb2f06;
 }
 
-.logo-footer {
-  width: 100%;
-  max-width: 150px;
-}
+
+
+
+
+
+
 
 @media (max-width:1100px) {
   footer .content .middle{
