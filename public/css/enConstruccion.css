@@ -1,0 +1,15 @@
+body .travolta{
+    background-image:url("/images/giphy.gif");
+     width: 97.5vw;
+    height: 80vh; 
+}
+
+
+body .travolta a
+{
+    display: flex;
+    justify-content: center;
+}
+body .travolta a img{
+    align-items: center;
+}

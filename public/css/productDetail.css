@@ -19,9 +19,9 @@
 
  } 
  .row{
-     background-color:#8f9291 ;
-
- }
+     /* background-color:#8f9291 ; */
+/* ESTE PINTA A OTROS */
+ } 
  .container-detail a{
      background-color:#8f9291 ;
      display: block;
