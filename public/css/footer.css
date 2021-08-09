@@ -4,146 +4,157 @@
   box-sizing: border-box;
 
 }*/
-
 root{
-      --font-primary:'Roboto', sans-serif;
-      --blacklight: #232323;
-      --black: #0000;
-      --white: #ffff;
-      --lightGray: #D6D5D5;
-      --green:#008F74;
+  --font-primary:'Roboto', sans-serif;
+  --blacklight: #232323;
+  --black: #0000;
+  --white: #ffff;
+  --lightGray: #D6D5D5;
+  --green:#008F74;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-  text-decoration: none;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+--font-primary:'Roboto', sans-serif;
+text-decoration: none;
 }
 .logo {
-  display: block;
-  width: 15%;
-  height: 15%;
-  border-radius: 10%;
-  
+/* display: block; */
+width: 90px;
+height: 90px;
+border-radius: 10%;
 }
+
 footer{
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background:black ;
+width: 100%;
+position: fixed;
+height: 190px;
+bottom: 0;
+left: 0;
+display: flex;
+background:#232323 ;
+justify-content: space-around;
+align-items: center;
+
 }
-footer .content{
-  max-width: 1350px;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+footer .content {
+max-width: 1350px;
+/* margin: auto; */
+/* padding: 20px 0px; */
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
 }
+.lo-footer{
+display: flex;
+align-items: center;
+}
+
+
 footer .content p,a{
-  color: #fff;
+color: #fff;
 }
-footer .content .box{
-  width: 33%;
-  transition: all 0.4s ease;
-}
+
+
 footer .content .topic{
-  font-size: 22px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 16px;
+font-size: 22px;
+font-weight: 600;
+color: #fff;
+margin-bottom: 16px;
 
 }
 footer .content p{
-  text-align: justify;
+text-align: justify;
 }
 footer .content .lower .topic{
-  margin: 24px 0 5px 0;
+margin: 0px 0 5px 24px;
 }
 footer .content .lower i{
-  padding-right: 16px;
+padding-right: 16px;
 }
 footer .content .middle{
-  padding-left: 80px;
+padding-left: 50px;
 }
 footer .content .middle a{
-  line-height: 32px;
+line-height: 32px;
 }
 footer .content .right input[type="text"]{
-  height: 45px;
-  width: 100%;
-  outline: none;
-  color: #d9d9d9;
-  background: #000;
-  border-radius: 5px;
-  padding-left: 10px;
-  font-size: 17px;
-  border: 2px solid #222222;
+height: 45px;
+width: 100%;
+outline: none;
+color: #d9d9d9;
+background: #000;
+border-radius: 5px;
+padding-left: 0px;
+font-size: 17px;
+border: 2px solid #222222;
+}
+footer .content .media-icons a{
+font-size: 16px;
+height: 35px;
+width: 35px;
+display: inline-block;
+text-align: center;
+line-height: 43px;
+border-radius: 5px;
+border: 2px solid #222222;
+margin: 40px 5px 0 0;
+transition: all 0.5s ease;
 }
 
-footer .content .media-icons a{
-  font-size: 16px;
-  height: 45px;
-  width: 45px;
-  display: inline-block;
-  text-align: center;
-  line-height: 43px;
-  border-radius: 5px;
-  border: 2px solid #222222;
-  margin: 30px 5px 0 0;
-  transition: all 0.3s ease;
-}
 .content .media-icons a:hover{
-  border-color: #eb2f06;
+border-color: #eb2f06;
+
 }
 footer .bottom{
-  width: 100%;
-  text-align: right;
-  color: #d9d9d9;
-  padding: 0 40px 5px 0;
+width: 100%;
+text-align: right;
+color: #d9d9d9;
+padding: 0 40px 5px 0;
 }
 footer .bottom a{
-  color: #eb2f06;
+color: #eb2f06;
 }
 footer a{
-  transition: all 0.3s ease;
+transition: all 0.3s ease;
 }
 footer a:hover{
-  color: #eb2f06;
+color: #eb2f06;
 }
 
-.logo-footer {
-  width: 100%;
-  max-width: 150px;
-}
+
+
+
+
+
+
 
 @media (max-width:1100px) {
-  footer .content .middle{
-    padding-left: 50px;
-  }
+footer .content .middle{
+padding-left: 50px;
+}
 }
 @media (max-width:950px){
-  footer .content .box{
-    width: 50%;
-  }
-  .content .right{
-    margin-top: 40px;
-  }
+footer .content .box{
+width: 50%;
+}
+.content .right{
+margin-top: 40px;
+}
 }
 @media (max-width:560px){
-  footer{
-    position: relative;
-  }
-  footer .content .box{
-    width: 100%;
-    margin-top: 30px;
-  }
-  footer .content .middle{
-    padding-left: 0;
-  }
+footer{
+position: relative;
+}
+footer .content .box{
+width: 100%;
+margin-top: 30px;
+}
+footer .content .middle{
+padding-left: 0;
+}
 }
 
 
