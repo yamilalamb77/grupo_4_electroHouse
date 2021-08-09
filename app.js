@@ -24,7 +24,7 @@ app.use('/login', loginRouter);
 app.use('/header', headerRouter); */
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/home.html'));
+    res.sendFile(path.join(__dirname,'/views/lucho.html'));
 })
 
 app.get('/header', (req, res) => {

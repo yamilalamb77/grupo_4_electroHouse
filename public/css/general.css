@@ -1,15 +1,15 @@
+
 /* Estilos generales */
 
- * {
+* {
     box-sizing: border-box;
     margin: 0;
-    padding: 0; 
-font-family: var(--roboto);
-
+    padding: 0;
+    
 }
 
 a {
-   
+    color: black;
     text-decoration: none;
 }
 
@@ -17,12 +17,12 @@ ul {
     list-style: none;
 }
 
-/* .btn {
+.btn {
     width: fit-content;
     width: -moz-fit-content;
     padding: 10px 20px;
     color: white;
-    font-family: var(--roboto);
+    font-family: var(--font_baloo);
     font-weight: bold;
     border-radius: 1rem;
 }
@@ -37,57 +37,12 @@ ul {
 .btn-primary:hover {
     background: linear-gradient(90deg, white, var(--primary)) ;
     color: var(--primary)    
-}  */
-/*botones*/
-/* .button-container{
-    align-items: center;/*para aliniar al cross axis*/
-  
-
-
-.btn {
-border-radius: 0.5rem;
-cursor: pointer;/*va a genererar que cuando pase por el elemnto aparezca la manito insinuando que se ´puede clickear*/
-height: 2.5rem;
-text-transform: uppercase;
-width: 12rem;
- border: 1px solid black;
-}/*para establecer la base la forma del los botonoes*/
-
-.btn-submit {
-    background: var(--lightGray);
-color: var(--blacklight);
-transition: all 1s ease; /*all es a todo los elementos que va a cambiar*/
 }
 
-.btn-submit:hover {
-    color:var(--green);
-/*     box-shadow: -5px -5px 10px rgb(255, 255, 255, 0.7); */
-background:#d6d5d5;
-border: 1px solid white;
-
-}
-/* .btn-reset {
-    background:  linear-gradient(45deg, rgba(255,255,255,1) 0%,  rgba(39, 151, 255, 0.5) 50%);
-    color: rgb(75, 75, 75);
-    font-weight: bold;
-    transition: all 1s ease;
+.body-iteml{
+    background-image: url(/images/c-d-x-dBwadhWa-lI-unsplash.jpg);
+    background-size: cover;
+    
 }
 
-.btn-reset:hover {
-    color: rgb(172, 172, 172);
-    box-shadow: -5px -5px 10px rgb(255, 255, 255, 0.7);
-    background: linear-gradient(285deg, rgba(255,255,255,0.5) 0%,  rgba(39, 151, 255, 0.5) 50%);
-    transition: all 1s ease;
-}
 
-.btn-edit {
-    background:  linear-gradient(45deg, rgba(255,255,255,1) 0%,  rgba(43, 236, 124, 0.5) 50%);
-    color: rgb(75, 75, 75);
-    font-weight: bold;
-}
-
-.btn-edit:hover {
-    color: rgb(172, 172, 172);
-    box-shadow: -5px -5px 10px rgb(255, 255, 255, 0.7);
-    background: linear-gradient(285deg, rgba(255,255,255,0.5) 0%,  rgba(43, 236, 124, 0.5) 50%);
-} */
