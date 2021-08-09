@@ -103,7 +103,7 @@
     margin: 20px 10px;
     transition: all 1s ease;
     box-shadow: 0 0 5px var(--primary);
-    background-color: black;
+    background-color: white;
 }
 
 .categories-section .categories .category-card{
