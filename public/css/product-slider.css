@@ -36,7 +36,7 @@
 
 .productSlide img {
     width: 100%;
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid black;
 }
 
 .productSlide .productName {
