@@ -15,13 +15,16 @@
   
  .container-detail{
      display: block;
+ }
+     
      
 
- } 
+  
  .row{
-     background-color:#8f9291 ;
-
- }
+    /*  background:#8f9291; 
+ */
+ 
+ } 
  .container-detail a{
      background-color:#8f9291 ;
      display: block;
@@ -33,16 +36,17 @@
     padding: 5px;
     text-align: center;
  }
+ 
   .card-title{
     --font-primary:'Roboto', sans-serif;
     color: black;
-    background-color:#D6D5D5 ;
+    background-color:#8f9291;
 
  }
  .card-text{
     --font-primary:'Roboto', sans-serif;
     color: black;
-    background-color:#D6D5D5 ;
+    background-color:#d5d6d5 ;
  }
  .list-group  li{
     --font-primary:'Roboto', sans-serif;

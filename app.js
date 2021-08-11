@@ -6,17 +6,11 @@ let port = 3030;
 
 app.use(express.static('public'));
 
-/* ROUTERS
-headerRouter = require('.routes/headerRouter');
+
 /*ROUTERS*/
 /*headerRouter = require('.routes/headerRouter');
 loginRouter = require('.routes/loginRouter');
 registerRouter = require('.routes/registerRouter'); */
-
-
-
-/*ROUTES
-app.use('/register',registerRouter);
 
 /*ROUTES*/
 /*app.use('/register',registerRouter);
@@ -33,6 +27,7 @@ app.get('/home', (req, res) => {
 app.get('/header', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/header.html'))
 })
+
 
 app.get('/shoppingCart', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/shoppingCart.html'))
@@ -66,15 +61,16 @@ app.get('/climatizacion', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
 })
 
-/*app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/home.html'));
-})*/
+
 
 app.get('/tvYSonido', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/tvYSonido.html'));
 })
-/* app.get('/productDetail', (req, res) => {*/
+
  app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/productDetail.html'));
 })
+/* app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/404.html'))
+})  */
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
