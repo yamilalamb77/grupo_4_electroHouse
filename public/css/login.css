@@ -66,6 +66,7 @@ text-decoration: none;
 }
 
 .login .form-container{
+    max-width: 380px;
     background:#008F74;
 border-radius: 10px;
 margin: 20px auto;
