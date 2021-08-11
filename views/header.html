@@ -14,23 +14,23 @@
     <title>header</title>
     <!--iconos de pestaña-->
 
-<link rel="apple-touch-icon" sizes="57x57" href="/imagenes/favicons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/imagenes/favicons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/imagenes/favicons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/imagenes/favicons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/imagenes/favicons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/imagenes/favicons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/imagenes/favicons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/imagenes/favicons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/imagenes/favicons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/imagenes/favicons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/imagenes/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/imagenes/favicons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/imagenes/favicons/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="/imagenes/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/imagenes/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/imagenes/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/imagenes/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/imagenes/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/imagenes/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/imagenes/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/imagenes/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/imagenes/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imagenes/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/imagenes/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imagenes/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 
@@ -41,7 +41,7 @@
         <div class="main-header">
             <nav class="navigation-bar" id="navigation-bar-mobile">
 
-           
+
                 <!-- Buscador mobile -->
 
                 <form action="#" class="search-form-mobile" id="search">
@@ -54,32 +54,38 @@
             <div class="logo">
                 <a href="home"><img src="/images/logo/logo.jpeg" alt=""></a>
             </div>
-
-            <a class="user-login" href="login">
-            <i class="far fa-user-circle user-login"></i></a>
+            <div class="login-cart">
+                <a class="user-login" href="login">
+                    <i class="far fa-user-circle user-login"></i></a>
+                <a class="shopping-cart" href="shoppingCart">
+                    <i class="fas fa-shopping-cart shopping-cart"></i></a>
+            </div>
             <!-- Menú de navegación mobile-->
-           
-
 
             <div>
                 <form action="">
                     <div class="container">
-                      
+
                         <div class="btn-menu">
                             <label for="btn-menu" class="burguer-menu-icon">☰</label>
-                      
-                    <input type="checkbox" id="btn-menu">
-                    <div class="container-menu">
-                        <div class="cont-menu">
-                            <nav>
-                                <a href="productDetail">TV y Sonido</a>
-                                <a href="productDetail">Heladeras y Lavado</a>
-                                <a href="productDetail">Climatización</a>
-                                <a href="productDetail">Pequeños Electros</a>
-                                <a href="enConstrucion">Contacto</a>
-                               
-                            </nav>
-                            <div> <label for="btn-menu">✖️ </label>
+
+                            <input type="checkbox" id="btn-menu">
+                            <div class="container-menu">
+                                <div class="cont-menu">
+                                    <nav>
+                                        <a href="tvYSonido">TV y Sonido</a>
+                                        <a href="heladeraYLavado">Heladeras y Lavado</a>
+                                        <a href="climatizacion">Climatización</a>
+                                        <a href="electro">Pequeños Electros</a>
+                                        <a href="enConstrucion">Contacto</a>
+
+                                    </nav>
+                                    <div> <label for="btn-menu">✖️ </label>
+                                        <a href="shoppingCart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,6 +93,20 @@
             </div>
 
         </div>
+
+        </div>
+        <!-- version escritorio-->
+        <section class="version-desktop">
+            <div class="list-container">
+                <ul>
+                    <li> <a href="tvYSonido">TV y Sonido</a></li>
+                    <li><a href="heladeraYLavado">Heladeras y Lavado</a></li>
+                    <li> <a href="climatizacion">Climatización</a></li>
+                    <li><a href="electro">Pequeños Electros</a></li>
+                    <li><a href="enConstrucion">Contacto</a></li>
+                </ul>
+            </div>
+        </section>
 
     </header>
 </body>

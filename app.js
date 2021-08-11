@@ -27,6 +27,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })
 
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/home.html'));
+})
 app.get('/header', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/header.html'))
 })
@@ -55,8 +58,8 @@ app.get('/electro', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/electro.html'));
 })
 
-app.get('/heladeraylavado', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/heladeraylavado.html'));
+app.get('/heladeraYLavado', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/heladeraYLavado.html'));
 })
 
 app.get('/climatizacion', (req, res) => {
@@ -67,8 +70,8 @@ app.get('/climatizacion', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
 })*/
 
-app.get('/tvysonido', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/tvysonido.html'));
+app.get('/tvYSonido', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/tvYSonido.html'));
 })
 /* app.get('/productDetail', (req, res) => {*/
  app.get('/productDetail', (req, res) => {

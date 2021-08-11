@@ -42,19 +42,25 @@ header .main-header .logo {
    
 }  
 
-header .main-header .logo img {
+header .main-header  .logo img {
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
 }
 
-header .main-header .user-login {
+header .main-header .login-cart .user-login {
     font-size: 30px;
-    order: 2;  
+/*     order: 2;  */ 
      color: var(--white);
      cursor: pointer;
      
   
+}
+header .main-header .login-cart{
+    order: 2; 
+}
+header .main-header .login-cart .shopping-cart{
+	display: none;
 }
 /* Botón y barra de búsqueda mobile */
 header .nav_menu{
@@ -205,4 +211,114 @@ header .container{
 		font-size: 20px;
 	}  
     
+	header .cont-menu i{
+		position: absolute;
+		right: 45px;
+		top: 13px; 
+		color: var(--white);
+		cursor: pointer;
+		font-size: 20px;
+	}
 	/*Fin de Menù lateral*/
+
+header .version-desktop{
+	display: none;
+}
+
+header .shopping-cart{
+	display: none;
+}
+	@media (min-width: 481px){
+		header .container{
+			display: none;
+		}
+	/* 	header .version-desktop{
+			display: flex;
+		} */
+	
+		
+header .main-header .logo {
+           order: 0;    
+}  
+
+header .main-header .navigation-bar {
+    order: 1;
+    padding: 15px;
+     width: 60%; 
+
+}
+/*  header .login-cart .login-cart{
+padding-left: 1px;
+}  */
+
+header .main-header .login-cart .user-login{
+	font-size: 20px;
+	padding-left: 1px;
+}
+
+header .main-header .login-cart .shopping-cart{
+	display: flex;
+	font-size: 20px; 
+    color: var(--white);
+    cursor: pointer;
+}
+
+header .main-header {
+ 
+    padding: 0 15px;
+  
+}
+
+header .login-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/*menu desktop*/
+header .version-desktop{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+/* 	order: 5; */
+}
+
+header .version-desktop .list-container{
+    width: 100%;
+  
+}
+
+header .version-desktop .list-container ul{
+    width: 100%;
+    height: 100%;
+background-color: black;
+margin: 0;
+padding: 0;
+display: flex;
+height: 40px;
+justify-content: space-around;
+}
+
+header .version-desktop .list-container ul li{
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+ list-style: none;
+ border: 1px solid white;
+ box-sizing: border-box;
+ width: 100%;
+ font-size: 20px;
+
+}
+
+header .version-desktop .list-container ul li a{
+    color: white;
+	font-size: 14px;
+
+    
+}
+
+header .version-desktop .list-container ul li:hover{
+    border-bottom: 5px solid #008F74;
+}
+	}
