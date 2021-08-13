@@ -1,0 +1,27 @@
+ .login .profile-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login .profile .button-container {
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-form .profile-box .profile-subtitle{
+    padding-top: 15px;
+}
+
+
+.login .form-container h2{
+    font-size: medium;
+}
+
+.login .form-container a{
+    font-size: small;
+}
+.login .form-container b{
+    font-size: medium;
+}
