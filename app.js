@@ -70,7 +70,13 @@ app.get('/tvYSonido', (req, res) => {
  app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/productDetail.html'));
 })
- app.get('*', (req, res) => {
+
+app.get('/editProfile', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/editProfile.html'))
+})
+/*  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/404.html'))
 })  
+ */
+
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 

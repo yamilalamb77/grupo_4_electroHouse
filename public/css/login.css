@@ -84,8 +84,8 @@ box-shadow: 0 0 6px black;
 .login .button-container {
     display: flex;
     flex-direction: column;
-    margin: 1rem 1rem;
-    width: 100%;
+    margin: 0.6rem 1rem;
+    width: 90%;
 
 }
 
@@ -164,6 +164,7 @@ font-weight: lighter;
 border-radius: 0.5rem;
 cursor: pointer;/*va a genererar que cuando pase por el elemnto aparezca la manito insinuando que se ´puede clickear*/
 height: 2.5rem;
+margin: 5px;
 text-transform: uppercase;
 width: 12rem;
  border: 1px solid black;
