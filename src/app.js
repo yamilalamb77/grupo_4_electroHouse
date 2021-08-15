@@ -77,6 +77,10 @@ app.get('/tvYSonido', (req, res) => {
 app.get('/editProfile', (req, res) => {
     res.sendFile(path.join(__dirname, '/src/views/editProfile.html'))
 })
+
+app.get('/productLoading', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/views/productLoading.html'))
+})
 /*  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/404.html'))
 })  
