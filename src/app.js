@@ -61,6 +61,9 @@ app.get('/climatizacion', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
 })
 
+app.get('/productLoading', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/productLoading.html'));
+})
 
 
 app.get('/tvYSonido', (req, res) => {
