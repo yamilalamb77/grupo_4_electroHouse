@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de Productos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="productLoading">
+    <!-- productLoading -->
+    <%- include('../partials/header.ejs') %>
+        <div class="edit-container">
+            <div class="edit-con-pl">
+                <div class="edit-pl">
+                    <span>Cargar</span><span>Eliminar</span><span>Modificar</span><span>Detalle</span>
+                </div>
+
+                <form class="product-loading" action="">
+                    <h2>FORMULARIO DE CARGA DE PRODUCTOS</h2>
+                    <div class="products-box">
+
+                        <div class="input-style">
+                            <label for="">Producto:</label>
+                            <input type="text" name="product">
+                            <span class="error-message">Debe ingresar un producto</span>
+                        </div>
+                        <div class="input-style">
+                            <label for="">Marca:</label>
+                            <select name="brand" id="">
+                                <option value="" hidden selected>elija una marca</option>
+                                <option value="">lg</option>
+                                <option value="">Samsung</option>
+                                <option value="">Liliana</option>
+                                <option value="">Philips</option>
+                                <option value="">Whirlpool</option>
+                            </select>
+                            <span class="error-message">Debe ingresar una marca</span>
+                        </div>
+                        <div class="input-style">
+                            <label for="">Categoria:</label>
+                            <select name="category" id="">
+                                <option value="" hidden selected>elija una categoria</option>
+                                <option value="">Climatización</option>
+                                <option value="">Pequeños Electros</option>
+                                <option value="">Heladera y Lavado</option>
+                                <option value="">TV y Sonido</option>
+                                <option value="">Otros</option>
+                            </select>
+                            <span class="error-message">Debe ingresar una categoria</span>
+                        </div>
+                        <div class="input-style">
+                            <label for="">Precio: $</label>
+                            <input type="number">
+                            <span class="error-message">Debe ingresar un precio</span>
+                        </div>
+                        <div class="input-style">
+                            <label for="">Codigo:</label>
+                            <input type="cc-number">
+                            <span class="error-message">Debe ingresar codigo</span>
+                        </div>
+                        <div class="input-style">
+                            <label for="">Fecha de lanzamiento:</label>
+                            <input type="date">
+                            <span class="error-message">Debe ingresar una fecha</span>
+                        </div>
+                    </div>
+                    <div class="input-style">
+                        <div class="profiles-box ">
+                            <h4 class="profile-subtitle">Avatar</h4>
+                            <div class="description">
+
+                            </div>
+                            <div class="input-file-container">
+                                <input type="file" name="" id="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <label for="">Descripción del Producto:</label>
+                    <div class="avatar">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+                    </div>
+                    <div class="button-end">
+                        <button type="submit" class="btn btn-submit">FINALIZAR</button>
+                    </div>
+                </form>
+            </div>
+            <form action="" class="product-eliminar">
+
+            </form>
+
+        </div>
+</body>
+
+</html>
