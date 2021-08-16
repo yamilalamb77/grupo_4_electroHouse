@@ -4,7 +4,16 @@ const path = require('path');
 const router = express.Router();
 let port = 3030;
 
+
+
+/* VIEWS */
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+/* Middlewares */
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended : false }));
+app.use(express.json())
 
 
 /*ROUTERS*/
