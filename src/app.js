@@ -22,27 +22,27 @@ app.get('/', (req, res) => {
 })
 
 app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/home.html'));
+    res.sendFile(path.join(__dirname,'/src/views/home.html'));
 })
 app.get('/header', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/header.html'))
+    res.sendFile(path.join(__dirname, '/src/views/header.html'))
 })
 
 
 app.get('/shoppingCart', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/shoppingCart.html'))
+    res.sendFile(path.join(__dirname, '/src/views/shoppingCart.html'))
 })
 
 app.get('/enConstrucion', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/enConstrucion.html'))
+    res.sendFile(path.join(__dirname, '/src/views/enConstrucion.html'))
 })
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/login.html'))
+    res.sendFile(path.join(__dirname, '/src/views/login.html'))
 })
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/register.html'))
+    res.sendFile(path.join(__dirname, '/src/views/register.html'))
 })
 
 app.get('/footer', (req, res) => {
@@ -61,6 +61,9 @@ app.get('/climatizacion', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
 })
 
+app.get('/productLoading', (req, res) => {
+    res.sendFile(path.join(__dirname,'/views/productLoading.html'));
+})
 
 
 app.get('/tvYSonido', (req, res) => {
@@ -72,7 +75,11 @@ app.get('/tvYSonido', (req, res) => {
 })
 
 app.get('/editProfile', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/editProfile.html'))
+    res.sendFile(path.join(__dirname, '/src/views/editProfile.html'))
+})
+
+app.get('/productLoading', (req, res) => {
+    res.sendFile(path.join(__dirname, '/src/views/productLoading.html'))
 })
 /*  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/404.html'))
