@@ -1,0 +1,5 @@
+para poner el header:
+ <%- include('../partials/header.ejs')  %>
+
+
+
