@@ -7,7 +7,7 @@ let port = 3030;
 
 
 /* VIEWS */
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views/product'));
 app.set('view engine', 'ejs');
 
 /* Middlewares */
@@ -16,15 +16,33 @@ app.use(express.urlencoded({ extended : false }));
 app.use(express.json())
 
 
-/*ROUTERS*/
-/*headerRouter = require('.routes/headerRouter');
-loginRouter = require('.routes/loginRouter');
-registerRouter = require('.routes/registerRouter'); */
-
-/*ROUTES*/
-/*app.use('/register',registerRouter);
+/*enrutadores*/
+/* headerRouter = require('./routes/product/headerRouter'); */
+loginRouter = require('./routes/product/loginRouter');
+registerRouter = require('./routes/product/registerRouter'); 
+ 
+/*Rutas*/
+app.use('/register',registerRouter); 
 app.use('/login', loginRouter);
-app.use('/header', headerRouter); */
+/* app.use('/header', headerRouter);  */
+
+
+app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/views/home.html'));
@@ -90,9 +108,7 @@ app.get('/editProfile', (req, res) => {
 app.get('/productLoading', (req, res) => {
     res.sendFile(path.join(__dirname, '/src/views/productLoading.html'))
 })
-/*  app.get('*', (req, res) => {
+  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/404.html'))
 })  
  */
-
-app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
