@@ -1,6 +1,7 @@
 const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
+const { producDetail } = require('./controllers/product/productDetailController');
 const router = express.Router();
 let port = 3030;
 
@@ -20,10 +21,16 @@ app.use(express.json())
 /* headerRouter = require('./routes/product/headerRouter'); */
 loginRouter = require('./routes/product/loginRouter');
 registerRouter = require('./routes/product/registerRouter'); 
+
+producDetailRouter = require("./routes/product/productDetailRouter");
+registerRouter = require("./routes/product/registerRouter");
  
 /*Rutas*/
 app.use('/register',registerRouter); 
 app.use('/login', loginRouter);
+
+app.use("./register",registerRouter);
+app.use("/producDetail",producDetailRouter);
 /* app.use('/header', headerRouter);  */
 
 
