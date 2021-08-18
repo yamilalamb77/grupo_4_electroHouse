@@ -33,7 +33,7 @@ tvYSonidoRouter = require('./routes/user/tvYSonidoRouter');
 registerRouter = require('./routes/product/registerRouter'); 
 productDetailRouter = require('./routes/product/productDetailRouter');
 enConstruccionRouter = require('./routes/product/enConstruccionRouter');
-
+shoppingCartRouter = require ('./routes/product/shoppingCartRouter');
 
 
 /*************************************/
@@ -49,6 +49,7 @@ app.use('/tvYSonido', tvYSonidoRouter);
 app.use('/register', registerRouter);
 app.use('/productDetail', productDetailRouter);
 app.use('/enConstruccion', enConstruccionRouter);
+app.use('/shoppingCart', shoppingCartRouter); 
 
 
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
