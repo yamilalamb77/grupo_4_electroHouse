@@ -1,14 +1,14 @@
 const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
-const { producDetail } = require('./controllers/product/productDetailController');
+/*const { producDetail } = require('./controllers/product/productDetailController');*/
 const router = express.Router();
 let port = 3030;
 
 
 
 /* VIEWS */
-app.set('views', path.join(__dirname, 'views/product'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 /* Middlewares */
@@ -20,6 +20,8 @@ app.use(express.json())
 /*enrutadores*/
 /* headerRouter = require('./routes/product/headerRouter'); */
 loginRouter = require('./routes/product/loginRouter');
+homeRouter = require('./routes/product/homeRouter');
+/*homeRouter = require('./routes/home');*/
 /* registerRouter = require('./routes/product/registerRouter');  */
 
 /* producDetailRouter = require("./routes/product/productDetailRouter"); */
@@ -28,7 +30,7 @@ loginRouter = require('./routes/product/loginRouter');
 /*Rutas*/
 /* app.use('/register',registerRouter);  */
 app.use('/login', loginRouter);
-
+app.use('/', homeRouter);
 /* app.use("./register",registerRouter);
 app.use("/producDetail",producDetailRouter); */
 /* app.use('/header', headerRouter);  */
