@@ -1,10 +1,8 @@
 const express = require('express'); //requiero express
-const app = express();   // genero instancia app
-const path = require('path');
-const router = express.Router('../../controllers/user/electroController');
+const router = express.Router()
+const controller = require('../../controllers/user/electroController');
+
+router.get('/', controller.electro);
 
 
-
-
-router.get('/', controller.register)
 module.exports = router

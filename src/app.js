@@ -1,6 +1,7 @@
 const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
+/*const { heladeraYLavado } = require('./controllers/user/heladeraYLavadoController');*/
 /*const { producDetail } = require('./controllers/product/productDetailController');*/
 const router = express.Router();
 let port = 3030;
@@ -17,23 +18,37 @@ app.use(express.urlencoded({ extended : false }));
 app.use(express.json())
 
 
-/*enrutadores*/
-/* headerRouter = require('./routes/product/headerRouter'); */
-loginRouter = require('./routes/product/loginRouter');
+
+/*************************************/
+/*--------- ENRUTADORES -------------*/
+/*************************************/
+
+
 homeRouter = require('./routes/product/homeRouter');
-/*homeRouter = require('./routes/home');*/
-/* registerRouter = require('./routes/product/registerRouter');  */
+loginRouter = require('./routes/product/loginRouter');
+climatizacionRouter = require('./routes/user/climatizacionRouter');
+electroRouter = require('./routes/user/electroRouter');
+heladeraYLavadoRouter = require ('./routes/user/heladeraYLavadoRouter');
+tvYSonidoRouter = require('./routes/user/tvYSonidoRouter');
+registerRouter = require('./routes/product/registerRouter'); 
+productDetailRouter = require('./routes/product/productDetailRouter');
+enConstruccionRouter = require('./routes/product/enConstruccionRouter');
 
-/* producDetailRouter = require("./routes/product/productDetailRouter"); */
 
- 
-/*Rutas*/
-/* app.use('/register',registerRouter);  */
-app.use('/login', loginRouter);
+
+/*************************************/
+/*------------ RUTAS ----------------*/
+/*************************************/
+
 app.use('/', homeRouter);
-/* app.use("./register",registerRouter);
-app.use("/producDetail",producDetailRouter); */
-/* app.use('/header', headerRouter);  */
+app.use('/login', loginRouter);
+app.use('/climatizacion', climatizacionRouter);
+app.use('/electro', electroRouter);
+app.use('/heladeraYLavado', heladeraYLavadoRouter);
+app.use('/tvYSonido', tvYSonidoRouter);
+app.use('/register', registerRouter);
+app.use('/productDetail', productDetailRouter);
+app.use('/enConstruccion', enConstruccionRouter);
 
 
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 

@@ -1,7 +1,7 @@
 const path = require('path');
 
-mmodule.exports = {
-    register: (req,res) => {
-        res.render('register')
-    }
-    }
+module.exports = {
+register: (req,res) => {
+    res.render('./product/register')
+}
+}

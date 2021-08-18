@@ -1,10 +1,8 @@
 const express = require('express'); //requiero express
-const app = express();   // genero instancia app
-const path = require('path');
-const router = express.Router('../../controllers/product/productDetailController');
+const router = express.Router()
+const controller = require('../../controllers/product/productDetailController');
 
+router.get('/', controller.productDetail)
 
-
-
-router.get('/', controller.register)
 module.exports = router
+
