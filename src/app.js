@@ -20,17 +20,17 @@ app.use(express.json())
 /*enrutadores*/
 /* headerRouter = require('./routes/product/headerRouter'); */
 loginRouter = require('./routes/product/loginRouter');
-registerRouter = require('./routes/product/registerRouter'); 
+/* registerRouter = require('./routes/product/registerRouter');  */
 
-producDetailRouter = require("./routes/product/productDetailRouter");
-registerRouter = require("./routes/product/registerRouter");
+/* producDetailRouter = require("./routes/product/productDetailRouter"); */
+
  
 /*Rutas*/
-app.use('/register',registerRouter); 
+/* app.use('/register',registerRouter);  */
 app.use('/login', loginRouter);
 
-app.use("./register",registerRouter);
-app.use("/producDetail",producDetailRouter);
+/* app.use("./register",registerRouter);
+app.use("/producDetail",producDetailRouter); */
 /* app.use('/header', headerRouter);  */
 
 
