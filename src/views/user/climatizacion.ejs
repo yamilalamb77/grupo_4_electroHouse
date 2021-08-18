@@ -1,89 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <!-- FONT AWESOME iconos dentro de la pagina-->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-   
-    <!--iconos de pestaña-->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+	<%- include('../partials/head') %> 
 
-    <title>Climatización</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
 <body >
-<header>
-	<div class="main-header">
-		<nav class="navigation-bar" id="navigation-bar-mobile">
 
-	   
-			<!-- Buscador mobile -->
-
-			<form action="#" class="search-form-mobile" id="search">
-
-				<input type="search" name="busqueda" id="" placeholder="Buscar producto...">
-				<button type="submit"><i class="fas fa-search"></i></button>
-
-			</form>
-		</nav>
-		<div class="logo">
-			<a href="/"><img src="/images/logo/logo.jpeg" alt=""></a>
-		</div>
-
-		<a class="user-login" href="login">
-		<i class="far fa-user-circle user-login"></i></a>
-		<!-- Menú de navegación mobile-->
-	   
-
-
-		<div>
-			<form action="">
-				<div class="container">
-				  
-					<div class="btn-menu">
-						<label for="btn-menu" class="burguer-menu-icon">☰</label>
-				  
-				<input type="checkbox" id="btn-menu">
-				<div class="container-menu">
-					<div class="cont-menu">
-						<nav>
-							<a href="tvYSonido">TV y Sonido</a>
-							<a href="heladeraYLavado">Heladeras y Lavado</a>
-							<a href="climatizacion">Climatización</a>
-							<a href="electro">Pequeños Electros</a>
-							<a href="enConstrucion">Contacto</a>
-						   
-						</nav>
-						<div> <label for="btn-menu">✖️ </label>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-
-	</div>
-
-</header>
+	<%- include('../partials/header') %> 
 
     <h2>Climatizacion</h2>
 
@@ -125,46 +47,9 @@
     
 
 	</section>
-	<footer>
-        <div class="lo-footer">
-          <img src = "/images/logo/logo.jpeg" alt="logotipo" class ="logo">
-      </div>
-      
-        
-    <div class="content">
-        <div class="left box">
-        <div class="lower">
-            <div class="topic">Contactanos</div>
-                <div class="phone">
-                    <a href="#"><i class="fas fa-phone-volume"></i>+54 11-5555-5555</a>
-                </div>
-            <div class="email">
-                    <a href="#"><i class="fas fa-envelope"></i>electrohouse@gmail.com</a>
-            </div>
-        </div>
-        </div>
-        
-            
-                <div class="middle box">
-                    <div class="topic">-Categorias</div>
-                        <div><a href="tvysonido">-TV y Sonido</a></div>
-                        <div><a href="heladeraylavado">-Heladeras y Lavado</a></div>
-                        <div><a href="climatizacion">-Climatizacion</a></div>
-                        <div><a href="electro">-Pequeños Electros</a></div>
-                    </div>
-                <div class="media-icons">
-                        <a href="enConstrucion"><i class="fab fa-facebook-f"></i></a>
-                        <a href="enConstrucion"><i class="fab fa-instagram"></i></a>
-                        <a href="enConstrucion"><i class="fab fa-twitter"></i></a>
-                        <a href="enConstrucion"><i class="fab fa-whatsapp"></i></a>
-            
-                </div>
-                </div>
-        
-        </div>
-   </div>
-   
- </footer>
+	
+
+	<%- include('../partials/footer') %> 
 
     
 </body>
