@@ -1,6 +1,9 @@
 
 .productLoading .menu {
 	display: flex;
+	justify-content: center;
+    margin: 15px;
+	
 }
 .productLoading .menu ul {
 	display: flex;
@@ -12,9 +15,9 @@
 	list-style: none;
 }
 
-.content {
+/* .content {
 	margin-top: 2rem;
-}
+} */
 
 [data-content] {
 	display: none;
@@ -66,13 +69,15 @@
 	.edit-container .products-box{
 		border: 1px solid black;
 		margin-bottom: 20px;
+
 		}
 		
 	
 		.product-loading .products-box{
 			padding: 10px;
 			width: 90%;
-			background-color: #d6d5d5;
+			color: var(--white);
+			background-color: var(--lightBlack);
 			}
 	
 	
@@ -131,7 +136,7 @@
 		flex-direction:column ;
 		flex-wrap: wrap;
 		align-content: center;
-		background-color: #d6d5d5;
+		background-color: var(--lightBlack);
 		border: 1px solid black;
 		width: 90%;
 		max-width: 500px;  
@@ -222,7 +227,9 @@
 	.profiles-box{
 		display: flex;
     flex-direction: column;
+	background-color: var(--lightBlack);
     align-items: center;
+	color: var(--white);
 	}
 	
 	.profiles-box .description {
