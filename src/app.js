@@ -24,16 +24,29 @@ app.use(express.json())
 /*************************************/
 
 
+
+editProfileRouter = require('./routes/product/editProfileRouter');
+enConstruccionRouter = require('./routes/product/enConstruccionRouter');
+errorRouter = require ('./routes/product/errorRouter');
 homeRouter = require('./routes/product/homeRouter');
 loginRouter = require('./routes/product/loginRouter');
+productDetailRouter = require('./routes/product/productDetailRouter');
+productLoadingRouter = require('./routes/product/productLoadingRouter');
+productDetailRouter = require('./routes/product/productDetailRouter');
+productDetailRouter = require('./routes/product/productLoadingRouter');
+registerRouter = require('./routes/product/registerRouter'); 
+shoppingCartRouter = require ('./routes/product/shoppingCartRouter');
+
+
+
 climatizacionRouter = require('./routes/user/climatizacionRouter');
 electroRouter = require('./routes/user/electroRouter');
 heladeraYLavadoRouter = require ('./routes/user/heladeraYLavadoRouter');
 tvYSonidoRouter = require('./routes/user/tvYSonidoRouter');
-registerRouter = require('./routes/product/registerRouter'); 
-productDetailRouter = require('./routes/product/productDetailRouter');
-enConstruccionRouter = require('./routes/product/enConstruccionRouter');
-shoppingCartRouter = require ('./routes/product/shoppingCartRouter');
+
+
+
+
 
 
 /*************************************/
@@ -41,16 +54,24 @@ shoppingCartRouter = require ('./routes/product/shoppingCartRouter');
 /*************************************/
 
 app.use('/', homeRouter);
+
+app.use('/enConstruccion', enConstruccionRouter);
+app.use('/editProfile', editProfileRouter);
+app.use('/home', homeRouter);
 app.use('/login', loginRouter);
+app.use('/productDetail', productDetailRouter);
+app.use('/register', registerRouter);
+app.use('/shoppingCart', shoppingCartRouter); 
+app.use('/productLoading', productLoadingRouter); 
+
+
 app.use('/climatizacion', climatizacionRouter);
 app.use('/electro', electroRouter);
 app.use('/heladeraYLavado', heladeraYLavadoRouter);
 app.use('/tvYSonido', tvYSonidoRouter);
-app.use('/register', registerRouter);
-app.use('/productDetail', productDetailRouter);
-app.use('/enConstruccion', enConstruccionRouter);
-app.use('/shoppingCart', shoppingCartRouter); 
 
+
+app.use('*', errorRouter);
 
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
 
@@ -65,75 +86,3 @@ app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n ht
 
 
 
-
-
-/*
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/home.html'));
-})
-
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname,'/src/views/home.html'));
-})
-app.get('/header', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/header.html'))
-})
-
-
-app.get('/shoppingCart', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/shoppingCart.html'))
-})
-
-app.get('/enConstrucion', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/enConstrucion.html'))
-})
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/login.html'))
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/register.html'))
-})
-
-app.get('/footer', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/footer.html'))
-})
-
-app.get('/electro', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/electro.html'));
-})
-
-app.get('/heladeraYLavado', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/heladeraYLavado.html'));
-})
-
-app.get('/climatizacion', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/climatizacion.html'));
-})
-
-app.get('/productLoading', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/productLoading.html'));
-})
-
-
-app.get('/tvYSonido', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/tvYSonido.html'));
-})
-
- app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/productDetail.html'));
-})
-
-app.get('/editProfile', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/editProfile.html'))
-})
-
-app.get('/productLoading', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/productLoading.html'))
-})
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/404.html'))
-})  
- */

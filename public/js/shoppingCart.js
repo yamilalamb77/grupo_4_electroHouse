@@ -1,3 +1,5 @@
+alert("NOTA: La parte de arriba esta para que se vea como quedaria y la funcionalidad del carrito pero no va a ir el diseño de la pagina, solo apartir de MI CARRITO")
+
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
