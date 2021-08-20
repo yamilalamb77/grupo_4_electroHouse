@@ -31,9 +31,8 @@ errorRouter = require ('./routes/product/errorRouter');
 homeRouter = require('./routes/product/homeRouter');
 loginRouter = require('./routes/product/loginRouter');
 productDetailRouter = require('./routes/product/productDetailRouter');
+
 productLoadingRouter = require('./routes/product/productLoadingRouter');
-productDetailRouter = require('./routes/product/productDetailRouter');
-productDetailRouter = require('./routes/product/productLoadingRouter');
 registerRouter = require('./routes/product/registerRouter'); 
 shoppingCartRouter = require ('./routes/product/shoppingCartRouter');
 
