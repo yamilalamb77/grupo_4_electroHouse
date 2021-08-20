@@ -14,10 +14,11 @@
     } */
   
     .gallery-wrap .img-big-wrap img {
-      height: 450px;
-      width: auto;
+      height: 100%;
+      width: 100%;
       display: inline-block;
       cursor: zoom-in;
+      object-fit: contain;
   }
   
   
