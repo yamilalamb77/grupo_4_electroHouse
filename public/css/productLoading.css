@@ -77,7 +77,7 @@
 			padding: 10px;
 			width: 90%;
 			color: var(--white);
-			background-color: var(--lightBlack);
+			background-color: var(--green);
 			}
 	
 	
@@ -136,8 +136,8 @@
 		flex-direction:column ;
 		flex-wrap: wrap;
 		align-content: center;
-		background-color: var(--lightBlack);
-		border: 1px solid black;
+		background-color:  var(--green);
+/* 		border: 1px solid black; */
 		width: 90%;
 		max-width: 500px;  
 		}
@@ -200,8 +200,44 @@
 		flex-direction: column;
 		align-items: center;
 		}
-	
-	
+ 	
+ .bb-edit-delete {
+			display: flex;
+			justify-content: space-evenly;
+		
+	}
+
+	form .bb-edit-delete .button-edit .btn-edit,
+	form .bb-edit-delete .button-delete .btn-delete{
+background-color: var(--lightGray);
+border-radius: 0.5rem;
+	cursor: pointer;
+	height: 2.5rem;
+	margin:0 0 30px 0px;
+	text-transform: uppercase;
+	width: 12rem;
+	 border: 1px solid black;
+	 margin: 20px;
+	 transition: all 2s ease;
+	}
+
+
+
+	.bb-edit-delete .button-delete .btn-delete:hover{
+		color:var(--black);
+
+		background:red;
+		border: 1px solid var(--black);
+	 
+	}
+
+	.bb-edit-delete .button-edit .btn-edit:hover{
+		color: var(--green);
+		background:var(--gray);
+		border: 1px solid var(--white);
+	} 
+
+
 	/**********************/
 	/*product-loading FIN parte 6 */
 	/**********************/
@@ -227,7 +263,7 @@
 	.profiles-box{
 		display: flex;
     flex-direction: column;
-	background-color: var(--lightBlack);
+	background-color:  var(--green);
     align-items: center;
 	color: var(--white);
 	}

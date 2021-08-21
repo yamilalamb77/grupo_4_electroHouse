@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,108 +9,148 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/productLoading.js" defer></script>
 </head>
+
 <body class="productLoading">
-	<%- include('../partials/header.ejs')  %>
+	<%- include('../partials/header.ejs') %>
 
-	<div class="menu">
-		<ul>
-		<li data-target="#Cargar">Cargar</li>
-		<li data-target="#Editar">Editar</li>
-		<li data-target="#detalle">Detalle</li>
-		<li data-target="#Eliminar">Eliminar</li>
-		
-	</ul>
-	</div>
+		<div class="menu">
+			<ul>
+				<li data-target="#Cargar">Cargar</li>
+				<li data-target="#Editar">Editar/Eliminar</li>
+		<!-- 		<li data-target="#Stock">Stock</li> -->
 
-	<div class="content">
 
-		<div data-content id="Cargar" class="active">
-		
-			<form class="product-loading" action="">
-				<h2>FORMULARIO DE CARGA DE CARGA</h2>
-				<div class="products-box">
+			</ul>
+		</div>
 
-					<div class="input-style">
-						<label for="">Producto:</label>
-						<input type="text" name="product">
-						<span class="error-message">Debe ingresar un producto</span>
-					</div>
-					<div class="input-style">
-						<label for="">Marca:</label>
-						<select name="brand" id="">
-							<option value="" hidden selected>elija una marca</option>
-							<option value="">lg</option>
-							<option value="">Samsung</option>
-							<option value="">Liliana</option>
-							<option value="">Philips</option>
-							<option value="">Whirlpool</option>
-							<option value="">Otros</option>
-						</select>
-						<span class="error-message">Debe ingresar una marca</span>
-					</div>
-					<div class="input-style">
-						<label for="">Categoria:</label>
-						<select name="category" id="">
-							<option value="" hidden selected>elija una categoria</option>
-							<option value="">Climatización</option>
-							<option value="">Pequeños Electros</option>
-							<option value="">Heladera y Lavado</option>
-							<option value="">TV y Sonido</option>
-							<option value="">Otros</option>
-						</select>
-						<span class="error-message">Debe ingresar una categoria</span>
-					</div>
-					<div class="input-style">
-						<label for="">Precio: $</label>
-						<input type="number">
-						<span class="error-message">Debe ingresar un precio</span>
-					</div>
-					<div class="input-style">
-						<label for="">Codigo:</label>
-						<input type="cc-number">
-						<span class="error-message">Debe ingresar codigo</span>
-					</div>
-					<div class="input-style">
-						<label for="">Fecha de lanzamiento:</label>
-						<input type="date">
-						<span class="error-message">Debe ingresar una fecha</span>
-					</div>
-				</div>
-				<div class="input-style">
-					<div class="profiles-box">
-						<h4 class="profile-subtitle">Avatar</h4>
-						<div class="description">
+		<div class="content">
 
+			<div data-content id="Cargar" class="active">
+
+				<form class="product-loading" action="">
+					<h2>FORMULARIO DE CARGA DE CARGA</h2>
+					<div class="products-box">
+
+						<div class="input-style">
+							<label for="">Producto:</label>
+							<input type="text" name="product">
+							<span class="error-message">Debe ingresar un producto</span>
 						</div>
-						<div class="input-file-container">
-							<input type="file" name="imagen" id="">
+						<div class="input-style">
+							<label for="">Marca:</label>
+							<select name="brand" id="">
+								<option value="" hidden selected>elija una marca</option>
+								<option value="">lg</option>
+								<option value="">Samsung</option>
+								<option value="">Liliana</option>
+								<option value="">Philips</option>
+								<option value="">Whirlpool</option>
+								<option value="">Otros</option>
+							</select>
+							<span class="error-message">Debe ingresar una marca</span>
+						</div>
+						<div class="input-style">
+							<label for="">Categoria:</label>
+							<select name="category" id="">
+								<option value="" hidden selected>elija una categoria</option>
+								<option value="">Climatización</option>
+								<option value="">Pequeños Electros</option>
+								<option value="">Heladera y Lavado</option>
+								<option value="">TV y Sonido</option>
+								<option value="">Otros</option>
+							</select>
+							<span class="error-message">Debe ingresar una categoria</span>
+						</div>
+						<div class="input-style">
+							<label for="">Precio: $</label>
+							<input type="number">
+							<span class="error-message">Debe ingresar un precio</span>
+						</div>
+						<div class="input-style">
+							<label for="">Codigo:</label>
+							<input type="cc-number">
+							<span class="error-message">Debe ingresar codigo</span>
+						</div>
+						<div class="input-style">
+							<label for="">Fecha de lanzamiento:</label>
+							<input type="date">
+							<span class="error-message">Debe ingresar una fecha</span>
 						</div>
 					</div>
+					<div class="input-style">
+						<div class="profiles-box">
+							<h4 class="profile-subtitle">Avatar</h4>
+							<div class="description">
 
-				</div>
-				<label for="">Descripción del Producto:</label>
-				<div class="avatar">
-					<textarea name="" id="" cols="30" rows="10"></textarea>
+							</div>
+							<div class="input-file-container">
+								<input type="file" name="imagen" id="">
+							</div>
+						</div>
+
+					</div>
+					<label for="">Descripción del Producto:</label>
+					<div class="avatar">
+						<textarea name="" id="" cols="30" rows="10"></textarea>
 
 
-				</div>
-				<div class="button-end">
-					<button type="submit" class="btn btn-submit">FINALIZAR</button>
-				</div>
-			</form>
+					</div>
+					<div class="button-end">
+						<button type="submit" class="btn btn-submit">FINALIZAR</button>
+					</div>
+				</form>
+			</div>
+
+			<div data-content id="Editar">
+
+				<form class="product-loading" action="">
+					<h2>FORMULARIO EDITAR/ELIMINAR</h2>
+					<div class="products-box">
+
+
+						<div class="input-style">
+							<label for="">Buscar producto por:</label>
+							<select name="brand" id="">
+								<option value="" hidden selected>elija una opción </option>
+								<option value="">Nombre del producto</option>
+								<option value="">Codigo</option>
+								<option value="">Precio</option>
+								<option value="">Fecha de lanzamiento</option>
+								<option value="">Marca</option>
+								<option value="">Categoria</option>
+							</select>
+							<!-- <span class="error-message">Debe ingresar una opcion</span> -->
+						</div>
+
+						<label for="">Cambio:</label>
+						<div style="text-align: center;">
+							<textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+						</div>
+						<form action="">
+							<div class="bb-edit-delete">
+								<div class="button-edit">
+									<button type="edit" class=" btn-edit">EDITAR</button>
+								</div>
+								<div class="button-delete">
+									<button type="delete" class=" btn-delete">ELIMINAR</button>
+								</div>
+							</div>
+						</form>
+				</form>
+			</div>
+<!-- 
+			<div data-content id="Stock">
+
+         <h1>algo</h1>
+
+			</div> -->
+
+
+
 		</div>
-
-		<div data-content id="Editar">
-			<h1>Editar</h1>
-		</div>
-		<div data-content id="detalle">
-			<h1>Detalle</h1>
-		</div>
-		<div data-content id="Eliminar">
-			<h1>Eliminar</h1>
-		</div>
-
-	</div>
-    <%- include('../partials/footer.ejs')  %>
+		<%- include('../partials/footer.ejs') %>
 </body>
+
 </html>
