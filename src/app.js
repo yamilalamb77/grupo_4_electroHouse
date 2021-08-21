@@ -1,8 +1,6 @@
 const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
-/*const { heladeraYLavado } = require('./controllers/user/heladeraYLavadoController');*/
-/*const { producDetail } = require('./controllers/product/productDetailController');*/
 const router = express.Router();
 let port = 3030;
 
@@ -19,34 +17,29 @@ app.use(express.json())
 
 
 
-/*************************************/
-/*--------- ENRUTADORES -------------*/
-/*************************************/
-
-
-
-editProfileRouter = require('./routes/product/editProfileRouter');
-enConstruccionRouter = require('./routes/product/enConstruccionRouter');
-errorRouter = require ('./routes/product/errorRouter');
-homeRouter = require('./routes/product/homeRouter');
-loginRouter = require('./routes/product/loginRouter');
-productDetailRouter = require('./routes/product/productDetailRouter');
-
-productLoadingRouter = require('./routes/product/productLoadingRouter');
-registerRouter = require('./routes/product/registerRouter'); 
-shoppingCartRouter = require ('./routes/product/shoppingCartRouter');
-
-
-
-climatizacionRouter = require('./routes/user/climatizacionRouter');
-electroRouter = require('./routes/user/electroRouter');
-heladeraYLavadoRouter = require ('./routes/user/heladeraYLavadoRouter');
-tvYSonidoRouter = require('./routes/user/tvYSonidoRouter');
+/************************************/
+/*--------- ENRUTADORES -------------/
+/************************************/
 
 
 
 
 
+
+/*productLoadingRouter = require('./product/productLoadingRouter');*/ //admin
+
+
+userRouter = require ('./routes/userRouter'); //user
+
+
+/*heladeraYLavadoRouter = require ('./routes/user/heladeraYLavadoRouter'); 
+shoppingCartRouter = require ('./routes/product/shoppingCartRouter'); 
+climatizacionRouter = require('./routes/user/climatizacionRouter'); 
+tvYSonidoRouter = require('./routes/user/tvYSonidoRouter'); 
+electroRouter = require('./routes/user/electroRouter'); */
+
+homeRouter = require('./routes/homeRouter'); 
+extraRouter = require('./routes/extraRouter')
 
 /*************************************/
 /*------------ RUTAS ----------------*/
@@ -54,25 +47,22 @@ tvYSonidoRouter = require('./routes/user/tvYSonidoRouter');
 
 app.use('/', homeRouter);
 
-app.use('/enConstruccion', enConstruccionRouter);
-app.use('/editProfile', editProfileRouter);
+app.use('/user', userRouter);
+app.use('/product',productRouter)
+
+
 app.use('/home', homeRouter);
-app.use('/login', loginRouter);
-app.use('/productDetail', productDetailRouter);
-app.use('/register', registerRouter);
 app.use('/shoppingCart', shoppingCartRouter); 
-app.use('/productLoading', productLoadingRouter); 
+/*app.use('/productLoading', productLoadingRouter); */
 
 
-app.use('/climatizacion', climatizacionRouter);
+/*app.use('/climatizacion', climatizacionRouter);
 app.use('/electro', electroRouter);
 app.use('/heladeraYLavado', heladeraYLavadoRouter);
-app.use('/tvYSonido', tvYSonidoRouter);
+app.use('/tvYSonido', tvYSonidoRouter);*/
 
 
-app.use('*', errorRouter);
-
-app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`)); 
+app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`));
 
 
 

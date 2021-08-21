@@ -1,8 +1,9 @@
 const express = require('express'); //requiero express
 const router = express.Router()
-const controller = require('../../controllers/user/tvYSonidoController');
+const {  home } = require('../controllers/userController');
 
-router.get('/', controller.tvYSonido);
+
+router.get('/', home);
 
 
 module.exports = router
