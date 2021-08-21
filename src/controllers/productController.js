@@ -2,15 +2,15 @@ const path = require('path');
 
 module.exports = {
     climatizacion: (req,res) => {
-        res.render('product/climatizacion')
+        res.render('user/climatizacion')
     },
     electro: (req,res) => {
-        res.render('product/electro')
+        res.render('user/electro')
     },
     tvYSonido: (req,res) => {
-        res.render('product/tvYSonido')
+        res.render('user/tvYSonido')
     },
     heladeraYLavado: (req,res) => {
-        res.render('product/heladeraYLavado')
+        res.render('user/heladeraYLavado')
     }
 }

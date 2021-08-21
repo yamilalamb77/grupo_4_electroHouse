@@ -1,10 +1,11 @@
 const express = require('express'); //requiero express
 const router = express.Router()
-const {  error , enConstruccion} = require('../controllers/userController');
+const {enConstruccion, error} = require('../controllers/extraController');
 
 
 router.get('/enConstruccion', enConstruccion);
-router.get('/error', error);
+
+router.get('*', error);
 
 
 module.exports = router
