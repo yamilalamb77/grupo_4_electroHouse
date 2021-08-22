@@ -17,7 +17,7 @@
 			<ul>
 				<li data-target="#Cargar">Cargar</li>
 				<li data-target="#Editar">Editar/Eliminar</li>
-		<!-- 		<li data-target="#Stock">Stock</li> -->
+				<li data-target="#Stock">Stock</li> 
 
 
 			</ul>
@@ -140,16 +140,52 @@
 						</form>
 				</form>
 			</div>
-<!-- 
-			<div data-content id="Stock">
-
-         <h1>algo</h1>
-
-			</div> -->
+ 
+		
 
 
 
 		</div>
+		<div data-content='Stock' id="Stock">
+
+			<h1>algo</h1>
+			<form class="product-loading" action="">
+			   <h2>FORMULARIO EDITAR/ELIMINAR</h2>
+			   <div class="products-box">
+   
+   
+				   <div class="input-style">
+					   <label for="">Buscar producto por:</label>
+					   <select name="brand" id="">
+						   <option value="" hidden selected>elija una opción </option>
+						   <option value="">Nombre del producto</option>
+						   <option value="">Codigo</option>
+						   <option value="">Precio</option>
+						   <option value="">Fecha de lanzamiento</option>
+						   <option value="">Marca</option>
+						   <option value="">Categoria</option>
+					   </select>
+					   <!-- <span class="error-message">Debe ingresar una opcion</span> -->
+				   </div>
+   
+				   <label for="">Cambio:</label>
+				   <div style="text-align: center;">
+					   <textarea name="" id="" cols="30" rows="10"></textarea>
+   
+   
+				   </div>
+				   <form action="">
+					   <div class="bb-edit-delete">
+						   <div class="button-edit">
+							   <button type="edit" class=" btn-edit">EDITAR</button>
+						   </div>
+						   <div class="button-delete">
+							   <button type="delete" class=" btn-delete">ELIMINAR</button>
+						   </div>
+					   </div>
+				   </form>
+		   </form>
+			   </div>
 		<%- include('../partials/footer.ejs') %>
 </body>
 
