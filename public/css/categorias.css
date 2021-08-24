@@ -44,7 +44,11 @@
 
 
 .prodCat img {
+    height: 100%;
     width: 100%;
+    display: inline-block;
+    cursor: zoom-in;
+    object-fit: contain;
     border-bottom: 1px solid black;
 }
 
