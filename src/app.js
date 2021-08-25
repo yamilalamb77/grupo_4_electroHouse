@@ -3,6 +3,7 @@ const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
 let port = 3030;
+let methodOverride = require('method-override')
 
 
 
@@ -12,9 +13,9 @@ app.set('view engine', 'ejs');
 
 /* Middlewares */
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended : false }));
 app.use(express.json())
-
+app.use(express.urlencoded({ extended : false }));
+app.use(methodOverride('_method'))
 
 
 /************************************/
