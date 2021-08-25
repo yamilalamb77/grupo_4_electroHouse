@@ -2,6 +2,7 @@
     "id": 1,
     "name": "Smart TV 4K UHD Samsung 50",
     "price": "75.999,00",
+    "description":"Led Smart. 50 Resolucion Crystal 4K UHD. Potencia de salida de sonido 20W. HDMI x 2. USB x 1. Bluetooth. Wi Fi. Sistema operativo Tizen. Incluye control remoto (one remote). Frecuencia de barrido 60 GHz. HDR" ,
     "discount": "5",
     "category": "1",
     "image": [
@@ -12,6 +13,7 @@
     "id": 2,
     "name": "Barra de Sonido Samsung HWT450",
     "price": "42.539,00",
+    "description": "Barra de sonido con subwoofer inalambrico 6.5. 2.1 canales. Bluetooth. Funciona con TV, reporductores DVD/BD, consolas, MP3. Potencia de altavoces 200W. Consumo de energia en funcionamiento 25W. Altavoces 3. Cable optico. Control remoto. Modo juegos",
     "discount": "10",
     "category": "1",
     "image": [
