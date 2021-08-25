@@ -19,7 +19,7 @@ app.use(methodOverride('_method'))
 
 
 /************************************/
-/*--------- ENRUTADORES -------------/
+/*--------- ENRUTADORES ------------*/
 /************************************/
 userRouter = require ('./routes/userRouter'); //user
 extraRouter = require('./routes/extraRouter')

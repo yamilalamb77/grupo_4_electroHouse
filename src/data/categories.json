@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "tv y sonido",
+        "code" : "tv y sonido",
+        "image": "tv y sonido electro.webp"
+    },
+    {
+        "id" : 2,
+        "name" : "Climatizacion",
+        "code" : "Climatizacion",
+        "image": "climatizacion electro.webp"
+    },
+    {
+        "id" : 3,
+        "name" : "Pequeños electro",
+        "code" : "Pequeños electro",
+        "image": "pequeños electro.webp"
+    },
+    {
+        "id" : 4,
+        "name" : "Heladera y lavado",
+        "code" : "Heladera y lavado",
+        "image": "heladera y lavado electro.webp"
+    }
+]

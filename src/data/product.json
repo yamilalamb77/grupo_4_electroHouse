@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "name": "Smart TV 4K UHD Samsung 50",
+    "price": "75.999,00",
+    "discount": "5",
+    "category": "1",
+    "image": [
+        "tv sam2.webp"
+    ]
+},
+{
+    "id": 2,
+    "name": "Barra de Sonido Samsung HWT450",
+    "price": "42.539,00",
+    "discount": "10",
+    "category": "1",
+    "image": [
+        "barra samsung 4...webp"
+    ]
+}
+]
