@@ -5,4 +5,5 @@
 {"id":5,"first_name":"Bruce","last_name":"Wayne","email":"batman@gmail.com","password":"12345678","category":"user","image":"user_5.jpg"},
 {"id":6,"first_name":"Clark","last_name":"Ken","email":"superMan@gmail.com","password":"123456789","category":"user","image":"user_6.jpg"},
 {"id":7,"first_name":"Pamela Lillian","last_name":"Isley","email":"poisonIvy@gmail.com","password":"123456789a","category":"user","image":"user_7.jpg"},
-{"id":8,"first_name":"Till","last_name":"Liderman","email":"rammstein@gmail.com","password":"123456789ab","category":"user","image":"user_8.jpg"},
+{"id":8,"first_name":"Till","last_name":"Liderman","email":"rammstein@gmail.com","password":"123456789ab","category":"user","image":"user_8.jpg"}
+]
