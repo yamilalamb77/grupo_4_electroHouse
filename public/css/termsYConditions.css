@@ -1,0 +1,9 @@
+
+.terms-cond{
+    background-color: var(--gray);
+}
+.terms{
+    width: 70%;
+    background-color: var(--lightGray);
+    font-size: 14px;
+}

@@ -18,5 +18,8 @@ module.exports = {
     },
     shoppingCart: (req,res) => {
         res.render('product/shoppingCart')
+    },
+    termsYConditions: (req,res) => {
+        res.render('user/termsYConditions')
     }
 }
