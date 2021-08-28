@@ -7,6 +7,17 @@ let methodOverride = require('method-override')
 
 
 
+
+
+/************************************/
+/*--------- ENRUTADORES ------------*/
+/************************************/
+userRouter = require ('./routes/userRouter'); //user
+extraRouter = require('./routes/extraRouter');
+productRouter = require('./routes/productRouter');
+indexRouter = require('./routes/indexRouter');
+adminRouter = require('./routes/admin');
+
 /* VIEWS */
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -18,14 +29,6 @@ app.use(express.urlencoded({ extended : false }));
 app.use(methodOverride('_method'))
 
 
-/************************************/
-/*--------- ENRUTADORES ------------*/
-/************************************/
-userRouter = require ('./routes/userRouter'); //user
-extraRouter = require('./routes/extraRouter')
-productRouter = require('./routes/productRouter')
-indexRouter = require('./routes/indexRouter')
-
 /*************************************/
 /*------------ RUTAS ----------------*/
 /*************************************/
@@ -33,7 +36,8 @@ app.use('/',indexRouter);
 app.use('/', userRouter);
 app.use('/', productRouter);
 app.use('/',extraRouter);
- app.use('*',extraRouter); 
+app.use('*',extraRouter); 
+app.use('/admin', adminRouter);
 
 
 
