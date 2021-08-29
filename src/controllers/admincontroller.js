@@ -9,18 +9,18 @@ products.forEach(product => {
 
 module.exports = {
     signin: (req, res) => {
-        res.render('adminLogin')
+        res.render('admin/adminLogin')
     },
     dashboard: (req, res) => {
-        res.render('adminIndex')
+        res.render('admin/adminIndex')
     }, 
     products: (req, res) => {
-        res.render('adminProducts', {
+        res.render('admin/adminProducts', {
             products
         })
     }, 
     productsCreate: (req, res) => {
-        res.render('adminProductCreateForm', {
+        res.render('admin/adminProductCreateForm', {
             categories, 
             subcategories
         })

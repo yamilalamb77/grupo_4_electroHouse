@@ -35,9 +35,8 @@ app.use(methodOverride('_method'))
 app.use('/',indexRouter);
 app.use('/', userRouter);
 app.use('/', productRouter);
+app.use('/admin',adminRouter);
 app.use('/',extraRouter);
-app.use('*',extraRouter); 
-app.use('/admin', adminRouter);
 
 
 
