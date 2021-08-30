@@ -21,5 +21,8 @@ module.exports = {
     },
     termsYConditions: (req,res) => {
         res.render('user/termsYConditions')
+    },
+    contact: (req,res) => {
+        res.render('user/contact')
     }
 }
