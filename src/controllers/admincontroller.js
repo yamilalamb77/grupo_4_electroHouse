@@ -1,4 +1,4 @@
-const { products, categories, writeProductsJSON } = require('../data/dataBase');
+const { products, categories,banner,users, writeProductsJSON } = require('../data/dataBase');
 
 let subcategories = [];
 products.forEach(product => {
@@ -32,7 +32,7 @@ module.exports = {
             if(product.id > lastId){
                 lastId = product.id
             }
-        })
+        });
 
         let {
             name, 
@@ -58,11 +58,11 @@ module.exports = {
 
         writeProductsJSON(products)
 
-        res.redirect('/admin/products')
+        res.redirect('admin/adminproducts')
     }, 
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
-        res.render('adminProductEditForm', {
+        res.render('admin/adminProductEditForm', {
             categories, 
             subcategories,
             product
@@ -94,7 +94,7 @@ module.exports = {
 
         writeProductsJSON(products)
 
-        res.redirect('/admin/products')
+        res.redirect('admin/products')
     },
     productDestroy: (req, res) => {
         products.forEach( product => {
