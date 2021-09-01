@@ -18,15 +18,16 @@ productRouter = require('./routes/productRouter');
 indexRouter = require('./routes/indexRouter');
 adminRouter = require('./routes/admin');
 
-/* VIEWS */
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 /* Middlewares */
 app.use(express.static('public'));
 app.use(express.json())
 app.use(express.urlencoded({ extended : false }));
 app.use(methodOverride('_method'))
+
+/* VIEWS */
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 
 /*************************************/

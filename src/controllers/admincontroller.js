@@ -1,4 +1,4 @@
-const { products, categories,banner,users, writeProductsJSON } = require('../data/dataBase');
+const { products, categories, writeProductsJSON } = require('../data/dataBase');
 
 let subcategories = [];
 products.forEach(product => {
@@ -53,12 +53,12 @@ module.exports = {
             subcategory,
             image: req.file ? [req.file.filename] : "default-image.png"
         };
-
+        
         products.push(newProduct);
 
         writeProductsJSON(products)
 
-        res.redirect('admin/adminproducts')
+        res.redirect('admin/products')
     }, 
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
