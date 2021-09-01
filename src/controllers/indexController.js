@@ -1,7 +1,15 @@
-const path = require('path');
+const { products , carousel } = require('../data/dataBase');
+//const path = require('path');
+
 
 module.exports = {
     home: (req,res) => {
-        res.render('home')
+        let productsSlider = products.filter(product => product.discount >= 5)
+
+        res.render('home', {
+            titleSlider : "Ofertas especiales",
+            productsSlider,
+            bannerSlides : carousel
+        })
     },
 }

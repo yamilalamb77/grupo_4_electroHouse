@@ -1,3 +1,4 @@
+let { products } = require('../data/dataBase')
 const path = require('path');
 
 module.exports = {
