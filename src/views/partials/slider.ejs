@@ -10,7 +10,12 @@
          <!--<a href="products/detail/<%- product.id %>"></a>-->
             <div class="productDiscount"><%= product.discount %>% OFF</div>
             <img src="/images/productos/<%- product.image[0] %>" alt="">
-            <p class="productName"><%= product.name %></p>
+            <p class="productName"> 
+               <% if (product.name.length > 30) { %>
+                   <%- `${product.name.slice(0,30)}...` %>
+               <% } else { %>
+                   <%= product.name %>
+               <% } %></p>
             <h4 class="productPrice">$<%= product.price %></h4>
          <!--</a>-->
         </div>

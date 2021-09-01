@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<%- include('../partials/head') %> 
+
+
+    
+</body>
+
+<body class="body-iteml" >
+
+	<%- include('../partials/header') %> 
+   <main>
+    <marquee behavior="" direction=""><h2 class="titleCat"><%= category.name %></h2></marquee>
+
+    <section class="hyl">
+		
+
+        <% products.forEach(product => { %>
+		<article class="carousel-cell  prodCat">
+			<a href="productDetail<%- product.id %>">
+			<div class="productDiscount"><%- product.discount %>% OFF</div>
+			<img src="/images/productos/<%- product.image[0] %>" alt="">
+			<p class="productName"> 
+                <% if (product.name.length > 30) { %>
+                    <%- `${product.name.slice(0,30)}...` %>
+                <% } else { %>
+                    <%= product.name %>
+                <% } %></p>
+			<h4 class="productPrice">$<%- product.price %></h4>
+		</a>
+		</article>
+        <% }) %> 
+		
+
+	</section>
+</main>
+	<%- include('../partials/footer') %>
+
+    
+</body>
+</html>

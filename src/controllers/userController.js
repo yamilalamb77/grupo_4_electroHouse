@@ -9,7 +9,19 @@ module.exports = {
         res.render('user/register')
     },
     productDetail: (req,res) => {
-        res.render('user/productDetail')
+
+            let productID = +req.params.id;
+            
+            let product = products.find(product => product.id === productID)
+            let sliderProducts = products.filter(item => item.category === product.category)
+    
+            res.render('user/productDetail', {
+                sliderTitle : "Productos relacionados",
+                sliderProducts,
+                product,
+                categories
+            })
+        
     },
     productLoading: (req,res) => {
         res.render('product/productLoading')
