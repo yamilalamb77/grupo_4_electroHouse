@@ -1,4 +1,4 @@
-const { products , carousel } = require('../data/dataBase');
+const { products , carousel, categories} = require('../data/dataBase');
 //const path = require('path');
 
 
@@ -9,7 +9,8 @@ module.exports = {
         res.render('home', {
             titleSlider : "Ofertas especiales",
             productsSlider,
-            bannerSlides : carousel
+            bannerSlides : carousel,
+            categories
         })
     },
 }

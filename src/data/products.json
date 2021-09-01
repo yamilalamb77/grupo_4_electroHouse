@@ -5,7 +5,8 @@
         "price": "75.999,00",
         "description": "Led Smart. 50 Resolucion Crystal 4K UHD. Potencia de salida de sonido 20W. HDMI x 2. USB x 1. Bluetooth. Wi Fi. Sistema operativo Tizen. Incluye control remoto (one remote). Frecuencia de barrido 60 GHz. HDR",
         "discount": "5",
-        "category": "1",
+        "category": "tv y sonido",
+        "subcategory": "tv",
         "image": [
             "tv sam2.webp"
         ]
@@ -15,8 +16,9 @@
         "name": "Equipo de audio Philco SAP500",
         "price": "20.999,000",
         "description": "Bluetooth - USB - Entrada para Micrófono - Sintonizador Digital - Formatos Soportados MP3 CD WMA.",
-        "discount": "5",
-        "category": "1",
+        "discount": "10",
+        "category": "tv y sonido",
+        "subcategory": "sonido",
         "image": [
             "equipoa.webp"
         ]
@@ -27,7 +29,8 @@
         "price": "73.199",
         "description": "Lavarropas Automatico. Capapacidad de carga: 9 Kg. 14 programas de lavado. Lavado rapido en 30 minutos. Alarma de fin de ciclo. 1200 RPM. Tambor de acero inoxidable. Sistema de lavado: Europeo. Tipo de carga: Frontal. Controles: Digitales.",
         "discount": "5",
-        "category": "2",
+        "category": "Heladera y lavado",
+        "subcategory": "lavado",
         "image": [
             "lavarropas whirl.webp"
         ]
@@ -38,7 +41,8 @@
         "price": "$134.999,00",
         "description": "Twin Cooling Plus crea un entorno favorable para preservar los alimentos frescos en la heladera - Mantiene los alimentos frescos durante más tiempo - 5 formas distintas de utilizar tu heladera - Conv ierte fácilmente tu freezer en una heladera para enfriar todos tus alimentos o cambia a modo off para ahorrar energía - La tecnología Digital Inverter ajusta automáticamente la velocidad del compres or según la demanda de frío de acuerdo a 7 niveles.",
         "discount": "10",
-        "category": "2",
+        "category": "Heladera y lavado",
+        "subcategory":"Heladera",
         "image": [
             "heladera n.webp"
         ]
@@ -49,7 +53,8 @@
         "price": "85.499,10",
         "description": "Lavarropas Automatico. Capapacidad de carga: 10 Kg. 10 programas de lavado. Lavado rapido. Alarma de fin de ciclo. 730 RPM. Tambor de acero inoxidable. Sistema de lavado: Impeller. Tipo de carga: Superior. Controles: Digitales. 3 Niveles de temperatura. Antiarrugas. Doble entrada de agua",
         "discount": "5",
-        "category": "2",
+        "category": "Heladera y lavado",
+        "subcategory": "lavado",
         "image": [
             "lavarropas whil 10.webp"
         ]
@@ -60,7 +65,8 @@
         "price": "53.099,00",
         "description": "Heladera bajo mesada. Volumen neto 76. Volumen bruto 81. Sistema de enfriamiento Cycle Defrost. Control interno de temperatura (min-med-max). Compartimiento extra frio. Portalatas. Tipo de estantes plasticos. Pies regulables. Ubicacion del freezer interior.",
         "discount": "10",
-        "category": "2",
+        "category": "Heladera y lavado",
+        "subcategory":"Heladera",
         "image": [
             "hela chica.webp"
         ]
@@ -71,7 +77,8 @@
         "price": "7.299",
         "description": "Vitrocalefactor. Trabaja por conveccion. Resistencia de alto rendimiento. Termostato. Potencia 2000w. Niveles de calor. Cantidad de elementos 3. Con soporte.",
         "discount": "5",
-        "category": "3",
+        "category": "Climatizacion",
+        "subcategory":"estufa",
         "image": [
             "rojo.webp"
         ]
@@ -82,7 +89,8 @@
         "price": "45.999",
         "description": "El Aire Acondicionado Hitachi trabaja con Gas Refrigerante Ecológico R410a, lo cual te permite disfrutar de una temperatura ideal y a la vez cuidar el medio ambiente. Además, su consumo inteligente te ayudará a ahorrar energía, mientras cuidás el planeta. Anticongelamiento -Seteando el equipo en modo Calor, los sensores de la unidad detectan la temperatura ambiente y previenen la salida de aire frío",
         "discount": "5",
-        "category": "3",
+        "category": "Climatizacion",
+        "subcategory":"aire",
         "image": [
             "aire-hitachi.webp"
         ]
@@ -93,7 +101,8 @@
         "price": "5.999",
         "description": "Caloventor oscilante. Placa ceramica de PTC. 2 Niveles de potencia 750/1500W. Termostato regulable. Forzador de aire que recircula el aire del ambiente. Luz indicadora de encendido. Corte de seguridad por caida y sobrecalentamiento. Moderno diseno. Ocupa poco espacio. Totalmente seguro. No consume oxigeno.",
         "discount": "30",
-        "category": "3",
+        "category": "Climatizacion",
+        "subcategory":"estufa",
         "image": [
             "caloventor-liliana.webp"
         ]
@@ -104,7 +113,8 @@
         "price": "48.999",
         "description": "Frío o calor, Display LCD, Filtros Lavables, Timer Programable, Función Sleep, Fácil de Instalar, No requiere Drenaje: el agua se auto-evapora. Y control remoto multifunción",
         "discount": "5",
-        "category": "3",
+        "category": "Climatizacion",
+        "subcategory":"aire",
         "image": [
             "aire-portatil-philco.webp"
         ]
@@ -115,7 +125,8 @@
         "price": "19.990,00",
         "description": "Tiene una presión de 19 bares y cuenta con un contenedor que alberga hasta 6 cápsulas usadas.",
         "discount": "5",
-        "category": "4",
+        "category": "Pequeños electro",
+        "subcategory":"cocina",
         "image": [
             "cafetera-nespresso.webp"
         ]
@@ -125,8 +136,8 @@
         "name": "Exprimidor de jugo Ken Brown",
         "price": "4.399,000",
         "description": "Exprimidor de citricos. Capacidad 500 ml. Motor de 25W. Jarra Removible, transparente y graduada. 1 nivel de Potencia. De muy facil limpieza y desarmado. Doble cono para distintos tamanos de fruta. Filtro plastico removible. Apoyos de goma antideslizante. Alimentacion 220V 50Hz.",
-        "discount": "10",
-        "category": "4",
+        "category": "Pequeños electro",
+        "subcategory":"cocina",
         "image": [
             "expromidora-kenbrown.webp"
         ]
@@ -136,8 +147,8 @@
         "name": "tostadora-moulinex LT2608-AR",
         "price": "6.499,00",
         "description": "Potencia 720W. 2 Ranuras para todo tipo de pan. 7 Niveles de tostado. Funciones: stop, descongelar y recalentar. Cuerpo de metal. Paredes frias al tacto. Bandeja colectora de migas. Extra elevacion para sacar el pan mas facil. Enrollacable.",
-        "discount": "5",
-        "category": "4",
+        "category": "Pequeños electro",
+        "subcategory":"cocina",
         "image": [
             "tostadora-moulinex.webp"
         ]
@@ -147,8 +158,8 @@
         "name": "Multiprocesadora con vaso Atma LP8425P",
         "price": "13.499,10",
         "description": "Multiprocesadora. Velocidades 2. Boton pusador. Capacidad Bowl 1.2L. Accesorios cuchilla acero inoxidable, amasador, rebanador, rallador, procesador de verduras, exprimidor y emulsionador. Pica, ralla, rebana, tritura, amasa, exprime, graniza hielo. Cuchillas de acero",
-        "discount": "10",
-        "category": "4",
+        "category": "Pequeños electro",
+        "subcategory":"cocina",
         "image": [
             "multiprocesadora-atma.webp"
         ]
