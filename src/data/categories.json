@@ -2,19 +2,19 @@
     {
         "id" : 1,
         "name" : "tv y sonido",
-        "code" : "tv y sonido",
+        "code" : "tvysonido",
         "image": "cat_tvYSonido.jpg"
     },
     {
         "id" : 2,
         "name" : "Heladera y lavado",
-        "code" : "Heladera y lavado",
+        "code" : "Heladeraylavado",
         "image": "cat_HeladeraYLavado.jpg"
     },
     {
         "id" : 3,
         "name" : "Climatizacion",
-        "code" : "Climatizacion",
+        "code" : "Climatizaciones",
         "image": "cat_climatizacion.jpg"
     },
     {
