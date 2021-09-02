@@ -1,15 +1,13 @@
 const express = require('express'); //requiero express
 let router = express.Router()
-const { productDetail, category,climatizacion , electro , tvYSonido , heladeraYLavado} = require('../controllers/productController');
+const { productDetail, category} = require('../controllers/productController');
 
-/*router.get('/climatizacion', climatizacion);
-router.get('/electro', electro);
-router.get('/tvYSonido', tvYSonido);
-router.get('/heladeraYLavado', heladeraYLavado);*/
 
-/* GET - Product Detail */
+/* GET - detalle de productos*/
 router.get('/detail/:id', productDetail)
-/* GET - List products for category */
+
+
+/* GET - Lista productos de categorias */
 router.get('/category/:id', category) 
 
 

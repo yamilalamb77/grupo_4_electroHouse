@@ -17,7 +17,7 @@
 
         <% products.forEach(product => { %>
 		<article class="carousel-cell  prodCat">
-			<a href="productDetail<%- product.id %>">
+			<a href="/products/detail/<%- product.id %>"></a>
 			<div class="productDiscount"><%- product.discount %>% OFF</div>
 			<img src="/images/productos/<%- product.image[0] %>" alt="">
 			<p class="productName"> 

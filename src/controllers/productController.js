@@ -1,19 +1,7 @@
 const { products, categories } = require('../data/dataBase')
-/*const path = require('path');*/
 
 module.exports = {
-    /*climatizacion: (req,res) => {
-        res.render('user/climatizacion')
-    },
-    electro: (req,res) => {
-        res.render('user/electro')
-    },
-    tvYSonido: (req,res) => {
-        res.render('user/tvYSonido')
-    },
-    heladeraYLavado: (req,res) => {
-        res.render('user/heladeraYLavado')
-    }*/
+
     productDetail: (req,res) => {
 
         let productID = +req.params.id;
@@ -29,6 +17,7 @@ module.exports = {
         })
     
 },
+
     category: (req, res) => {
         /* Busco la categoría solicitada */
         let category = categories.find(category => {
