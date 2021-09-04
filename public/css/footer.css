@@ -2,7 +2,7 @@
 /* GENERAL FOOTER */
 
 .footer {
-    font-family: var(--font_poppins);
+    font-family: roboto;
     max-width: 1200px;
     margin: 0 auto;
     
@@ -48,7 +48,7 @@
 /* FOOTER */
 
 .footer {
-    /*border-radius: 15px 15px 0px 0px;*/
+   
     background-color: #232323
 }
 
@@ -199,7 +199,6 @@
 
     .footer .navegacion {
         width: 25%;
-       /* border-right: 2px solid #fff;*/
         margin: 0;
     }
 
@@ -215,7 +214,6 @@
 
     .footer .contacto {
         width: 28%;
-        /*border-left: 2px solid #fff;*/
     }
 
     .footer .contacto div {

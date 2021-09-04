@@ -74,7 +74,11 @@ display: none;
 /* Productos */
 
 .products {
-font-family: var(--font_poppins);
+    font-family: roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .product {
@@ -127,6 +131,7 @@ margin: 10px auto;
 @media screen and (min-width: 768px) {
 .products {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
