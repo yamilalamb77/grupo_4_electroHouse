@@ -35,7 +35,7 @@ app.set('view engine', 'ejs');
 /*************************************/
 app.use('/',indexRouter);
 app.use('/', userRouter);
-app.use('/', productRouter);
+app.use('/products', productRouter);
 app.use('/admin',adminRouter);
 app.use('/',extraRouter);
 
