@@ -1,15 +1,16 @@
-let { products } = require('../data/dataBase')
+const { categories, users, writeUsersJSON } = require('../data/dataBase')
 const path = require('path');
 
 module.exports = {
     login: (req,res) => {
-        res.render('user/login')
+        res.render('user/login') ,{
+            categories
+        }
     },
     register: (req,res) => {
-        res.render('user/register')
-    },
-    productDetail: (req,res) => {
-        res.render('user/productDetail')
+        res.render('user/register'), {
+            categories
+        }
     },
     productLoading: (req,res) => {
         res.render('product/productLoading')
