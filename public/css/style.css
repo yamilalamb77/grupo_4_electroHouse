@@ -10,7 +10,7 @@
 
 @import url('footer.css');
 @import url('productDetail.css');
-
+@import url('contact.css');
 
 
 /*yami*/
@@ -27,4 +27,3 @@
 @import url('editProfile.css');
 @import url('productLoading.css');
 @import url('termsYConditions.css');
-@import url('contact.css');

@@ -66,7 +66,7 @@
         "description": "Twin Cooling Plus crea un entorno favorable para preservar los alimentos frescos en la heladera - Mantiene los alimentos frescos durante más tiempo - 5 formas distintas de utilizar tu heladera - Conv ierte fácilmente tu freezer en una heladera para enfriar todos tus alimentos o cambia a modo off para ahorrar energía - La tecnología Digital Inverter ajusta automáticamente la velocidad del compres or según la demanda de frío de acuerdo a 7 niveles.",
         "discount": "10",
         "category": "2",
-        "subcategory":"Heladera",
+        "subcategory": "Heladera",
         "image": [
             "heladera n.webp"
         ]
@@ -90,7 +90,7 @@
         "description": "Heladera bajo mesada. Volumen neto 76. Volumen bruto 81. Sistema de enfriamiento Cycle Defrost. Control interno de temperatura (min-med-max). Compartimiento extra frio. Portalatas. Tipo de estantes plasticos. Pies regulables. Ubicacion del freezer interior.",
         "discount": "10",
         "category": "2",
-        "subcategory":"Heladera",
+        "subcategory": "Heladera",
         "image": [
             "hela chica.webp"
         ]
@@ -102,7 +102,7 @@
         "description": "Vitrocalefactor. Trabaja por conveccion. Resistencia de alto rendimiento. Termostato. Potencia 2000w. Niveles de calor. Cantidad de elementos 3. Con soporte.",
         "discount": "5",
         "category": "3",
-        "subcategory":"estufa",
+        "subcategory": "estufa",
         "image": [
             "rojo.webp"
         ]
@@ -114,7 +114,7 @@
         "description": "El Aire Acondicionado Hitachi trabaja con Gas Refrigerante Ecológico R410a, lo cual te permite disfrutar de una temperatura ideal y a la vez cuidar el medio ambiente. Además, su consumo inteligente te ayudará a ahorrar energía, mientras cuidás el planeta. Anticongelamiento -Seteando el equipo en modo Calor, los sensores de la unidad detectan la temperatura ambiente y previenen la salida de aire frío",
         "discount": "5",
         "category": "3",
-        "subcategory":"aire",
+        "subcategory": "aire",
         "image": [
             "aire-hitachi.webp"
         ]
@@ -126,7 +126,7 @@
         "description": "Caloventor oscilante. Placa ceramica de PTC. 2 Niveles de potencia 750/1500W. Termostato regulable. Forzador de aire que recircula el aire del ambiente. Luz indicadora de encendido. Corte de seguridad por caida y sobrecalentamiento. Moderno diseno. Ocupa poco espacio. Totalmente seguro. No consume oxigeno.",
         "discount": "30",
         "category": "3",
-        "subcategory":"estufa",
+        "subcategory": "estufa",
         "image": [
             "caloventor-liliana.webp"
         ]
@@ -138,7 +138,7 @@
         "description": "Frío o calor, Display LCD, Filtros Lavables, Timer Programable, Función Sleep, Fácil de Instalar, No requiere Drenaje: el agua se auto-evapora. Y control remoto multifunción",
         "discount": "5",
         "category": "3",
-        "subcategory":"aire",
+        "subcategory": "aire",
         "image": [
             "aire-portatil-philco.webp"
         ]
@@ -150,7 +150,7 @@
         "description": "Tiene una presión de 19 bares y cuenta con un contenedor que alberga hasta 6 cápsulas usadas.",
         "discount": "5",
         "category": "4",
-        "subcategory":"cocina",
+        "subcategory": "cocina",
         "image": [
             "cafetera-nespresso.webp"
         ]
@@ -161,7 +161,7 @@
         "price": "4.399,000",
         "description": "Exprimidor de citricos. Capacidad 500 ml. Motor de 25W. Jarra Removible, transparente y graduada. 1 nivel de Potencia. De muy facil limpieza y desarmado. Doble cono para distintos tamanos de fruta. Filtro plastico removible. Apoyos de goma antideslizante. Alimentacion 220V 50Hz.",
         "category": "4",
-        "subcategory":"cocina",
+        "subcategory": "cocina",
         "image": [
             "expromidora-kenbrown.webp"
         ]
@@ -172,7 +172,7 @@
         "price": "6.499,00",
         "description": "Potencia 720W. 2 Ranuras para todo tipo de pan. 7 Niveles de tostado. Funciones: stop, descongelar y recalentar. Cuerpo de metal. Paredes frias al tacto. Bandeja colectora de migas. Extra elevacion para sacar el pan mas facil. Enrollacable.",
         "category": "4",
-        "subcategory":"cocina",
+        "subcategory": "cocina",
         "image": [
             "tostadora-moulinex.webp"
         ]
@@ -183,7 +183,7 @@
         "price": "13.499,10",
         "description": "Multiprocesadora. Velocidades 2. Boton pusador. Capacidad Bowl 1.2L. Accesorios cuchilla acero inoxidable, amasador, rebanador, rallador, procesador de verduras, exprimidor y emulsionador. Pica, ralla, rebana, tritura, amasa, exprime, graniza hielo. Cuchillas de acero",
         "category": "4",
-        "subcategory":"cocina",
+        "subcategory": "cocina",
         "image": [
             "multiprocesadora-atma.webp"
         ]

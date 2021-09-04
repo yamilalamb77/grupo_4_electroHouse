@@ -6,7 +6,10 @@ body {
 
 /* SIGNIN */
 
-
+.img-adm{
+  max-inline-size: -webkit-fill-available;
+  max-inline-size: -moz-available;  
+}
 
 body.signin {
   display: flex;
