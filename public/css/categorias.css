@@ -36,10 +36,10 @@
 }
 
 /* Style the button that is used to open the sidepanel */
-.openbtn {
+.openbtnl {
   font-size: 20px;
   cursor: pointer;
-  background-color: var(--primary);
+  background-color: #000000;
   color: white;
   padding: 10px 15px;
   border-radius: 10px;
@@ -82,7 +82,7 @@ display: none;
 }
 
 .product {
-width: 250px;
+width: 230px;
 margin: 10px auto;
 background-color: #fff;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);

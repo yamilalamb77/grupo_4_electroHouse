@@ -28,3 +28,10 @@
 @import url('productLoading.css');
 @import url('termsYConditions.css');
 @import url('contact.css');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}

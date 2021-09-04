@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %>
-    <body>
-        <%- include('./partials/header') %>
-    </body>
+       <%- include('./partials/head') %>
     <body class="body-iteml">
-        
-        <main class="home-m">
+        <%- include('./partials/header') %>
 
-            <!-- CAROUSEL -->
-            <%- include('./partials/carousel') %>  
-            <!-- END CAROUSEL -->
+            <main class="home-m">
+
+                <!-- CAROUSEL -->
+                <%- include('./partials/carousel') %>
+                    <!-- END CAROUSEL -->
 
 
-            <!-- CATEGORIES -->
+                    <!-- CATEGORIES -->
 
-            <div class="mancha2">
-                <img src="/" alt="">
-            </div>
-
-            <section class="categories-section">
-                <div class="categoriesH">
-                    <div class="category-card">
-                        <a href="/products/category/1"><img src="/images/categorias/cat_tvYSonido.jpg" alt=""></a>
-                        <p class="fondo" href="#">TV Y SONIDO</p>
+                    <div class="mancha2">
+                        <img src="/" alt="">
                     </div>
-                    <div class="category-card">
-                        <a href="/products/category/3"> <img src="/images/categorias/cat_climatizacion.jpg" alt=""></a>
-                        <p class="fondo" href="#">CLIMATIZACIÓN</p>
-                    </div>
-                    <div class="category-card">
-                        <a href="/products/category/4"> <img src="/images/categorias/cat_pequeñosElectro.jpg" alt=""></a>
-                        <p class="fondo" href="#">PEQUEÑOS ELECTRO</p>
-                    </div>
-                    <div class="category-card">
-                        <a href="/products/category/2"> <img src="/images/categorias/cat_HeladeraYLavado.jpg" alt=""></a>
-                        <p class="fondo" href="#">HELADERA Y LAVADO</p>
-                    </div>
-                </div>
 
-            </section>
-            <!-- END CATEGORIES -->
+                    <section class="categories-section">
+                        <div class="categoriesH">
+                            <div class="category-card">
+                                <a href="/products/category/1"><img src="/images/categorias/cat_tvYSonido.jpg"
+                                        alt=""></a>
+                                <p class="fondo" href="#">TV Y SONIDO</p>
+                            </div>
+                            <div class="category-card">
+                                <a href="/products/category/3"> <img src="/images/categorias/cat_climatizacion.jpg"
+                                        alt=""></a>
+                                <p class="fondo" href="#">CLIMATIZACIÓN</p>
+                            </div>
+                            <div class="category-card">
+                                <a href="/products/category/4"> <img src="/images/categorias/cat_pequeñosElectro.jpg"
+                                        alt=""></a>
+                                <p class="fondo" href="#">PEQUEÑOS ELECTRO</p>
+                            </div>
+                            <div class="category-card">
+                                <a href="/products/category/2"> <img src="/images/categorias/cat_HeladeraYLavado.jpg"
+                                        alt=""></a>
+                                <p class="fondo" href="#">HELADERA Y LAVADO</p>
+                            </div>
+                        </div>
 
-             <!-- SPECIAL OFFERS -->
+                    </section>
+                    <!-- END CATEGORIES -->
 
-            <%- include('./partials/slider.ejs') %>
+                    <!-- SPECIAL OFFERS -->
 
-             <!-- END SPECIAL OFFERS -->
+                    <%- include('./partials/slider.ejs') %>
 
-          
+                        <!-- END SPECIAL OFFERS -->
 
 
-        </main>
 
-        <%- include('./partials/footer') %>
 
-            <!-- JavaScript -->
-            <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+            </main>
+
+            <%- include('./partials/footer') %>
+
+                <!-- JavaScript -->
+                <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     </body>
 
 </html>
