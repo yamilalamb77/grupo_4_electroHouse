@@ -58,7 +58,7 @@ module.exports = {
 
         writeProductsJSON(products)
 
-        res.redirect('/admin/products')
+        res.redirect('admin/products')
     }, 
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
@@ -95,7 +95,7 @@ module.exports = {
         writeProductsJSON(products)
 
 
-        res.redirect('admin/products')
+        res.redirect('/admin/products')
     },
     productDestroy: (req, res) => {
         products.forEach( product => {
