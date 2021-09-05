@@ -9,7 +9,7 @@ const{
     productEdit, 
     productDestroy,
     productUpdate} = require('../controllers/adminController');
-
+    let uploadProductFile = require('../middlewares/subirProductsArchivos')
     
 
 /* GET - Admin Signin */
