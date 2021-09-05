@@ -12,6 +12,7 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 15px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  
 }
 
 /* The sidepanel links */
@@ -95,6 +96,7 @@ justify-content: center;
 margin: 10px;
 transition: all 1s ease;
 z-index: 1;
+border: 1px solid black;
 }
 
 .product:hover {
