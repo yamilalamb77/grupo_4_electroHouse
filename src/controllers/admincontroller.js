@@ -62,7 +62,7 @@ module.exports = {
     }, 
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
-        res.render('/admin/adminProductEditForm', {
+        res.render('admin/adminProductEditForm', {
             categories, 
             subcategories,
             product
