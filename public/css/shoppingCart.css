@@ -1,5 +1,11 @@
 .shoppingCart {
   font-family: var(--roboto);
+  background-image: url(/images/40-409499_material-wallpaper-4k.jpg);
+    background-size: cover;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
 }
 .shoppingCart .item {

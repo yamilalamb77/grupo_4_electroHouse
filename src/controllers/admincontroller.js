@@ -89,10 +89,11 @@ module.exports = {
                 product.category = category,
                 product.subcategory = subcategory,
                 product.image = req.file ? [req.file.filename] : product.image
+                console.log(product)
             }
         })
-
         writeProductsJSON(products)
+
 
         res.redirect('admin/products')
     },

@@ -9,8 +9,9 @@ const{
     productEdit, 
     productDestroy,
     productUpdate} = require('../controllers/adminController');
-    let uploadProductFile = require('../middlewares/subirProductsArchivos')
-    
+let uploadProductFile = require('../middlewares/subirProductsArchivos')
+
+
 
 /* GET - Admin Signin */
 router.get('/', signin);
@@ -20,10 +21,10 @@ router.get('/index', dashboard);
 router.get('/products', products);
 /* Create Product*/
 router.get('/products/create', productsCreate);
-router.post('/products/create');
+router.post('/products/create', uploadProductFile.single("image"), productStore);
 /* Edit Product*/
 router.get('/products/edit/:id', productEdit);
-router.put('/products/edit/:id');
+router.put('/products/edit/:id', uploadProductFile.single("image"), productUpdate);
 /* Edit Product*/
 router.delete('/products/delete/:id', productDestroy);
 
