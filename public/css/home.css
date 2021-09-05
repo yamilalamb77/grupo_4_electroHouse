@@ -19,10 +19,13 @@
 /* OFERTAS */
 
 .special-offers {
-    background: linear-gradient(95deg, black, #008f74);
+    /*background: linear-gradient(95deg, black, #008f74);*/
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 30px;
+    background-color: black;
+    border: 1px solid white;
+    
 }
 
 .section__title {

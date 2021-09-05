@@ -9,8 +9,8 @@ module.exports = {
         let product = products.find(product => product.id === productID)
         let productsSlider = products.filter(item => item.category === product.category)
 
-        res.render('user/productDetail', {
-            sliderTitle : "Productos relacionados",
+        res.render('productDetail', {
+            titleSlider  : "Productos relacionados",
             productsSlider,
             product,
             categories

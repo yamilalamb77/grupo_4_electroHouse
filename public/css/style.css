@@ -3,6 +3,7 @@
 @import url('home.css');
 @import url('product-slider.css');
 @import url('categorias.css');
+@import url('background.css');
 
 
 
@@ -27,9 +28,8 @@
 @import url('editProfile.css');
 @import url('productLoading.css');
 @import url('termsYConditions.css');
-<<<<<<< HEAD
-=======
 @import url('contact.css');
+
 
 
 * {
@@ -37,4 +37,3 @@
     box-sizing: border-box;
     padding: 0;
 }
->>>>>>> f934e4e0876cbca27827ada540c1f8b0c46a9780
