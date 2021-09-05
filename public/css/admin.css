@@ -97,6 +97,11 @@ body {
       top: 5rem;
     }
   }
+  @media (min-width: 480px)  {
+    .sidebar {
+      top: 5rem;
+    }
+  }
   
   .sidebar-sticky {
     position: relative;
