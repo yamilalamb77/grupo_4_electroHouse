@@ -27,3 +27,14 @@
 @import url('editProfile.css');
 @import url('productLoading.css');
 @import url('termsYConditions.css');
+<<<<<<< HEAD
+=======
+@import url('contact.css');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+>>>>>>> f934e4e0876cbca27827ada540c1f8b0c46a9780
