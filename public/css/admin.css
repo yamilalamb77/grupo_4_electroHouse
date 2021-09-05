@@ -55,6 +55,11 @@ body.signin {
   border-color: #F6F6F6;
 }
 
+.btn-primary:hover{
+  color: #008F74;
+  background-color:#d6d5d5 ;
+  border-color: #F6F6F6;
+}
 
 
 /* DASHBOARD */
@@ -155,6 +160,13 @@ body {
     border-color: rgba(255, 255, 255, .1);
   }
   
+  .form-control-dark::-webkit-input-placeholder { 
+    color: var(--white);
+   } /* WebKit */
+  .form-control-dark::-moz-placeholder {
+     color: var(--white); 
+    } /* Firefox 19+ */
+
   .form-control-dark:focus {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
