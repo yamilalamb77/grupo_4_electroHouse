@@ -47,6 +47,7 @@
     height: 100%;
     object-fit: contain;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 .productDetail .productData-container {
@@ -88,10 +89,12 @@
 
 .productDetail  .productData-container .productName {
     margin: 15px 0;
+    color: white;
 }
 
 .productDetail  .productData-container .productPrice {
     font-size: 1.5rem;
+    color: white;
 }
 
 .productDetail  .productData-container .button-addToCart {
@@ -151,6 +154,10 @@
     color: white;
 }
 
+.opioniones {
+    color: white;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -189,6 +196,7 @@
 
     .productDetail  .productData-container .productPrice {
         font-size: 2rem;
+        color: white;
     }
 
     .productDetail-container .productDescription .description h5{
