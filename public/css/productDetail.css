@@ -8,11 +8,14 @@
 }
 
 .productDetail {
-    background-color:black ;
+    background-color:white ;
     display: flex;
     flex-direction: column;
     padding: 10px;
     color: black;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid black;
 }
 
 .productDetail img {
@@ -35,7 +38,7 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.2 );
     margin: 5px 0;
     border-radius: 10px;
-    border: 1px solid black;
+    
 }
 
 .productDetail .images-container .mainImage {
@@ -46,7 +49,6 @@
 .productDetail .images-container .mainImage img {
     height: 100%;
     object-fit: contain;
-    border: 1px solid black;
     border-radius: 10px;
 }
 
@@ -58,7 +60,7 @@
     flex-direction: column;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
     padding: 10px;
-    border-radius: 10px;
+    border-top: 1px solid black;
 }
 
 .productDetail  .productData-container .counter {
@@ -89,12 +91,12 @@
 
 .productDetail  .productData-container .productName {
     margin: 15px 0;
-    color: white;
+    color: black;
 }
 
 .productDetail  .productData-container .productPrice {
     font-size: 1.5rem;
-    color: white;
+    color: black;
 }
 
 .productDetail  .productData-container .button-addToCart {
@@ -115,14 +117,14 @@
 
 .productDetail-container .productDescription {
     display: flex;
-    color: white;
+    color: black;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
     border: 1px solid black;
-    background: black;
+    background: white;
     border: 1px solid white;
 }
 
@@ -138,7 +140,7 @@
     padding-bottom: 20px;
     text-align: justify;
     border-bottom: 1px solid black;
-    color: white;
+    color: black;
 }
 
 .productDetail-container .productDescription .comments h5{
@@ -148,14 +150,14 @@
 }
 
 .productDetail-container .productDescription .comments .comment {
-    background:  black;
+    background:  white;
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    color: black;
 }
 
 .opioniones {
-    color: white;
+    color: black;
 }
 
 
@@ -165,38 +167,40 @@
 
 @media screen and (min-width: 768px) {
     .productDetail {
-        flex-direction: row;
+        flex-direction: row-reverse;
         padding: 10px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
         border-radius: 10px;
         margin: 10px;
-        border: 1px solid white;
+        border: 1px solid black;
     }
 
     .productDetail .productData-container {
         width: 40%;
         display: flex;
-        color: var(--dark-blue);
+        color: black;
         justify-content: space-evenly;
         align-items: center;
         box-shadow: none;
         padding: 25px;
-        border-left: 1px solid black;
+        border-right: 1px solid black;
         border-radius: 0;
+        border-top: none;
+        flex-wrap: wrap-reverse;
     }
 
     .opioniones {
-        color: white;
+        color: black;
     }
 
     .productDetail  .productData-container .productName {
         font-size: 1.5rem;
-        color: white;
+        color: black;
     }
 
     .productDetail  .productData-container .productPrice {
         font-size: 2rem;
-        color: white;
+        color: black;
     }
 
     .productDetail-container .productDescription .description h5{
