@@ -28,11 +28,11 @@ module.exports = {
     productStore: (req, res) => {
         let lastId = 1;
 
-        products.forEach(product => {
-            if(product.id > lastId){
+        products.forEach(product => { /* aca trabajamos con el array de producto */
+            if(product.id > lastId){ /* si el producto que recoriamos era mayor que lastId, le asignamos el valor de la id ese producto y se guarda en la variable */
                 lastId = product.id
             }
-        });
+        })
 
         let {
             name, 
@@ -40,25 +40,26 @@ module.exports = {
             discount, 
             category, 
             subcategory, 
-            description
-            } = req.body;
+            description 
+            } = req.body; /* aca se destructura el req.body, capture los datos del req.body  .se traen los campos de nuestro formulario  */
 
+            /* aca armo el nuevo producto */
         let newProduct = {
-            id: lastId + 1,
+            id: lastId + 1, /*  */
             name,
             price,
             description,
             discount,
             category,
             subcategory,
-            image: req.file ? [req.file.filename] : "default-image.png"
+            image: /* req.file ? [req.file.filename] :  */"default-image.png"
         };
         
-        products.push(newProduct);
+        products.push(newProduct); /* le paso el producto que acabo de crear */
 
-        writeProductsJSON(products)
+        writeProductsJSON(products) /* se escribe en el json el array nuevo */
 
-        res.redirect('admin/products')
+        res.redirect('/admin/products') /* la que me muestra el listo de productos */
     }, 
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
@@ -88,7 +89,7 @@ module.exports = {
                 product.discount = discount,
                 product.category = category,
                 product.subcategory = subcategory,
-                product.image = req.file ? [req.file.filename] : product.image
+                product.image =/*  req.file ? [req.file.filename] :  */product.image
             }
         })
 
