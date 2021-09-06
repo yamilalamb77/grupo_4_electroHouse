@@ -16,13 +16,16 @@ a {
 ul {
     list-style: none;
 }
+
+/*botones*/
+
 /* 
 .btn {
     width: fit-content;
     width: -moz-fit-content;
     padding: 10px 20px;
     color: white;
-    font-family: var(--font_baloo);
+ 
     font-weight: bold;
     border-radius: 1rem;
 }

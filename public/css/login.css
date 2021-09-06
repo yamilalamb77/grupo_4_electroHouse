@@ -10,7 +10,7 @@
      margin-top: auto;
     font-weight: bold;
     height: 44px;
-    padding: 5px;
+    margin: 5px;
     
 }  
 
@@ -167,13 +167,12 @@ font-weight: lighter;
 }
 /*botones*/
 .login .button-container{
-    align-items: center;/*para aliniar al cross axis*/
-  
+    align-items: center;
 }
 
 .login .btn{
 border-radius: 0.5rem;
-cursor: pointer;/*va a genererar que cuando pase por el elemnto aparezca la manito insinuando que se ´puede clickear*/
+cursor: pointer;
 height: 2.5rem;
 margin: 5px;
 text-transform: uppercase;
