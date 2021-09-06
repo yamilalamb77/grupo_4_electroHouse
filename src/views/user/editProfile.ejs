@@ -6,7 +6,7 @@
     <div class="form-container">
         <h2><b> Editar mi perfil</b>│¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
         
-            <form action="" method= "post">
+        <form action="" method="post" enctype="multipart/form-data">
                 <div class="profile-box" id="avatar-box">
                    <!--  <h4 class="profile-subtitle">Avatar</h4>
                     <div class="avatar">
@@ -17,7 +17,7 @@
                             <span><i class="fas fa-camera txt-send"></i></span>
                           </div>
                        <!--    <p class="txt-send">Agregar imagen</p> -->
-                        <input type="file" multiple name="image[]" id="btn-send">
+                        <input type="file" multiple name="images[]" id="file">
                     </div>
                 </div>
                 <div class="profile-form">
@@ -97,6 +97,8 @@
                 
             </form>
     </div>
+   
+    <script src="/js/image.js"></script>
     <%- include('../partials/footer.ejs')  %>
 </body>
 </html>

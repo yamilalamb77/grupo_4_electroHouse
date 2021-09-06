@@ -3,7 +3,8 @@ const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
 let port = 3030;
-let methodOverride = require('method-override')
+let methodOverride = require('method-override');
+ const userLogs = require('./middlewares/userLogs'); 
 
 
 
@@ -23,9 +24,10 @@ adminRouter = require('./routes/admin');
 app.use(express.static('public'));
 app.use(express.json())
 app.use(express.urlencoded({ extended : false }));
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'));
+app.use(userLogs);
 
-/* VIEWS */
+ /* VIEWS */
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

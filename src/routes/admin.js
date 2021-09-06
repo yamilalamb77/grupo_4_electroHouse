@@ -1,5 +1,8 @@
 const express = require('express'); //requiero express
-const router = express.Router()
+const router = express.Router();
+let controller = require('../controllers/admincontroller');
+let userAdmin = require('../middlewares/userAdmin');
+
 const{ 
     signin,
     dashboard, 
@@ -12,9 +15,12 @@ const{
 let uploadProductFile = require('../middlewares/subirProductsArchivos')
 
 
+  router.get('/admin', userAdmin, controller.admin);
+
+
 
 /* GET - Admin Signin */
-router.get('/', signin);
+router.get('/', signin );
 /* GET - Admin Dashboard */
 router.get('/index', dashboard);
 /* GET - Admin products*/

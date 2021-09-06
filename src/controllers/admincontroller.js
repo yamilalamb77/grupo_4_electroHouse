@@ -8,6 +8,12 @@ products.forEach(product => {
 });
 
 module.exports = {
+    admin : (req,res) => {
+        res.render('admin', {
+            user: req.query.user
+        })
+    
+    },
     signin: (req, res) => {
         res.render('admin/adminLogin')
     },
