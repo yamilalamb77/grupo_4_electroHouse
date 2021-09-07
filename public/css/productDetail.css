@@ -109,10 +109,18 @@
     margin: 5px;
     text-transform: uppercase;
     width: 12rem;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 10px;
     background-color: white;
     color: black;
+}
+
+
+.productDetail  .productData-container .button-addToCart .btn-ad-btn-ad-primary{
+width: fit-content;
+width: -moz-fit-content;
+background: var(--green);
+transition: all 2s ease;
 }
 
 .productDetail-container .productDescription {

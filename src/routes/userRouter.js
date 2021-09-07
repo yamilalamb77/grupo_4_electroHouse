@@ -8,7 +8,7 @@ const { register ,
     logout,
     editProfile,
     updateProfile,
-    shoppingCart, productLoading,} = require('../controllers/userController');
+ productLoading,} = require('../controllers/userController');
 const loginValidator = require('../validations/loginValidator')
 const registerValidator = require('../validations/registerValidator')
 const uploadUserAvatar = require('../middlewares/subirUserAvatar')
@@ -28,7 +28,7 @@ router.get('/editProfile', editProfile);
 router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'),updateProfile);
 
 router.get('/productLoading', productLoading);
-router.get('/shoppingCart', shoppingCart);
+
 
 
 
