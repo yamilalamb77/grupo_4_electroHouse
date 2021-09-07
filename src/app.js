@@ -2,17 +2,14 @@ const express = require('express'); //requiero express
 const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
+let cookieParser = require('cookie-parser')
+let session = require('express-session');
 let port = 3030;
 let methodOverride = require('method-override');
  const userLogs = require('./middlewares/userLogs'); 
 
-
-
-
-
-/************************************/
 /*--------- ENRUTADORES ------------*/
-/************************************/
+
 userRouter = require ('./routes/userRouter'); //user
 extraRouter = require('./routes/extraRouter');
 productRouter = require('./routes/productRouter');
@@ -25,6 +22,13 @@ app.use(express.static('public'));
 app.use(express.json())
 app.use(express.urlencoded({ extended : false }));
 app.use(methodOverride('_method'));
+app.use(cookieParser())
+app.use(session({
+    secret: "electroHouse",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 30000 }
+}))
 app.use(userLogs);
 
  /* VIEWS */

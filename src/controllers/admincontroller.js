@@ -1,4 +1,5 @@
 const { products, categories, writeProductsJSON } = require('../data/dataBase');
+const { validationResult } = require('express-validator')
 
 let subcategories = [];
 products.forEach(product => {
@@ -18,27 +19,42 @@ module.exports = {
         res.render('admin/adminLogin')
     },
     dashboard: (req, res) => {
-        res.render('admin/adminIndex')
+        res.render('admin/adminIndex'), {
+            session: req.session
+        }
+        
     }, 
     products: (req, res) => {
         res.render('admin/adminProducts', {
-            products
+            products,
+            session: req.session
         })
     }, 
     productsCreate: (req, res) => {
         res.render('admin/adminProductCreateForm', {
             categories, 
-            subcategories
+            subcategories,
+            session: req.session
         })
     }, 
     productStore: (req, res) => {
-        let lastId = 1;
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()){
+            let lastId = 1;
 
         products.forEach(product => {
             if(product.id > lastId){
                 lastId = product.id
             }
-        });
+        })
+
+        let arrayImages = [];
+        if(req.files){
+            req.files.forEach(image => {
+                arrayImages.push(image.filename)
+            })
+        }
 
         let {
             name, 
@@ -57,7 +73,7 @@ module.exports = {
             discount,
             category,
             subcategory,
-            image: req.file ? [req.file.filename] : "default-image.png"
+            image: arrayImages.length > 0 ? arrayImages : "default-image.png"
         };
         
         products.push(newProduct);
@@ -65,16 +81,36 @@ module.exports = {
         writeProductsJSON(products)
 
         res.redirect('/admin/products')
-    }, 
+    }else {
+        res.render('admin/adminProductCreateForm', {
+            subcategories,
+            categories,
+            errors: errors.mapped(),
+            old: req.body,
+            session: req.session
+        })
+    } 
+},
     productEdit: (req, res) => {
         let product = products.find(product => product.id === +req.params.id)
         res.render('admin/adminProductEditForm', {
             categories, 
             subcategories,
-            product
+            product,
+            session: req.session
         })
     },
     productUpdate: (req, res) => {
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()){
+
+        let arrayImages = [];
+        if(req.files){
+            req.files.forEach(image => {
+                arrayImages.push(image.filename)
+            })
+        }
         
         let {
             name, 
@@ -102,7 +138,16 @@ module.exports = {
 
 
         res.redirect('/admin/products')
-    },
+    }else {
+        res.render('admin/adminProductEditForm', {
+            subcategories,
+            categories,
+            errors: errors.mapped(),
+            old: req.body,
+            session: req.session
+        })
+    }
+},
     productDestroy: (req, res) => {
         products.forEach( product => {
             if(product.id === +req.params.id){
@@ -115,4 +160,5 @@ module.exports = {
 
         res.redirect('/admin/products')
     }
+
 }
