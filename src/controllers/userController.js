@@ -184,14 +184,7 @@ module.exports = {
         /*  product */
                     })        
     },
-
-    termsYConditions: (req,res) => {
-        res.render('user/termsYConditions')
-    },
-
-    contact: (req,res) => {
-        res.render('user/contact')
-    },
+   
    
 
 }

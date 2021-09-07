@@ -1,5 +1,5 @@
 const { products , carousel, categories} = require('../data/dataBase');
-//const path = require('path');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 module.exports = {
@@ -13,6 +13,25 @@ module.exports = {
             categories
             
         })
+    },
+    search: (req, res) => {
+		let result = []
+		products.forEach(product => {
+			if(product.name.toLowerCase().includes(req.query.keywords.toLowerCase())){
+				result.push(product)
+			}
+		});
+		res.render('user/search', {
+			result,
+			toThousand,
+			search: req.query.keywords
+		})
+	},
+    termsYConditions: (req,res) => {
+        res.render('user/termsYConditions')
+    },
+    contact: (req,res) => {
+        res.render('user/contact')
     },
 
 }

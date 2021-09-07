@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %>
+<body class="body-iteml">
+	<!-- Header -->
+	<%- include('../partials/header') %>
+	<!-- /Header -->
+	
+	<!-- Banner -->
+	<div class="banner"></div>
+	<!-- /Banner -->
+    <main class="home-m">
+
+	
+			<div class="col-12">
+				<h2 class="products-title">Resultados de la búsqueda: <%= search %> </h2>
+			</div>
+
+			<% if (result.length > 0) { %> 
+				<% result.forEach(product => { %> 
+                    <div class="product">
+                        <a href="/products/detail/<%- product.id %>">
+                            <div class="productDiscount"><%- product.discount %>% OFF</div>
+                            <img src="/images/productos/<%- product.image[0] %>" alt="">
+                            <p class="productName"> 
+                                <% if (product.name.length > 30) { %>
+                                    <%- `${product.name.slice(0,30)}...` %>
+                                <% } else { %>
+                                    <%= product.name %>
+                                <% } %></p>
+                            <h4 class="productPrice">$<%- product.price %></h4>
+                        </a>
+                    </div>
+				<% }) %> 
+              <% } else { %> 
+				<div class="col-12">
+					<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+				</div>
+				<% } %> 	
+     </main>
+	
+	
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
