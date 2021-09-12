@@ -11,7 +11,6 @@ let methodOverride = require('method-override');
 /*--------- ENRUTADORES ------------*/
 
 userRouter = require ('./routes/userRouter'); //user
-extraRouter = require('./routes/extraRouter');
 productRouter = require('./routes/productRouter');
 indexRouter = require('./routes/indexRouter');
 adminRouter = require('./routes/admin');
@@ -43,7 +42,7 @@ app.use('/',indexRouter);
 app.use('/user', userRouter);
 app.use('/products', productRouter);
 app.use('/admin',adminRouter);
-app.use('/',extraRouter);
+
 
 
 

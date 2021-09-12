@@ -33,5 +33,12 @@ module.exports = {
     contact: (req,res) => {
         res.render('user/contact')
     },
+    enConstruccion: (req,res) => {
+        res.render('product/enConstruccion')
+    },
+    error: (req,res) => {
+        res.render('product/error')
+    }
+
 
 }

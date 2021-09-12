@@ -12,4 +12,9 @@ router.get('/contact', controller.contact);
 /* Ruta para la búsqueda */
 router.get('/search', controller.search);
 
+router.get('/enConstruccion', controller.enConstruccion);
+
+router.get('/error', controller.error);
+
+
 module.exports = router
