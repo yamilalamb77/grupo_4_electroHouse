@@ -1370,3 +1370,13 @@ El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/shoppingCart
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
