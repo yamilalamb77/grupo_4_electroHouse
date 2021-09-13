@@ -27,14 +27,15 @@ module.exports = {
 			search: req.query.keywords
 		})
 	},
-    termsYConditions: (req,res) => {
-        res.render('user/termsYConditions')
-    },
+  
     contact: (req,res) => {
         res.render('user/contact')
     },
     enConstruccion: (req,res) => {
         res.render('product/enConstruccion')
+    },
+    termsYConditions: (req,res) => {
+        res.render('termsYConditions')
     },
     error: (req,res) => {
         res.render('product/error')

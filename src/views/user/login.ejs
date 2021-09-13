@@ -12,17 +12,21 @@
     <div class="form-container">
         <h2>Ingresa a Mi cuenta</h2>
        
-        <form action="" method="">
+        <form action="/user/login" method="POST" class="form-ad">
             <div class="form">
                 <div class="input-container">
                     <label>E-mail:</label>
                     <input class="input-style" type="email" name="email" >
-                    <span class="error-message">Debe ingresar su email</span>
+                    <% if (locals.errors && errors.email) { %>
+                        <small class="text-danger"><%= errors.email.msg %> </small>
+                    <% } %>
                 </div>
                 <div class="input-container">
                     <label>Contraseña:</label>
                     <input class="input-style" type="password" name="pass" >
-                    <span class="error-message">Debe ingresar su contraseña</span>
+                    <% if (locals.errors && errors.pass) { %>
+                        <small class="text-danger"><%= errors.pass.msg %> </small>
+                    <% } %>
                 </div>
                 
                 <span class="qp"><a href="enConstruccion">¿Olvidaste tu contraseña?</a></span>
@@ -31,9 +35,12 @@
                     <label for="remember">  Recordarme </label>
                     <input type="checkbox" name="remember" id="remember">                     
                 </div>
+                <% if (locals.errorMsg ) { %>
+                    <small class="text-danger"><%= errorMsg %> </small>
+            <% } %>
 
                 <div class="button-container">
-                    <span class="error-message">Credenciales inválidas</span>
+            <!--         <span class="error-message">Credenciales inválidas</span> -->
                     <button type="submit" class="btn btn-submit">Ingresar</button>
                 </div>
                 

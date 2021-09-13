@@ -1,41 +1,42 @@
 /* de aca puedo acceder a los metodos y propiedades del data */
-const { categories, users, writeUsersJSON, products } = require('../data/dataBase')
+const { categories, users, writeUsersJSON, products, writeProductsJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 let bcrypt = require('bcryptjs')
 
 module.exports = {
-       /* Register form */
-    register: (req,res) => {
-        res.render('user/register',{
+    /* Register form */
+    register: (req, res) => {
+        res.render('user/register', {
             categories,
             session: req.session
         })
     },
-        /* Login form */
-    login: (req,res) => {
-        res.render('user/login' ,{
+   
+    /* Login form */
+    login: (req, res) => {
+        res.render('user/login', {
             categories,
             session: req.session
         })
-       },
-        /* User profile */
-    profile: (req, res) =>{
+    },
+    /* User profile */
+    profile: (req, res) => {
         let user = users.find(user => user.id === req.session.user.id)
-        
+
         res.render('user/userProfile', {
             categories,
             user,
             session: req.session
         })
     },
-    editProfile: (req,res) => {
+    editProfile: (req, res) => {
         let user = users.find(user => user.id === +req.params.id)
 
-        res.render('user/editProfile',{
-        categories,
-        user,
-        session: req.session
-    })
+        res.render('user/editProfile', {
+            categories,
+            user,
+            session: req.session
+        })
     },
     updateProfile: (req, res) => {
         let errors = validationResult(req)
@@ -68,13 +69,13 @@ module.exports = {
 
             req.session.user = user
 
-            res.redirect('/users/profile')
+            res.redirect('/user/profile')
 
-        }else{
+        } else {
             res.render('user/editProfile', {
                 categories,
                 errors: errors.mapped(),
-                old:req.body,
+                old: req.body,
                 session: req.session
             })
         }
@@ -88,20 +89,20 @@ module.exports = {
             req.session.user = {
                 id: user.id,
                 name: user.name,
-                last_name : user.last_name,
+                last_name: user.last_name,
                 email: user.email,
                 avatar: user.avatar,
                 rol: user.rol
-            }  
-
-            if(req.body.remember){
-                res.cookie("userElectrohouse", req.session.user, {expires: new Date(Date.now() + 900000), httpOnly : true})
             }
-            
+
+            if (req.body.remember) {
+                res.cookie("userElectrohouse", req.session.user, { expires: new Date(Date.now() + 900000), httpOnly: true })
+            }
+
             res.locals.user = req.session.user
 
             res.redirect('/')
-        }else{
+        } else {
             res.render('user/login', {
                 categories,
                 errors: errors.mapped(),
@@ -117,62 +118,107 @@ module.exports = {
             let lastId = 0;
 
             users.forEach(user => {
-                if(user.id > lastId){
+                if (user.id > lastId) {
                     lastId = user.id
                 }
-            }) 
+            })
 
             let {
-                name, 
+                name,
                 last_name,
-                email, 
+                email,
                 pass1
             } = req.body
 
             let newUser = {
-                id : lastId + 1,
+                id: lastId + 1,
                 name,
                 last_name,
                 email,
-                pass : bcrypt.hashSync(pass1, 12),
-                avatar : req.file ? req.file.filename : "default-image.png",
+                pass: bcrypt.hashSync(pass1, 12),
+                avatar: req.file ? req.file.filename : "default-image.png",
                 rol: "ROL_USER",
                 tel: "",
                 address: "",
                 pc: "",
                 province: "",
-                city:""
+                city: ""
             }
 
             users.push(newUser)
 
             writeUsersJSON(users)
 
-            res.redirect('/users/login')
+            res.redirect('/user/login')
 
         } else {
-            res.render('register', {
+            res.render('/user/register', {
                 categories,
                 errors: errors.mapped(),
-                old : req.body,
+                old: req.body,
                 session: req.session
             })
         }
     },
     logout: (req, res) => {
         req.session.destroy()
-        if(req.cookies.userArtisticaDali){
-            res.cookie('userElectroHouse', '', {maxAge: -1})
+        if (req.cookies.userArtisticaDali) {
+            res.cookie('userElectroHouse', '', { maxAge: -1 })
         }
 
         res.redirect('/')
     },
-    
-    productLoading: (req,res) => {
-        res.render('product/productLoading')
+
+
+
+    newRegister: (req, res) => {
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()) {
+            let lastId = 0; /* cada usuario tiene su id por eso el lastid */
+
+            users.forEach(user => {
+                if (user.id > lastId) {
+                    lastId = user.id
+                }
+            })
+            /* se captura los datos del body del form de registro */
+            let {
+                name,
+                last_name,
+                email,
+                pass1
+            } = req.body
+
+
+            let newRegisterUser = {
+                id: lastId + 1,
+                name,
+                last_name,
+                email,
+                pass: pass1,
+                addPhoto: req.file ? req.file.filename : "userimg.jpg", /* buscar una imagen para default */
+                rol: "ROL_USER",
+                tel: "",
+                address: "",
+                pc: "",
+                province: "",
+                city: ""
+
+            }
+            users.push(newRegisterUser)
+            writeUsersJSON(users)
+            res.redirect('/user/login')
+
+
+        } else {
+res.render('/user/register', {
+categories,
+errors: errors.mapped(),
+old: req.body
+        })
     }
-   
-   
+    }
 
 }
 

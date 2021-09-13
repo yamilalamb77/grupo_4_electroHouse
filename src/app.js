@@ -26,7 +26,7 @@ app.use(session({
     secret: "electroHouse",
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 30000 }
+    cookie: { maxAge: 604800}
 }))
 app.use(userLogs);
 
