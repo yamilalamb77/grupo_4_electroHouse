@@ -36,10 +36,10 @@ ___
 > [Retro I](retro/retro.md "retro" )  
 > [Retro II](retro/retroII.md "retro II" )  
 > [Retro III](retro/retroIII.md "retro III" )  
-> [Retro IV](retro/retroIIII.md "retro IV" ) 
+> [Retro IV](retro/retroIV.md "retro IV" ) 
 ___
 ## Weekly:
-> [Weekly](weekly/weekly_sprint_4.md "weekly" )  
+> [Weekly IV](weekly/weekly_sprint_4.md "weekly" )  
 > [Weekly](weekly/weekly_standups.md "weekly" ) 
 ___
 ## Colores:
