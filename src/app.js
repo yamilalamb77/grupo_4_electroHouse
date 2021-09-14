@@ -39,7 +39,7 @@ app.set('view engine', 'ejs');
 /*------------ RUTAS ----------------*/
 /*************************************/
 app.use('/',indexRouter);
-app.use('/user', userRouter);
+app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/admin',adminRouter);
 

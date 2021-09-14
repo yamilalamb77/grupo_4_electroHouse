@@ -7,14 +7,14 @@
             <div class="form-container">
                 <h2><b> Editar mi perfil</b>│¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
 
-                <form action="/user/profile/edit/<%= user.id %>?_method=PUT" method="POST"
+                <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST"
                     enctype="multipart/form-data" class="form-ad">
                     <div class="profile-box" id="avatar-box">
 
                         <div class="input-file-container">
-                            <div class="add-new-photo" id="addPhoto">
+                        <!--     <div class="add-new-photo" id="addPhoto">
                                 <span><i class="fas fa-camera txt-send"></i></span>
-                            </div>
+                            </div> -->
 
                             <input type="file" name="avatar">
                         </div>
@@ -62,14 +62,39 @@
                             </div> -->
                             <div class="input-container">
                                 <label>Provincia:</label>
-                                <select name="province" id="">
+                                <select name="province" id="" class="selec-city">
                                     <option value="">Provincia</option>
+                                    <option value="">Buenos Aires</option>
+                                    <option value="">Capital Federal</option>
+                                    <option value="">Catamarca</option>
+                                    <option value="">Chaco</option>
+                                    <option value="">Chubut</option>
+                                    <option value="">Córdoba</option>
+                                    <option value="">Corrientes</option>
+                                    <option value="">Entre Ríos</option>
+                                    <option value="">Formosa</option>
+                                    <option value="">Jujuy</option>
+                                    <option value="">La Pampa</option>
+                                    <option value="">La Rioja</option>
+                                    <option value="">Mendoza</option>
+                                    <option value="">Misiones</option>
+                                    <option value="">Neuquén</option>
+                                    <option value="">Río Negro</option>
+                                    <option value="">Salta</option>
+                                    <option value="">San Juan</option>
+                                    <option value="">San Luis</option>
+                                    <option value="">Santa Cruz</option>
+                                    <option value="">Santa Fe</option>
+                                    <option value="">Santiago del Estero</option>
+                                    <option value="">Tierra del Fuego</option>
+                                    <option value="">Tucumán</option>
                                 </select>
                                 <!-- <input class="input-style" type="text" name="Province">
                                 <span class="error-message">Debe ingresar un provincia</span> -->
                             </div>
                             <div class="input-container">
-                                <select name="city" id="">
+                                <label>Localidad:</label>
+                                <select name="city" id="" class="selec-city">
                                     <option value="">Localidad</option>
                                 </select>
                                <!--  <label>Ciudad:</label>
@@ -87,7 +112,7 @@
                             </div>
                             <div class="input-container">
                                 <label>Piso o departamento:</label>
-                                <input class="input-style" type="text" name="flat_apartment" value="<%= user.flat_apartment ? user.flat_apartment : "" %>">>
+                                <input class="input-style" type="text" name="flat_apartment" value="<%= user.flat_apartment ? user.flat_apartment : "" %>">
                                 <!-- <span class="error-message">Debe ingresar un calle</span> -->
                             </div>
                             <div class="input-container">

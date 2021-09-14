@@ -15,13 +15,15 @@
 
 * Pedir ayuda.
 
+* Mantener la predisposicion y colaboracion.
+
 * Seguir siendo curiosos, googlear prara encontrar soluciones.
 
 * Seguir tomando ideas para guiarnos de otros repositorios y paginas de goolge.
 
 * Seguir compartiendo las responsabilidades de las tareas, mas si son dificiles
 
-* Seguir teniendo la energuia puesta en el proyecto a pesar de las dificultades.
+* Seguir teniendo la energia puesta en el proyecto a pesar de las dificultades.
 
 
 ### Hacer mas  :muscle: :muscle::muscle: :computer:
@@ -49,6 +51,8 @@
 * Positividad siempre.
 
 * Empezar a tomar en cuenta las indicaciones de los profesores, para evitar problemas.
+
+* Poder dar criticas constructivas sinceras (sin miedo a herir a la otra persona).
 
 
 ### Dejar de hacer  :collision: :collision: :collision: :computer:

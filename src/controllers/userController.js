@@ -6,7 +6,7 @@ let bcrypt = require('bcryptjs')
 module.exports = {
     /* Register form */
     register: (req, res) => {
-        res.render('user/register', {
+        res.render('users/register', {
             categories,
             session: req.session
         })
@@ -14,7 +14,7 @@ module.exports = {
    
     /* Login form */
     login: (req, res) => {
-        res.render('user/login', {
+        res.render('users/login', {
             categories,
             session: req.session
         })
@@ -23,7 +23,7 @@ module.exports = {
     profile: (req, res) => {
         let user = users.find(user => user.id === req.session.user.id)
 
-        res.render('user/userProfile', {
+        res.render('users/userProfile', {
             categories,
             user,
             session: req.session
@@ -32,7 +32,7 @@ module.exports = {
     editProfile: (req, res) => {
         let user = users.find(user => user.id === +req.params.id)
 
-        res.render('user/editProfile', {
+        res.render('users/editProfile', {
             categories,
             user,
             session: req.session
@@ -69,10 +69,10 @@ module.exports = {
 
             req.session.user = user
 
-            res.redirect('/user/profile')
+            res.redirect('/users/profile')
 
         } else {
-            res.render('user/editProfile', {
+            res.render('users/editProfile', {
                 categories,
                 errors: errors.mapped(),
                 old: req.body,
@@ -103,7 +103,7 @@ module.exports = {
 
             res.redirect('/')
         } else {
-            res.render('user/login', {
+            res.render('users/login', {
                 categories,
                 errors: errors.mapped(),
                 session: req.session
@@ -136,7 +136,7 @@ module.exports = {
                 last_name,
                 email,
                 pass: bcrypt.hashSync(pass1, 12),
-                avatar: req.file ? req.file.filename : "default-image.png",
+                avatar: req.file ? req.file.filename : "userimg.jpg",
                 rol: "ROL_USER",
                 tel: "",
                 address: "",
@@ -149,10 +149,10 @@ module.exports = {
 
             writeUsersJSON(users)
 
-            res.redirect('/user/login')
+            res.redirect('/users/login')
 
         } else {
-            res.render('/user/register', {
+            res.render('/users/register', {
                 categories,
                 errors: errors.mapped(),
                 old: req.body,
@@ -208,11 +208,11 @@ module.exports = {
             }
             users.push(newRegisterUser)
             writeUsersJSON(users)
-            res.redirect('/user/login')
+            res.redirect('/users/login')
 
 
         } else {
-res.render('/user/register', {
+res.render('/users/register', {
 categories,
 errors: errors.mapped(),
 old: req.body

@@ -29,7 +29,7 @@ module.exports = {
 	},
   
     contact: (req,res) => {
-        res.render('user/contact')
+        res.render('users/contact')
     },
     enConstruccion: (req,res) => {
         res.render('product/enConstruccion')

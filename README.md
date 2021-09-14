@@ -33,7 +33,14 @@ ___
 >[Trelo](https://trello.com/b/uDzyb6rF/grupo-4-c8)
 ___
 ## Retro:
-> [Retro](/retro.md "retro" ) 
+> [Retro](retro/retro.md "retro" )  
+> [Retro](retro/retroII.md "retro II" )  
+> [Retro](retro/retroIII.md "retro III" )  
+> [Retro](retro/retroIIII.md "retro IIII" ) 
+___
+## Weekly:
+> [Weekly](weekly/weekly_sprint_4.md "weekly" )  
+> [Weekly](weekly/weekly_standups.md "weekly" ) 
 ___
 ## Colores:
 * [Blanco](/public/images/paleta.jpg "FFFFFF" ) 
