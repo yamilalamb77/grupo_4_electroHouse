@@ -76,3 +76,12 @@
 .login .form-container b{
     font-size: medium;
 }
+.input-container .selec-city{
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+.pre-img{
+    display: none;
+}

@@ -1972,16 +1972,27 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/register
 El usuario ingreso a la ruta: /favicon.ico
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/editProfile/1
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/editProfile/1
+=======
+El usuario ingreso a la ruta: /user/register
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/editProfile
 El usuario ingreso a la ruta: /user/editProfile/1
 El usuario ingreso a la ruta: /css/productSlider.css
@@ -1989,6 +2000,16 @@ El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+=======
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/profile/edit/1?_method=PUT
+El usuario ingreso a la ruta: /favicon.ico
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
@@ -1999,6 +2020,7 @@ El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/register
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/register
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
@@ -2020,10 +2042,34 @@ El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+=======
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /user/register
+El usuario ingreso a la ruta: /user/register
+El usuario ingreso a la ruta: /user/register
+El usuario ingreso a la ruta: /user/register
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
@@ -2059,12 +2105,48 @@ El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
+=======
+El usuario ingreso a la ruta: /contact
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /favicon.ico
+El usuario ingreso a la ruta: /products/category/4
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/3
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/3
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/4
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /contact
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
@@ -2072,10 +2154,22 @@ El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
+=======
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/login/editProfile/1
+El usuario ingreso a la ruta: /user/login/editProfile/1
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /products/category/4
 El usuario ingreso a la ruta: /css/productSlider.css
@@ -2087,15 +2181,46 @@ El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/login
+=======
+El usuario ingreso a la ruta: /editProfile/1
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
+El usuario ingreso a la ruta: /users/profile
+El usuario ingreso a la ruta: /favicon.ico
+El usuario ingreso a la ruta: /users/profile
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/login
+=======
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /user/profile
+El usuario ingreso a la ruta: /users/profile
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
@@ -2185,15 +2310,101 @@ El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/login
+=======
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
+El usuario ingreso a la ruta: /users/profile
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/editProfile/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/login
+=======
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /products/shoppingCart
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
@@ -2235,11 +2446,43 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/editProfile
 El usuario ingreso a la ruta: /users/editProfile
+=======
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/3
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/4
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/shoppingCart
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /favicon.ico
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
@@ -2254,11 +2497,31 @@ El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /users/register
+=======
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/3
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /products/category/4
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /
@@ -2266,3 +2529,26 @@ El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
 El usuario ingreso a la ruta: /user/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+=======
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/detail/2
+El usuario ingreso a la ruta: /images/comment-stars.png
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/shoppingCart
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /imagenes/40-409499_material-wallpaper-4k.jpg
+El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
