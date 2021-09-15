@@ -4,17 +4,17 @@ const { users } = require('../data/dataBase')
 module.exports = [
     check('name')
     .notEmpty()
-    .withMessage('Debes escribir un email'),
+    .withMessage('Debe ingresar su nombre'),
 
     check('last_name')
     .notEmpty()
-    .withMessage('Debes escribir un email'),
+    .withMessage('Debe ingresar su apellido'),
 
     check('email')
     .notEmpty()
-    .withMessage('Debes escribir un email').bail()
+    .withMessage('Debe escribir su email').bail()
     .isEmail()
-    .withMessage('Debes escribir un email válido'),
+    .withMessage('Debe escribir su email válido'),
 
     body('email')
     .custom(value => {
@@ -32,15 +32,16 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes escribir tu contraseña')
     .isLength({
-        min: 6
-    })
-    .withMessage('La contraseña debe tener como mínimo 6 caracteres'),
+        min: 4,
+        max:16
+})
+    .withMessage('La contraseña debe tener como mínimo 6 caracteres y maximo 16'),
 
-    body('pass2')
-    .custom((value, {req}) => value !== req.body.pass1 ? false : true)
+    body('pass2') /* validacion custom, compara las contraseñas */
+    .custom((value, {req}) => value !== req.body.pass1 ? false : true)/*  */
     .withMessage('Las contraseñas no coinciden'),
 
     check('terms')
-    .isString('on')
+    .isString('on')/* valida que sea un string que tenga valor on */
     .withMessage('Debes aceptar los términos y condiciones')
 ]

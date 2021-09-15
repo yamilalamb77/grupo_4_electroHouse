@@ -1,41 +1,42 @@
 /* de aca puedo acceder a los metodos y propiedades del data */
-const { categories, users, writeUsersJSON, products } = require('../data/dataBase')
+const { categories, users, writeUsersJSON, products, writeProductsJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 let bcrypt = require('bcryptjs')
 
 module.exports = {
-       /* Register form */
-    register: (req,res) => {
-        res.render('user/register',{
+    /* Register form */
+    register: (req, res) => {
+        res.render('users/register', {
             categories,
             session: req.session
         })
     },
-        /* Login form */
-    login: (req,res) => {
-        res.render('user/login' ,{
+   
+    /* Login form */
+    login: (req, res) => {
+        res.render('users/login', {
             categories,
             session: req.session
         })
-       },
-        /* User profile */
-    profile: (req, res) =>{
+    },
+    /* User profile */
+    profile: (req, res) => {
         let user = users.find(user => user.id === req.session.user.id)
-        
-        res.render('user/userProfile', {
+
+        res.render('users/userProfile', {
             categories,
             user,
             session: req.session
         })
     },
-    editProfile: (req,res) => {
+    editProfile: (req, res) => {
         let user = users.find(user => user.id === +req.params.id)
 
-        res.render('user/editProfile',{
-        categories,
-        user,
-        session: req.session
-    })
+        res.render('users/editProfile', {
+            categories,
+            user,
+            session: req.session
+        })
     },
     updateProfile: (req, res) => {
         let errors = validationResult(req)
@@ -70,11 +71,11 @@ module.exports = {
 
             res.redirect('/users/profile')
 
-        }else{
-            res.render('user/editProfile', {
+        } else {
+            res.render('users/editProfile', {
                 categories,
                 errors: errors.mapped(),
-                old:req.body,
+                old: req.body,
                 session: req.session
             })
         }
@@ -88,91 +89,87 @@ module.exports = {
             req.session.user = {
                 id: user.id,
                 name: user.name,
-                last_name : user.last_name,
+                last_name: user.last_name,
                 email: user.email,
                 avatar: user.avatar,
                 rol: user.rol
-            }  
-
-            if(req.body.remember){
-                res.cookie("userElectrohouse", req.session.user, {expires: new Date(Date.now() + 900000), httpOnly : true})
             }
-            
+
+            if (req.body.remember) {
+                res.cookie("userElectrohouse", req.session.user, { expires: new Date(Date.now() + 900000), httpOnly: true })
+            }
+
             res.locals.user = req.session.user
 
             res.redirect('/')
-        }else{
-            res.render('user/login', {
+        } else {
+            res.render('users/login', {
                 categories,
                 errors: errors.mapped(),
                 session: req.session
             })
         }
     },
-    processRegister: (req, res) => {
+    
+    logout: (req, res) => {
+        req.session.destroy()
+        if (req.cookies.userArtisticaDali) {
+            res.cookie('userElectroHouse', '', { maxAge: -1 })
+        }
+
+        res.redirect('/')
+    },
+
+
+
+    newRegister: (req, res) => {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
-
-            let lastId = 0;
+            let lastId = 0; /* cada usuario tiene su id por eso el lastid */
 
             users.forEach(user => {
-                if(user.id > lastId){
+                if (user.id > lastId) {
                     lastId = user.id
                 }
-            }) 
-
+            })
+            /* se captura los datos del body del form de registro */
             let {
-                name, 
-                last_name,
-                email, 
-                pass1
-            } = req.body
-
-            let newUser = {
-                id : lastId + 1,
                 name,
                 last_name,
                 email,
-                pass : bcrypt.hashSync(pass1, 12),
-                avatar : req.file ? req.file.filename : "default-image.png",
+                pass1
+            } = req.body
+
+
+            let newRegisterUser = {
+                id: lastId + 1,
+                name,
+                last_name,
+                email,
+                pass: bcrypt.hashSync(pass1, 10),
+              //  addPhoto: req.file ? req.file.filename : "default-image.png", /* buscar una imagen para default */
                 rol: "ROL_USER",
                 tel: "",
                 address: "",
                 pc: "",
                 province: "",
-                city:""
+                city: ""
+
             }
-
-            users.push(newUser)
-
+            users.push(newRegisterUser)
             writeUsersJSON(users)
-
             res.redirect('/users/login')
 
-        } else {
-            res.render('register', {
-                categories,
-                errors: errors.mapped(),
-                old : req.body,
-                session: req.session
-            })
-        }
-    },
-    logout: (req, res) => {
-        req.session.destroy()
-        if(req.cookies.userArtisticaDali){
-            res.cookie('userElectroHouse', '', {maxAge: -1})
-        }
 
-        res.redirect('/')
-    },
-    
-    productLoading: (req,res) => {
-        res.render('product/productLoading')
+        } else {
+res.render('users/register', {
+categories,
+errors: errors.mapped(),
+old: req.body
+        })
     }
-   
-   
+    }
 
 }
 

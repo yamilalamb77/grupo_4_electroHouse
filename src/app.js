@@ -26,7 +26,7 @@ app.use(session({
     secret: "electroHouse",
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 30000 }
+    cookie: { maxAge: 604800}
 }))
 app.use(userLogs);
 
@@ -39,7 +39,7 @@ app.set('view engine', 'ejs');
 /*------------ RUTAS ----------------*/
 /*************************************/
 app.use('/',indexRouter);
-app.use('/user', userRouter);
+app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/admin',adminRouter);
 

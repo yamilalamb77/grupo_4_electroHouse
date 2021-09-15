@@ -5,7 +5,7 @@ let bcrypt = require('bcryptjs')
 module.exports = [
     check('email')
     .notEmpty()
-    .withMessage('Debes escribir un email').bail()
+    .withMessage('Debes escribir un email').bail() /* si el campo esta vacio corta ahi  */
     .isEmail()
     .withMessage('Debes escribir un email válido'),
 
@@ -23,7 +23,7 @@ module.exports = [
 
     check('pass')
     .notEmpty()
-    .withMessage('Debes escribir tu contraseña'),
+    .withMessage('Debes escribir la contraseña'),
 
     body('pass')
     .custom((value, {req}) => {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+    <body class="login">
+        <%- include('../partials/header.ejs') %>
+            <div class="form-container">
+                <h2><b> Editar mi perfil</b>│¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
+
+                <form action="/users/profile/edit/<%= user.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data" class="form-ad">
+                    <div class="profile-box" id="avatar-box">
+
+                        <div class="input-file-container">
+                            <div class="add-new-photo" id="addPhoto">
+                                <span><i class="fas fa-camera txt-send"></i></span>
+                            </div>
+
+                            <input type="file" name="avatar">
+                        </div>
+                    </div>
+
+
+                    <div class="profile-form">
+
+                        <div class="profile-box">
+                            <h4 class="profile-subtitle">Datos personales</h4>
+                           
+                            <div class="input-container">
+                                <label>Nombre:</label>
+                                <input class="input-style" type="text" name="name"value="<%= locals.old ? old.name : user.name %>">
+                <% if (locals.errors && errors.name) { %>
+                    <small class="text-danger"><%= errors.name.msg %> </small>
+                <% } %>
+                            </div>
+
+                            <div class="input-container">
+                                <label>Apellido:</label>
+                                <input class="input-style" type="text" name="last_name"value="<%= locals.old ? old.last_name : user.last_name %>">
+                                <% if (locals.errors && errors.last_name) { %>
+                                    <small class="text-danger"><%= errors.last_name.msg %> </small>
+                                <% } %>
+                            </div>
+
+                        <!--     <div class="input-container">
+                                <label>DNI:</label>
+                                <input class="input-style" type="number" name="dni">
+                                <span class="error-message">Debe ingresar un DNI válido</span>
+                            </div>
+                        </div> -->
+                        <div class="profile-box">
+                            <h4 class="profile-subtitle">Datos de contacto</h4>
+                            <div class="input-container">
+                                <label>Teléfono:</label>
+                                <input class="input-style" type="tel" name="tel"value="<%= user.tel ? user.tel : "" %>">
+                            </div>
+
+                       <!--      <div class="input-container">
+                                <label>Pais:</label>
+                                <input class="input-style" type="text" name="country">
+                                <span class="error-message">Debe ingresar un pais</span>
+                            </div> -->
+                            <div class="input-container">
+                                <label>Provincia:</label>
+                                <select name="province" id="">
+                                    <option value="">Provincia</option>
+                                </select>
+                                <!-- <input class="input-style" type="text" name="Province">
+                                <span class="error-message">Debe ingresar un provincia</span> -->
+                            </div>
+                            <div class="input-container">
+                                <select name="city" id="">
+                                    <option value="">Localidad</option>
+                                </select>
+                               <!--  <label>Ciudad:</label>
+                                <input class="input-style" type="text" name="city">
+                                <span class="error-message">Debe ingresar una ciudad</span> -->
+                            </div>
+                            <div class="input-container">
+                                <label>Codigo Postal:</label>
+                                <input class="input-style" type="text" name="pc"value="<%= user.cp ? user.cp : "" %>">
+                            </div>
+                            <div class="input-container">
+                                <label>Calle:</label>
+                                <input class="input-style" type="text" name="address"value="<%= user.address ? user.address : "" %>">
+                            <!--     <span class="error-message">Debe ingresar un calle</span> -->
+                            </div>
+                            <div class="input-container">
+                                <label>Piso o departamento:</label>
+                                <input class="input-style" type="text" name="flat_apartment" value="<%= user.flat_apartment ? user.flat_apartment : "" %>">>
+                                <!-- <span class="error-message">Debe ingresar un calle</span> -->
+                            </div>
+                            <div class="input-container">
+                                <label>Número:</label>
+                                <input class="input-style" type="number" name="number" value="<%= user.number ? user.number : "" %>">
+                                <span class="error-message">Debe ingresar un número</span>
+                            </div>
+                            <div class="input-container">
+                                <label>E-mail:</label>
+                                <input class="input-style" type="email" name="email"  readonly value="<%= user.email %>">
+                           
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <!-- <button type="reset" class="btn btn-submit">Reset</button> -->
+                        <button type="submit" class="btn btn-submit">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <script src="/js/image.js"></script>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>

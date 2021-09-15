@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+    <body class="login">
+        <%- include('../partials/header.ejs') %>
+            <div class="form-container">
+                <h2><b>Registrate</b>│ ¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
+
+                <form action="/users/register" method="POST" enctype="multipart/form-data" class="form-ad">
+                    <div class="form">
+                        <div class="input-container">
+                            <label>Nombre:</label>
+                            <input class="input-style" type="text" name="name" value="<%= locals.old && old.name %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <small class="text-danger">
+                                    <%= errors.name.msg %>
+                                </small>
+                                <% } %>
+                        </div>
+                        <div class="input-container">
+                            <label>Apellido:</label>
+                            <input class="input-style" type="text" name="last_name"
+                                value="<%= locals.old && old.last_name %>">
+                            <% if (locals.errors && errors.last_name) { %>
+                                <small class="text-danger">
+                                    <%= errors.last_name.msg %>
+                                </small> 
+                                <!--     <span class="error-message">Debe ingresar su email</span> -->
+                                <% } %>
+                            </div>
+                        
+                            <div class="input-container">
+                                <label>E-mail:</label>
+                                <input class="input-style" type="email" name="email">
+                                <% if (locals.errors && errors.email) { %>
+                                    <small class="text-danger">
+                                        <%= errors.email.msg %>
+                                    </small>
+                                    <% } %>
+                            </div>
+                            <div class="input-container">
+                                <label>Contraseña:</label>
+                                <input class="input-style" type="password" name="pass1">
+                                <% if (locals.errors && errors.pass1) { %>
+                                    <small class="text-danger">
+                                        <%= errors.pass1.msg %>
+                                    </small>
+                                    <% } %>
+                            </div>
+                            <div class="input-container">
+                                <label>Repita la contraseña:</label>
+                                <input class="input-style" type="password" name="pass2">
+                                <% if (locals.errors && errors.pass2) { %>
+                                    <small class="text-danger">
+                                        <%= errors.pass2.msg %>
+                                    </small>
+                                    <% } %>
+                            </div>
+                            <span class="qp"><a href="enConstruccion">¿Olvidaste tu contraseña?</a></span>
+                            <div class="check">
+                                <label for="terms"> Acepto los <a href="../termsYConditions">términos y condiciones</a>
+                                </label>
+                                <input type="checkbox" name="terms" id="term">
+                                <span class="error-message">Debe aceptar los términos y condiciones</span>
+                            </div>
+                            <div class="button-container">
+                                <span class="error-message">Credenciales inválidas</span>
+                                <button type="submit" class="btn btn-submit">Registrarme</button>
+                            </div>
+
+                    </div>
+                </form>
+            </div>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>

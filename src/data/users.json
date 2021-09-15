@@ -1,9 +1,157 @@
-[{"id":1,"first_name":"Yamila","last_name":"Correa","email":"yami@gmail.com","password":"1234","category":"user","image":"user_1.jpg"},
-{"id":2,"first_name":"Vilma","last_name":"Toledo","email":"vilma@gmail.com","password":"12345","category":"user","image":"user_2.jpg"},
-{"id":3,"first_name":"Luis","last_name":"Molina","email":"lucho@gmail.com","password":"123456","category":"user","image":"user_3.jpg"},
-{"id":4,"first_name":"Marshall","last_name":"Mathers","email":"eminem@gmail.com","password":"1234567","category":"user","image":"user_4.jpg"},
-{"id":5,"first_name":"Bruce","last_name":"Wayne","email":"batman@gmail.com","password":"12345678","category":"user","image":"user_5.jpg"},
-{"id":6,"first_name":"Clark","last_name":"Ken","email":"superMan@gmail.com","password":"123456789","category":"user","image":"user_6.jpg"},
-{"id":7,"first_name":"Pamela Lillian","last_name":"Isley","email":"poisonIvy@gmail.com","password":"123456789a","category":"user","image":"user_7.jpg"},
-{"id":8,"first_name":"Till","last_name":"Liderman","email":"rammstein@gmail.com","password":"123456789ab","category":"user","image":"user_8.jpg"}
+[
+    {
+        "id": 1,
+        "first_name": "Yamila",
+        "last_name": "Correa",
+        "email": "yami@gmail.com",
+        "password": "1234",
+        "category": "user",
+        "image": "user_1.jpg",
+        "name": "",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 2,
+        "first_name": "Vilma",
+        "last_name": "Toledo",
+        "email": "vilma@gmail.com",
+        "password": "12345",
+        "category": "user",
+        "image": "user_2.jpg",
+        "name": "qqq",
+        "tel": "11",
+        "address": "jahkdfs",
+        "pc": "11",
+        "province": "",
+        "city": "",
+        "avatar": "1631656998380_img_.png"
+    },
+    {
+        "id": 3,
+        "first_name": "Luis",
+        "last_name": "Molina",
+        "email": "lucho@gmail.com",
+        "password": "123456",
+        "category": "user",
+        "image": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "first_name": "Marshall",
+        "last_name": "Mathers",
+        "email": "eminem@gmail.com",
+        "password": "1234567",
+        "category": "user",
+        "image": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "first_name": "Bruce",
+        "last_name": "Wayne",
+        "email": "batman@gmail.com",
+        "password": "12345678",
+        "category": "user",
+        "image": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "first_name": "Clark",
+        "last_name": "Ken",
+        "email": "superMan@gmail.com",
+        "password": "123456789",
+        "category": "user",
+        "image": "user_6.jpg"
+    },
+    {
+        "id": 7,
+        "first_name": "Pamela Lillian",
+        "last_name": "Isley",
+        "email": "poisonIvy@gmail.com",
+        "password": "123456789a",
+        "category": "user",
+        "image": "user_7.jpg"
+    },
+    {
+        "id": 8,
+        "first_name": "Till",
+        "last_name": "Liderman",
+        "email": "rammstein@gmail.com",
+        "password": "123456789ab",
+        "category": "user",
+        "image": "user_8.jpg"
+    },
+    {
+        "id": 9,
+        "addPhoto": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 10,
+        "addPhoto": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 11,
+        "addPhoto": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 12,
+        "name": "Yamila ",
+        "last_name": "car",
+        "email": "yamila.lamb.77@gmail.com",
+        "pass": "$2a$12$g.sksCHUFy9gvER6GYxse.JV2y9M/YX/Ff.9NoTqgUWgmM.iLuPOy",
+        "avatar": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 13,
+        "name": "yami",
+        "last_name": "algo",
+        "email": "yassssssssssss@gmail.com",
+        "pass": "12345",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 14,
+        "name": "algo ",
+        "last_name": "algooo",
+        "email": "yamla@gmail.com",
+        "pass": "$2a$10$9FD5M26fdZnETZy4skgZoOltT3o0rfuJDemaxZp8xF1daflNFbQJO",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    }
 ]
