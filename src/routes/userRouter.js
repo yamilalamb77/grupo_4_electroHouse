@@ -9,7 +9,7 @@ const { register ,
     newRegister,
     editProfile,
     updateProfile,
- productLoading} = require('../controllers/userController');
+ productLoading,} = require('../controllers/userController');
 
 const uploadUserAvatar = require('../middlewares/subirUserAvatar');
 const userLoginCheck = require('../middlewares/userLoginCheck');
