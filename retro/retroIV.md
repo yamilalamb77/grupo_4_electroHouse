@@ -3,7 +3,6 @@
 ### Seguir haciendo  :clap:
 
 ---
-* Continuar con la buena comunicación entre los integrantes del grupo.
 
 * Seguir teniendo en cuenta la opinión de cada participante.
 
@@ -27,7 +26,11 @@
 ---
 * Ver integración de GitHub a Trello.
 
+* Leer bien las tarjetas de nuestros compañeros.
+
 * Comunicarnos cualquier inconveniente que tengamos para no atrasarnos.
+
+* Avisar sobre las modificaciones que vamos a hacer (por mas pequeñas que sean)  
 
 * Hacer nuestras Ramas.
 
@@ -45,6 +48,8 @@
 * No dejar para mañana, lo que se puede hacer hoy.
 
 * No esperar hasta ultimo momento para terminar los proyectos.
+
+
 
 
 
