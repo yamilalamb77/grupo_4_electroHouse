@@ -20,11 +20,7 @@ module.exports = [
     .custom(value => {
         let user = users.find(user => user.email === value)
 
-<<<<<<< HEAD
         if(user === undefined){
-=======
-        if(user !== undefined){
->>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
             return true
         }else{
             return false
