@@ -11,30 +11,34 @@ products.forEach(product => {
 module.exports = {
     admin : (req,res) => {
         res.render('admin', {
-            user: req.query.user
+            user: req.query.user,
+            usuario : req.session.user ? req.session.user : ""
         })
     
     },
     signin: (req, res) => {
-        res.render('admin/adminLogin')
+        res.render('admin/adminLogin',{ usuario : req.session.user ? req.session.user : ""})
     },
     dashboard: (req, res) => {
-        res.render('admin/adminIndex'), {
-            session: req.session
-        }
+        res.render('admin/adminIndex', {
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
+        })
         
     }, 
     products: (req, res) => {
         res.render('admin/adminProducts', {
             products,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     }, 
     productsCreate: (req, res) => {
         res.render('admin/adminProductCreateForm', {
             categories, 
             subcategories,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     }, 
     productStore: (req, res) => {
@@ -87,7 +91,8 @@ module.exports = {
             categories,
             errors: errors.mapped(),
             old: req.body,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     } 
 },
@@ -97,7 +102,8 @@ module.exports = {
             categories, 
             subcategories,
             product,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     },
     productUpdate: (req, res) => {
@@ -144,7 +150,8 @@ module.exports = {
             categories,
             errors: errors.mapped(),
             old: req.body,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     }
 },

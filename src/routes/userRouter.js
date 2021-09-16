@@ -37,4 +37,7 @@ router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'),updateProfile)
 
 
 
+
+
+
 module.exports = router

@@ -16,8 +16,15 @@
         <a href="/"><img src="/images/logo/logo.jpeg" alt=""></a>
     </div>
     <div class="login-cart">
-        <a class="user-login" href="/users/login">
-            <i class="far fa-user-circle user-login"></i></a>
+         <% if (usuario){ %>
+            <a class="user-login" href="/users/profile">
+                <i class="far fa-user-circle user-login"></i></a>
+        <%} else { %>
+            <a class="user-login" href="/users/login">
+                <i class="far fa-user-circle user-login"></i></a>
+        <% } %>  
+
+       
         <a class="shopping-cart" href="/products/shoppingCart">
             <i class="fas fa-shopping-cart shopping-cart"></i></a>
     </div>

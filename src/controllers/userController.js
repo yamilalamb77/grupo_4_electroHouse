@@ -8,7 +8,8 @@ module.exports = {
     register: (req, res) => {
         res.render('users/register', {
             categories,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     },
    
@@ -16,7 +17,8 @@ module.exports = {
     login: (req, res) => {
         res.render('users/login', {
             categories,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     },
     /* User profile */
@@ -26,7 +28,8 @@ module.exports = {
         res.render('users/userProfile', {
             categories,
             user,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     },
     editProfile: (req, res) => {
@@ -35,7 +38,8 @@ module.exports = {
         res.render('users/editProfile', {
             categories,
             user,
-            session: req.session
+            session: req.session,
+            usuario : req.session.user ? req.session.user : ""
         })
     },
     updateProfile: (req, res) => {
@@ -76,7 +80,8 @@ module.exports = {
                 categories,
                 errors: errors.mapped(),
                 old: req.body,
-                session: req.session
+                session: req.session,
+                usuario : req.session.user ? req.session.user : ""
             })
         }
     },
@@ -106,7 +111,8 @@ module.exports = {
             res.render('users/login', {
                 categories,
                 errors: errors.mapped(),
-                session: req.session
+                session: req.session,
+                usuario : req.session.user ? req.session.user : ""
             })
         }
     },
@@ -166,7 +172,8 @@ module.exports = {
 res.render('users/register', {
 categories,
 errors: errors.mapped(),
-old: req.body
+old: req.body,
+usuario : req.session.user ? req.session.user : ""
         })
     }
     }
