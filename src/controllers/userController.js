@@ -133,11 +133,7 @@ module.exports = {
                     lastId = user.id
                 }
             })
-<<<<<<< HEAD
             /* se captura los datos del body del form de registro */
-=======
-
->>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
             let {
                 name,
                 last_name,
@@ -145,109 +141,25 @@ module.exports = {
                 pass1
             } = req.body
 
-<<<<<<< HEAD
 
             let newRegisterUser = {
-=======
-            let newUser = {
->>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
                 id: lastId + 1,
                 name,
                 last_name,
                 email,
-<<<<<<< HEAD
                 pass: bcrypt.hashSync(pass1, 10),
               //  addPhoto: req.file ? req.file.filename : "default-image.png", /* buscar una imagen para default */
-=======
-                pass: bcrypt.hashSync(pass1, 12),
-                avatar: req.file ? req.file.filename : "userimg.jpg",
->>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
-                rol: "ROL_USER",
-                tel: "",
-                address: "",
-                pc: "",
                 province: "",
                 city: ""
-<<<<<<< HEAD
-=======
-            }
-
-            users.push(newUser)
->>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 
             }
             users.push(newRegisterUser)
             writeUsersJSON(users)
             res.redirect('/users/login')
 
-<<<<<<< HEAD
 
         } else {
 res.render('users/register', {
-=======
-        } else {
-            res.render('/users/register', {
-                categories,
-                errors: errors.mapped(),
-                old: req.body,
-                session: req.session
-            })
-        }
-    },
-    logout: (req, res) => {
-        req.session.destroy()
-        if (req.cookies.userArtisticaDali) {
-            res.cookie('userElectroHouse', '', { maxAge: -1 })
-        }
-
-        res.redirect('/')
-    },
-
-
-
-    newRegister: (req, res) => {
-        let errors = validationResult(req)
-
-        if (errors.isEmpty()) {
-            let lastId = 0; /* cada usuario tiene su id por eso el lastid */
-
-            users.forEach(user => {
-                if (user.id > lastId) {
-                    lastId = user.id
-                }
-            })
-            /* se captura los datos del body del form de registro */
-            let {
-                name,
-                last_name,
-                email,
-                pass1
-            } = req.body
-
-
-            let newRegisterUser = {
-                id: lastId + 1,
-                name,
-                last_name,
-                email,
-                pass: pass1,
-                addPhoto: req.file ? req.file.filename : "userimg.jpg", /* buscar una imagen para default */
-                rol: "ROL_USER",
-                tel: "",
-                address: "",
-                pc: "",
-                province: "",
-                city: ""
-
-            }
-            users.push(newRegisterUser)
-            writeUsersJSON(users)
-            res.redirect('/users/login')
-
-
-        } else {
-res.render('/users/register', {
->>>>>>> 52bdc0935f3a620fcb7d8128e15135e49dce7e23
 categories,
 errors: errors.mapped(),
 old: req.body
