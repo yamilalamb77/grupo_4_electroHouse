@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de contacto</title>
+        <link rel="stylesheet" href="/css/userProfile.css">
     <%- include('../partials/head') %>
+    </head>
 <body>
     <%- include('../partials/header') %>
     <main class= "userProfile">
@@ -22,8 +29,18 @@
                 <p class="userProfile_item">Provincia: <%= user.province ? user.province : "------"%></p>
                 <p class="userProfile_item">Localidad: <%= user.city ? user.city : "------"%></p>
             </div>
-            <a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
-            <a href='/users/logout'>Salir</a>
+            <div class="button-userProfile1">
+                <div class="btn-ad-btn-ad-primary">
+                    <a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
+                    
+                </div>
+            </div>
+            <div class="button-userProfile2">
+                <div class="btn-ad-btn-ad-primary">
+                    <a href='/users/logout'>Salir</a> 
+                </div>
+            </div>
+            
         </div>
     </main>
 

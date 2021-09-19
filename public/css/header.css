@@ -41,7 +41,14 @@ header .main-header .logo {
        order: 1;  
     margin-bottom: 10px;
    
-}  
+} 
+.user-cerrar{
+	color:blanchedalmond;
+	font-size:x-small;
+	text-align:left;
+
+	
+} 
 
 header .main-header  .logo img {
     width: 100%;
