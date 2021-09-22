@@ -4020,3 +4020,11 @@ El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
