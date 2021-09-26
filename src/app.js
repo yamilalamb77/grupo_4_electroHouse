@@ -4,6 +4,7 @@ const path = require('path');
 const router = express.Router();
 let cookieParser = require('cookie-parser')
 let session = require('express-session');
+let localsCheck = require('./middlewares/localsCheck');
 let port = 3030;
 let methodOverride = require('method-override');
  const userLogs = require('./middlewares/userLogs'); 
@@ -25,10 +26,10 @@ app.use(cookieParser())
 app.use(session({
     secret: "electroHouse",
     resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 604800}
+    saveUninitialized: true
 }))
 app.use(userLogs);
+app.use(localsCheck);
 
  /* VIEWS */
 app.set('views', path.join(__dirname, 'views'));

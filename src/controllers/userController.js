@@ -101,7 +101,7 @@ module.exports = {
             }
 
             if (req.body.remember) {
-                res.cookie("userElectrohouse", req.session.user, { expires: new Date(Date.now() + 900000), httpOnly: true })
+                res.cookie("userElectroHouse", req.session.user, { expires: new Date(Date.now() + 900000), httpOnly: true })
             }
 
             res.locals.user = req.session.user
