@@ -1,10 +1,10 @@
-const { admin } = require("../controllers/adminController");
+
 
 module.exports= function(req, res, next){
-    if (req.query.user == "yami" || req.query.user == "vilma" || req.query.user == "lucho" ) {
+    if(req.session.user && req.session.user.rol === "ROL_ADMIN"){
         next()
-    } else {
-        res.send("No sos admin")
+      }else{
+          res.redirect('/')
         
     }
 

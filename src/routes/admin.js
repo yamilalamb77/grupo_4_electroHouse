@@ -16,24 +16,23 @@ const{
 let cargaProductFile = require('../middlewares/subirProductsArchivos')
 let productTheValidator = require('../validations/productCreateValidator')
 
-  router.get('/admin', userAdmin, controller.admin);
+  
 
 
 
-/* GET - Admin Signin */
-router.get('/', signin );
+
 /* GET - Admin Dashboard */
-router.get('/index', dashboard);
+router.get('/',userAdmin, dashboard);
 /* GET - Admin products*/
-router.get('/products', products);
+router.get('/products',userAdmin, products);
 /* Create Product*/
-router.get('/products/create', productsCreate);
-router.post('/products/create', cargaProductFile.array("images"), productTheValidator,productStore);
+router.get('/products/create',userAdmin, productsCreate);
+router.post('/products/create',userAdmin, cargaProductFile.array("images"), productTheValidator,productStore);
 /* Edit Product*/
-router.get('/products/edit/:id', productEdit);
-router.put('/products/edit/:id', cargaProductFile.array("images"), productTheValidator,productUpdate);
+router.get('/products/edit/:id',userAdmin, productEdit);
+router.put('/products/edit/:id',userAdmin, cargaProductFile.array("images"), productTheValidator,productUpdate);
 /* Edit Product*/
-router.delete('/products/delete/:id', productDestroy);
+router.delete('/products/delete/:id',userAdmin, productDestroy);
 
 
 module.exports = router;

@@ -154,7 +154,7 @@ module.exports = {
                 last_name,
                 email,
                 pass: bcrypt.hashSync(pass1, 10),
-              //  addPhoto: req.file ? req.file.filename : "default-image.png", /* buscar una imagen para default */
+                addPhoto: req.file ? req.file.filename : "default-image.png", /* buscar una imagen para default */
                 rol: "ROL_USER",
                 tel: "",
                 address: "",

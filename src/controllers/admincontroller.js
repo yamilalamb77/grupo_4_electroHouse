@@ -9,16 +9,8 @@ products.forEach(product => {
 });
 
 module.exports = {
-    admin : (req,res) => {
-        res.render('admin', {
-            user: req.query.user,
-            usuario : req.session.user ? req.session.user : ""
-        })
+   
     
-    },
-    signin: (req, res) => {
-        res.render('admin/adminLogin',{ usuario : req.session.user ? req.session.user : ""})
-    },
     dashboard: (req, res) => {
         res.render('admin/adminIndex', {
             session: req.session,
