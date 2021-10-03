@@ -6,12 +6,15 @@
     <div class="container-fluid">
         <div class="row">
     <%- include('../partials/adminSidebar') %>
-    <h1>
-        Lista de usuarios:
-    </h1>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2"> Lista de usuarios:</h1>
+
+    </div>
+    <div class="table-responsive">
     <% usuarios.forEach(user => { %>
-        <p>id:<%- user.id %> </p>
-        <p>rol:<%- user.rol %> </p>      
+        <p> id: <%- user.id %> </p>
+        <p>rol: <%- user.rol %> </p>      
         <p>Nombre: <%- user.name %> </p>
         <p>Apellido: <%- user.last_name %> </p>
         <p>Email: <%- user.email %> </p>
@@ -24,8 +27,8 @@
         <% })%>
         </div>
         </div>
-        
-        
+        </div>
+        </main>
         <%- include('../partials/adminScripts') %>
         
 </body>
