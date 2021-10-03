@@ -1,0 +1,8 @@
+email: yami@gmail.com
+contraseña: 1234
+
+email: lucho@gmail.com
+contraseña: 1234
+
+email: vilmat@gmail.com
+contraseña: 1234

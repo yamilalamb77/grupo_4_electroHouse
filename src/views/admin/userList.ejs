@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/headAdmin') %>
+<body>
+    <%- include('../partials/headerAdmin') %>
+    <div class="container-fluid">
+        <div class="row">
+    <%- include('../partials/adminSidebar') %>
+    <h1>
+        Lista de usuarios:
+    </h1>
+    <% usuarios.forEach(user => { %>
+        <p>id:<%- user.id %> </p>
+        <p>rol:<%- user.rol %> </p>      
+        <p>Nombre: <%- user.name %> </p>
+        <p>Apellido: <%- user.last_name %> </p>
+        <p>Email: <%- user.email %> </p>
+        <p>Número de telefono: <%- user.tel %> </p>
+        <p>Dirección: <%- user.address %> </p>
+        <p>Codigo Postal: <%- user.pc %> </p>
+        <p>Provincia: <%- user.province %> </p>
+        <p>Ciudad: <%- user.city %> </p>        
+        <p>--------------------</p>
+        <% })%>
+        </div>
+        </div>
+        
+        
+        <%- include('../partials/adminScripts') %>
+        
+</body>
+</html>

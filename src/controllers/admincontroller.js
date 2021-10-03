@@ -1,4 +1,4 @@
-const { products, categories, writeProductsJSON } = require('../data/dataBase');
+const { products, categories, writeProductsJSON, users } = require('../data/dataBase');
 const { validationResult } = require('express-validator')
 
 let subcategories = [];
@@ -69,7 +69,7 @@ module.exports = {
             discount,
             category,
             subcategory,
-            image: arrayImages.length > 0 ? arrayImages : "default-image.png"
+            image: arrayImages.length > 0 ? arrayImages : "userimg.jpg"
         };
         
         products.push(newProduct);
@@ -101,7 +101,7 @@ module.exports = {
     productUpdate: (req, res) => {
         let errors = validationResult(req)
 
-        if(errors.isEmpty()){
+        if(errors.isEmpty()) {
 
         let arrayImages = [];
         if(req.files){
@@ -129,7 +129,7 @@ module.exports = {
                 product.category = category,
                 product.subcategory = subcategory,
                 product.image = req.file ? [req.file.filename] : product.image
-                console.log(product)
+      /*           console.log(product) */
             }
         })
         writeProductsJSON(products)
@@ -149,7 +149,7 @@ module.exports = {
 },
     productDestroy: (req, res) => {
         products.forEach( product => {
-            if(product.id === +req.params.id){
+            if(product.id == req.params.id){
                let productToDestroy = products.indexOf(product);
                products.splice(productToDestroy, 1)
             }
@@ -158,6 +158,13 @@ module.exports = {
         writeProductsJSON(products)
 
         res.redirect('/admin/products')
+    },
+
+    userList: (req, res) => {
+        res.render('admin/userList', {
+             usuario: req.session.user ? req.session.user : "",
+             usuarios:users
+            })
     }
 
 }
