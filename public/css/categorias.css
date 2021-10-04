@@ -108,7 +108,7 @@ position:absolute;
 top: 0;
 right: 0px;
 padding: 5px;
-background-color: var(--dark-blue);
+background-color: red;
 color: white;
 border-radius: 0px 10px 0px 10px;
 font-size: 15px;

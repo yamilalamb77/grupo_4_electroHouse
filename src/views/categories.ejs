@@ -25,7 +25,7 @@
                 <% products.forEach(product => { %>
                     <div class="product">
                         <a href="/products/detail/<%- product.id %>">
-                            <div class="productDiscount"><%- product.discount %>% OFF</div>
+                            <div class="productDiscount"><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %></div>
                             <img src="/images/productos/<%- product.image[0] %>" alt="">
                             <p class="productName"> 
                                 <% if (product.name.length > 30) { %>
@@ -33,7 +33,8 @@
                                 <% } else { %>
                                     <%= product.name %>
                                 <% } %></p>
-                            <h4 class="productPrice">$<%- product.price %></h4>
+                            <h4 class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></h4>
+                            
                         </a>
                     </div>
                 <% }) %> 

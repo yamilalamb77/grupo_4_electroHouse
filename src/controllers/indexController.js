@@ -8,6 +8,7 @@ module.exports = {
         console.log(req.session.user)
         res.render('index', {
             titleSlider: "Ofertas especiales",
+            toThousand,
             productsSlider,
             bannerSlides: carousel,
             categories,

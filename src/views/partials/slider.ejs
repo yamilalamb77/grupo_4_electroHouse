@@ -15,7 +15,7 @@
                <% } else { %>
                    <%= product.name %>
                <% } %></p>
-            <h4 class="productPrice">$<%= product.price %></h4>
+            <h4 class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></h4>
          </a>
         </div>
         <% }) %>

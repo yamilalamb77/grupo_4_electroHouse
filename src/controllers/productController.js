@@ -1,4 +1,5 @@
 const { products, categories } = require('../data/dataBase')
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
 
@@ -12,6 +13,7 @@ module.exports = {
         res.render('productDetail', {
             titleSlider  : "Productos relacionados",
             productsSlider,
+            toThousand,
             product,
             categories,
             usuario : req.session.user ? req.session.user : ""
@@ -37,6 +39,7 @@ module.exports = {
 
         res.render('categories', {
             category,
+            toThousand,
             products: categoryProducts,
             subCategories,
             categories,
