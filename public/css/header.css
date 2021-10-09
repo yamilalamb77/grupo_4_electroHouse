@@ -40,6 +40,7 @@ header .main-header .logo {
     width: 60px;
        order: 1;  
     margin-bottom: 10px;
+
    
 } 
 .user-cerrar{
@@ -61,11 +62,12 @@ header .main-header .login-cart .user-login {
 /*     order: 2;  */ 
      color: var(--white);
      cursor: pointer;
-     
+   
   
 }
 header .main-header .login-cart{
     order: 2; 
+	list-style: none;
 }
 header .main-header .login-cart .shopping-cart{
 	display: none;
@@ -329,4 +331,9 @@ header .version-desktop .list-container ul li a{
 header .version-desktop .list-container ul li:hover{
     border-bottom: 5px solid #008F74;
 }
+	}
+
+	header .user-cerrar{
+		color: #008F74;
+		list-style: none;
 	}

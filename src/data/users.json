@@ -13,7 +13,6 @@
         "province": "",
         "city": ""
     },
-    
     {
         "id": 2,
         "name": "lucho",
@@ -61,6 +60,20 @@
         "last_name": "landa",
         "email": "hola@mail.com",
         "pass": "$2a$10$OLcz9C24rmjzvHPWVi3jDOeYGrdpY.KLaNv/wWICrgEhm8J2NRl9a",
+        "addPhoto": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "pc": "",
+        "province": "",
+        "city": ""
+    },
+    {
+        "id": 19,
+        "name": "aas",
+        "last_name": "sss",
+        "email": "yam@gmail.com",
+        "pass": "$2a$10$m.4vXslqR0Mh54evGVQgCO0Gzv/wmGjRn2nHdVmrJOyCgA/8449dW",
         "addPhoto": "default-image.png",
         "rol": "ROL_USER",
         "tel": "",

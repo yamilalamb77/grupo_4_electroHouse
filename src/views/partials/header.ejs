@@ -18,26 +18,37 @@
     <div class="login-cart">
         <% if (usuario){ %>
           
-            <a class="user-login" href="/users/profile"><img src="/images/userAvatars/<%= usuario.avatar %>" alt="" width="25px" height="25px"
-              class="rounded-circle avatar"></a>
+         <!--    <a class="user-login" href="/users/profile"><img src="/images/userAvatars/<%= usuario.avatar%>" alt="" width="25px" height="25px"
+              class="rounded-circle avatar"></a> -->
               <li>
                 
                 <a class="user-cerrar" href='/users/logout'>Cerrar Sesion</a>
               </li>
                   <% if (usuario.rol=== "ROL_ADMIN") { %>
                     <li>
-                      <a href="/admin">IR AL ADMIN</a>
+                      <a  class="user-cerrar" href="/admin">Ir al admin</a>
                     </li>    
+                  <% } %>
+                  <% if (usuario.rol=== "ROL_USER") { %>
+                    <li>
+                        <a class="user-login" href="users/editProfile/<%= usuario.id%>">
+                            <i class="far fa-user-circle user-login"></i></a>
+                    </li>   
+                    <li>
+                        <a class="shopping-cart" href="/products/shoppingCart">
+                            <i class="fas fa-shopping-cart shopping-cart"></i></a> 
+                    </li> 
                   <% } %>
 
         <%} else { %>
-            <a class="user-login" href="/users/login">
-                <i class="far fa-user-circle user-login"></i></a>
+            
+        <a class="user-login" href="/users/login">
+            <i class="far fa-user-circle user-login"></i></a>
+            <a class="shopping-cart" href="/products/shoppingCart">
+                <i class="fas fa-shopping-cart shopping-cart"></i></a>
         <% } %> 
 
-       
-        <a class="shopping-cart" href="/products/shoppingCart">
-            <i class="fas fa-shopping-cart shopping-cart"></i></a>
+    
     </div>
     <!-- Menú de navegación mobile-->
 
