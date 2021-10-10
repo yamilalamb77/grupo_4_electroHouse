@@ -29,14 +29,15 @@ module.exports = (sequelize, dataTypes) => {
     Cart.associate = models => {
         Cart.belongsTo(models.User, {
             as: "user",
-            foreignKey: "userId",
-             as: "product",
+            foreignKey: "userId" 
+        })
+        Cart.hasMany(models.products, {
+            as: "product",
             foreignKey: "productId" 
         })
-        
     }
  
-
+    
 
 
 return Peliculas 

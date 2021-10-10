@@ -33,17 +33,14 @@ module.exports = (sequelize, dataTypes) => {
         },
         avatar:{
             type: dataTypes.STRING(100)
-        },
-        createdAt :{
-            type: dataTypes.DATE
-        },
-        updatedAT: {
-            type: dataTypes.DATE
-        },
+        }
     }
     let config = {
         tableName: "users",
- /*        timestamps: true */
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false
     }
 
     const User = sequelize.define(alias, cols, config)
@@ -52,6 +49,10 @@ module.exports = (sequelize, dataTypes) => {
         User.hasMany(models.Address, {
             as: "addresses",
             foreignKey:"userId" 
+        })
+        User.belongsTo(models.Cart, {
+            as: "cart",
+            foreignKey: "cartId" 
         })
     }
 

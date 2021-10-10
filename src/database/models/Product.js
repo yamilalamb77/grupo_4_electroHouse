@@ -25,17 +25,14 @@ module.exports = function(sequelize, dataTypes){
         subcategoryId: {
             type: dataTypes.INTEGER(11),
             allowNull: false
-        }/* ,
-        createdAt :{
-            type: dataTypes.DATE
-        },
-        updatedAT: {
-            type: dataTypes.DATE
-        }, */
+        }
     }
     let config = {
         tableName: "products",
-        timestamps: true
+        timestamps: true,
+         createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false 
     }
 
     const Product = sequelize.define(alias, cols, config)
@@ -48,6 +45,10 @@ module.exports = function(sequelize, dataTypes){
         Product.hasMany(models.ProductImage, {
             as: "images",
             foreignKey: "productId"
+        })
+        Product.belongsTo(models.Cart, {
+            as: "cart",
+            foreignKey: "cartId"
         })
     }
 
