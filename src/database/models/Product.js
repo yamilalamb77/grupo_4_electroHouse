@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = "Products"; //nombre del modelo en plural
+    let alias = "Product"; //nombre del modelo en plural
     let cols = {
         id: {
             type: dataTypes.INTEGER(11).UNSIGNED,
@@ -41,15 +41,15 @@ module.exports = function(sequelize, dataTypes){
         Product.belongsTo(models.Subcategory, {
             as: "subcategory",
             foreignKey: "subcategoryId"
-        })
+        }) 
         Product.hasMany(models.ProductImage, {
             as: "images",
             foreignKey: "productId"
         })
-        Product.belongsTo(models.Cart, {
+          Product.belongsTo(models.Cart, {
             as: "cart",
             foreignKey: "cartId"
-        })
+        })  
     }
 
     return Product

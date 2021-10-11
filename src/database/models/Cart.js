@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Carts"
+    let alias = "Cart"
     let cols ={
         id: {
             type: dataTypes.INTEGER(11), 
@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false 
         },
-        usuarioId:{
+        userId:{
             type: dataTypes.INTEGER(11), 
             allowNull: false 
         },
@@ -27,18 +27,20 @@ module.exports = (sequelize, dataTypes) => {
 
     const Cart = sequelize.define(alias, cols, config)
     Cart.associate = models => {
-        Cart.belongsTo(models.User, {
+
+  /*           Cart.belongTo(models.User, {
             as: "user",
             foreignKey: "userId" 
-        })
-        Cart.hasMany(models.products, {
+        })    */
+
+         Cart.hasMany(models.Product, {
             as: "product",
             foreignKey: "productId" 
-        })
-    }
+        })  
+    } 
  
     
 
 
-return Peliculas 
+return Cart
 }
