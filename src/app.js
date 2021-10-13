@@ -7,7 +7,8 @@ let session = require('express-session');
 let localsCheck = require('./middlewares/localsCheck');
 let port = 3030;
 let methodOverride = require('method-override');
- const userLogs = require('./middlewares/userLogs'); 
+ const userLogs = require('./middlewares/userLogs');
+/*  let categoriesHeader = require('./middlewares/categoriesHeader') */ 
 
 /*--------- ENRUTADORES ------------*/
 
@@ -30,6 +31,8 @@ app.use(session({
 }))
 app.use(userLogs);
 app.use(localsCheck);
+/*app.use(categoriesHeader) 
+ */
 
  /* VIEWS */
 app.set('views', path.join(__dirname, 'views'));

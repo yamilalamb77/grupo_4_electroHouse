@@ -20,7 +20,7 @@ module.exports = {
             res.render('index', {
                 titleSlider: "Ofertas especiales",
                 toThousand,
-                productsSlider: products,
+                productSlider: products,
                 bannerSlides: carousel,
                 /* categories, */
                 usuario: req.session.user ? req.session.user : ""
