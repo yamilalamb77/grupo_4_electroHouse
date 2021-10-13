@@ -1,5 +1,6 @@
 .productSlider {
-    font-family: var(--font_poppins);
+    font-family: roboto;
+    
 }
 
 .productSlide {
@@ -17,6 +18,7 @@
     transition: all 1s ease;
     z-index: 1;
 }
+
 
 .productSlide:hover {
     transform: scale(1.03);
@@ -36,7 +38,9 @@
 
 .productSlide img {
     width: 100%;
+    display: inline-block;
     border-bottom: 1px solid black;
+    
 }
 
 .productSlide .productName {

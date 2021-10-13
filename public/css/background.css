@@ -1,0 +1,35 @@
+.gradient-background {
+    background-image: url(/imagenes/40-409499_material-wallpaper-4k.jpg);
+     /* background: linear-gradient(62deg, #008F74, white, #23D5AB);
+       animation: gradient 15s ease infinite; 
+        background-size: 400% 400%;*/
+        background-size: cover; 
+        
+   /* margin-bottom: 100px;*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  @-webkit-keyframes gradient{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+       background-position: 0% 50%;
+    }
+  }
+  @keyframes gradient{
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+       background-position: 0% 50%;
+    }
+  }

@@ -14,48 +14,27 @@
      }
 }
 
-.mancha {
-    position: absolute;
-    right: 0;
-    top: 0;
-    opacity: 0.5;
-    animation-name: mancha;
-    animation-duration:15s;
-    animation-iteration-count: 1;
-    z-index: -1;
-}
-
-.mancha2 {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 90%;
-    opacity: 0.5;
-    animation-name: mancha;
-    animation-duration: 20s;
-    z-index: -1;
-}
-
-.mancha2 img {
-    width: 100%;
-}
 
 
 /* OFERTAS */
 
 .special-offers {
-    background: linear-gradient(45deg, #3B6978, transparent);
+    /*background: linear-gradient(95deg, black, #008f74);*/
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 30px;
+    background-color: black;
+    border: 1px solid white;
+    
 }
 
 .section__title {
-    font-family: var(--font_baloo);
+    font-family: roboto;
     margin-bottom: 25px;
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -91,7 +70,7 @@
     padding: 20px;
 }
 
-.categories {
+.categoriesH {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,17 +78,19 @@
 
 .category-card {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 20px 10px;
     transition: all 1s ease;
     box-shadow: 0 0 5px var(--primary);
     background-color: white;
+    border: 4px solid black;
+    
 }
 
-.categories-section .categories .category-card{
+.categories-section .categoriesH .category-card{
     position: relative;
 }
-.categories-section .categories .category-card .fondo {
+.categories-section .categoriesH .category-card .fondo {
     position: absolute;
     left: 0;
     top: 48%;
@@ -147,7 +128,7 @@
     .categories-section {
         padding: 70px;
     }
-    .categories {
+    .categoriesH {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;

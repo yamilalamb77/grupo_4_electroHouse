@@ -1,0 +1,383 @@
+
+.productLoading .menu {
+	display: flex;
+	justify-content: center;
+    margin: 15px;
+	
+}
+.productLoading .menu ul {
+	display: flex;
+}
+.productLoading .menu li {
+	margin-right: 2rem;
+	cursor: pointer;
+
+	list-style: none;
+}
+
+/* .content {
+	margin-top: 2rem;
+} */
+
+[data-content] {
+	display: none;
+}
+
+.active[data-content] {
+	display: block;
+}
+
+
+/*aparte*/
+
+.edit-container{
+	display: flex;
+	width: 200%;
+	}
+	
+	/*****************/
+	/*edit-pl parte 1*/
+	.edit-container .edit-pl{
+	margin: 10px;
+	text-align: center;
+	display: flex;
+	justify-content: space-around
+	}
+	
+	.edit-pl span{
+	cursor: pointer;
+	transition: 1s;
+	width: 100%;
+	background-color: #232323;
+		color: white;
+	border: 1px solid white;
+	}
+		
+	.edit-pl span:hover{
+	background-color: #d6d5d5;  
+	}
+	/*edit-pl fin de parte 1*/
+	/***********************/
+	
+	
+	
+	
+	/************************/
+	/*products-box parte 2*/
+	/**********************/
+	
+	.edit-container .products-box{
+		border: 1px solid black;
+		margin-bottom: 20px;
+
+		}
+		
+	
+		.product-loading .products-box{
+			padding: 10px;
+			width: 90%;
+			color: var(--white);
+			background-color: var(--green);
+			}
+	
+	
+	
+			.products-box{
+				width: 100%;
+				max-width: 500px;
+			}
+		   
+	
+	/************************/
+	/*products-box  FIN parte 2*/
+	/**********************/
+	
+	
+	/************************/
+	/* input-style INICIO parte 3*/
+	/**********************/
+	
+	
+	
+	.input-style label{
+		font-size: 14px;
+		}
+					
+		.input-style span{
+		color: #ff1100;
+		font-size: 12px;
+		}
+		
+		
+		.input-style{
+		width: 100%;
+		max-width: 500px;
+		}
+				   
+	
+		.product-loading .input-style{
+			width: 90%;
+			margin: 5px;    
+			}
+			
+	/************************/
+	/* input-style FIN parte 3*/
+	/**********************/
+	
+	
+	
+	
+	/************************/
+	/*AVATAR parte 4*/
+	/**********************/
+	
+	.product-loading .avatar  {
+		display: flex;
+		flex-direction:column ;
+		flex-wrap: wrap;
+		align-content: center;
+		background-color:  var(--green);
+/* 		border: 1px solid black; */
+		width: 90%;
+		max-width: 500px;  
+		}
+		
+	.product-loading .avatar textarea{
+		margin: 20px;
+		}
+		
+	
+			
+	/************************/
+	/* AVATAR FIN parte 4*/
+	/**********************/
+	
+	
+	
+	/**********************/
+	/* button-end INICIO parte 5 */
+	/**********************/
+	
+	
+	.edit-container .button-end{
+		display: flex;
+		justify-content: center;
+		}
+		
+	
+	
+	
+	/**********************/
+	/* button-end INICIO parte 5 */
+	/**********************/
+	
+	
+	/* product-loading */
+	
+	
+	.product-loading label{
+		margin: 20px 0 10px 0;
+		font-weight: bold;
+		}
+		
+		
+		
+		.product-loading {
+		background-color: #F6F6F6;
+		height: 75%;
+		} 
+			
+		.product-loading h2{
+		padding: 10px;
+		font-size: 14px;
+		}
+		
+		
+		.product-loading {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		}
+ 	
+ .bb-edit-delete {
+			display: flex;
+			justify-content: space-evenly;
+		
+	}
+
+	form .bb-edit-delete .button-edit .btn-edit,
+	form .bb-edit-delete .button-delete .btn-delete{
+background-color: var(--lightGray);
+border-radius: 0.5rem;
+	cursor: pointer;
+	height: 2.5rem;
+	margin:0 0 30px 0px;
+	text-transform: uppercase;
+	width: 12rem;
+	 border: 1px solid black;
+	 margin: 20px;
+	 transition: all 2s ease;
+	}
+
+
+
+	.bb-edit-delete .button-delete .btn-delete:hover{
+		color:var(--black);
+
+		background:red;
+		border: 1px solid var(--black);
+	 
+	}
+
+	.bb-edit-delete .button-edit .btn-edit:hover{
+		color: var(--green);
+		background:var(--gray);
+		border: 1px solid var(--white);
+	} 
+
+
+	/**********************/
+	/*product-loading FIN parte 6 */
+	/**********************/
+	
+	
+	  
+	.edit-con-pl{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: stretch;
+	}
+	/* 
+	.input-file-container input,
+	.profiles-box .profile-subtitle{
+	margin: 5px;
+	width: 90%;
+	}******/
+	
+	/****************/
+	/*profile-box*/
+	/************/
+	.profiles-box{
+		display: flex;
+    flex-direction: column;
+	background-color:  var(--green);
+    align-items: center;
+	color: var(--white);
+	}
+	
+	.profiles-box .description {
+	width: 10rem;
+	height: 10rem;
+	background-color: white ;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	} */
+	
+	 .productLoading .profiles-box {
+	background-color: #d6d5d5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid black;
+	margin-bottom: 5px;
+	
+	}
+	
+	.productLoading .profiles-box h4{
+	display: flex;
+	justify-content: center;
+	}
+	 
+	
+	
+	
+	
+	.product-eliminar {
+	width: 100%;
+	height: 75%;
+	}
+	
+	
+	
+	
+	
+	
+	/* .product-loading label{
+		margin: 10px;
+	}
+	 */
+	
+	
+	.product-loading .btn{
+	border-radius: 0.5rem;
+	cursor: pointer;/*va a genererar que cuando pase por el elemnto aparezca la manito insinuando que se ´puede clickear*/
+	height: 2.5rem;
+	margin:0 0 30px 0px;
+	text-transform: uppercase;
+	width: 12rem;
+	 border: 1px solid black;
+	 margin: 20px;
+	}/*para establecer la base la forma del los botonoes*/
+	
+	.productLoading .btn-submit{
+	 background: #f6f6f6; 
+	color: #232323;
+	
+	transition: all 1s ease; /*all es a todo los elementos que va a cambiar*/
+	}
+	
+	.productLoading .btn-submit:hover{
+		color:#008F74;
+	/*     box-shadow: -5px -5px 10px rgb(255, 255, 255, 0.7); */
+		background:#d6d5d5;
+		border: 1px solid white;
+	 
+	}
+	
+	.product-loading input,
+	.product-loading select{
+		width: 45%;
+	}
+	
+	
+	@media (min-width: 481px){
+		.edit-container .edit-pl {
+		   
+			width: 70%;
+			text-align: center;
+			display: flex;
+	   
+			align-self: center;
+		}
+	
+		.input-style label {
+			font-size: 20px;
+			font-weight: inherit;
+		}
+	.input-style span {
+		color: #ff1100;
+		font-size: 14px;
+	  
+	}
+	
+	}
+	
+	@media (min-width: 770px){
+		.edit-container .edit-pl {
+		   
+			width: 70%;
+		   /*  text-align: center;
+			display: flex;
+	   
+			align-self: center; */
+		}
+		.edit-container .edit-pl {
+			width: 50%;
+		}
+	
+	}

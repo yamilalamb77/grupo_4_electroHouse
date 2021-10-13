@@ -1,0 +1,24 @@
+
+.terms-cond{
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    background-color: var(--gray);
+}
+
+.terms-cond .back{
+    cursor: pointer;
+    color: var(--green);
+    text-decoration: underline;
+}
+.terms{
+    width: 90%;
+    background-color: var(--lightGray);
+    font-size: 18px;
+}
+
+.terms2{
+    padding: 14px;
+}
+.terms2 .cond{
+    margin: 12px;
+}

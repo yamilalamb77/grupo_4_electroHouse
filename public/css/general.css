@@ -4,13 +4,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
-<<<<<<< HEAD
     padding: 0; 
-    background-image: url(/imagenes/40-409499_material-wallpaper-4k.jpg);
-=======
-    padding: 0;
-    
->>>>>>> 5d75bbbc0435ea33aabcaa8004578268d9226a7e
+   /*  background-image: url(/images/40-409499_material-wallpaper-4k.jpg); */
 }
 
 a {
@@ -22,12 +17,18 @@ ul {
     list-style: none;
 }
 
+.text-danger{
+    color: red;
+}
+/*botones*/
+
+/* 
 .btn {
     width: fit-content;
     width: -moz-fit-content;
     padding: 10px 20px;
     color: white;
-    font-family: var(--font_baloo);
+ 
     font-weight: bold;
     border-radius: 1rem;
 }
@@ -42,7 +43,7 @@ ul {
 .btn-primary:hover {
     background: linear-gradient(90deg, white, var(--primary)) ;
     color: var(--primary)    
-}
+} */
 
 .body-iteml{
     background-image: url(/images/40-409499_material-wallpaper-4k.jpg);
@@ -53,5 +54,3 @@ ul {
     padding: 0;
     
 }
-
- 

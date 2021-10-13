@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "name" : "tv y sonido",
+        "code" : "tvysonido",
+        "image": "cat_tvYSonido.jpg"
+    },
+    {
+        "id" : 2,
+        "name" : "Heladera y lavado",
+        "code" : "Heladeraylavado",
+        "image": "cat_HeladeraYLavado.jpg"
+    },
+    {
+        "id" : 3,
+        "name" : "Climatizacion",
+        "code" : "Climatizaciones",
+        "image": "cat_climatizacion.jpg"
+    },
+    {
+        "id" : 4,
+        "name" : "Pequeños electro",
+        "code" : "Pequeños electro",
+        "image": "cat_pequeñosElectro.jpg"
+    }
+    
+]
