@@ -21,18 +21,11 @@ module.exports = function(sequelize, dataTypes){
         description: {
             type: dataTypes.STRING(800), //aca esta el cambio
 
-        },
-        subcategoryId: {
-            type: dataTypes.INTEGER(11),
-            allowNull: false
         }
     }
     let config = {
-        tableName: "products",
-        timestamps: true,
-         createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false 
+        tableName: "product",
+        timestamps: true 
     }
 
     const Product = sequelize.define(alias, cols, config)
@@ -40,15 +33,15 @@ module.exports = function(sequelize, dataTypes){
     Product.associate = models => {
         Product.belongsTo(models.Subcategory, {
             as: "subcategory",
-            foreignKey: "subcategoryId"
+            foreignKey: "subcategoriesId"
         }) 
         Product.hasMany(models.ProductImage, {
             as: "images",
-            foreignKey: "productId"
+            foreignKey: "productID"
         })
-          Product.belongsTo(models.Cart, {
+        Product.hasMany(models.Cart, {
             as: "cart",
-            foreignKey: "cartId"
+            foreignKey: "productID"
         })  
     }
 

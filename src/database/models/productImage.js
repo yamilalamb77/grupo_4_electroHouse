@@ -17,7 +17,7 @@ module.exports = function(sequelize, dataTypes){
         },
     }
     let config = {
-        tableName: "productsImage",
+        tableName: "productimage",
         timestamps: false
     }
 
@@ -26,7 +26,7 @@ module.exports = function(sequelize, dataTypes){
      ProductImage.associate = models => {
         ProductImage.belongsTo(models.Product, {
             as: "product",
-            foreignKey: "productId"
+            foreignKey: "productID"
         })
     }
 
