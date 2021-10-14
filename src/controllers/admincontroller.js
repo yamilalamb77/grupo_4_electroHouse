@@ -1,16 +1,17 @@
 const { products, categories, writeProductsJSON, users } = require('../data/dataBase');
 const { validationResult } = require('express-validator')
+const db = require('../database/models');
 
-let subcategories = [];
+
+/* let subcategories = [];
 products.forEach(product => {
     if(!subcategories.includes(product.subcategory)){
         subcategories.push(product.subcategory)
     }  
-});
+}); */
 
 module.exports = {
-   
-    
+     
     dashboard: (req, res) => {
         res.render('admin/adminIndex', {
             session: req.session,
@@ -19,32 +20,52 @@ module.exports = {
         
     }, 
     products: (req, res) => {
-        res.render('admin/adminProducts', {
+        db.Products.findAll({
+            include: [
+                {association: "images"},
+                {association: 'subcategory',  
+                    include: [
+                        {association: "category"}
+                ]}
+            ]
+        })
+        .then(products =>{
+            res.render('admin/adminProducts', {
             products,
             session: req.session,
             usuario : req.session.user ? req.session.user : ""
         })
+        })
+        
     }, 
     productsCreate: (req, res) => {
-        res.render('admin/adminProductCreateForm', {
-            categories, 
-            subcategories,
-            session: req.session,
-            usuario : req.session.user ? req.session.user : ""
+        let categoriesPromise = db.Category.findAll();
+        let subcategoriesPromise = db.Subcategory.findAll();
+
+        Promise.all([categoriesPromise, subcategoriesPromise])
+        .then(([categories, subcategories]) => {
+            res.render('admin/adminProductCreateForm', {
+                categories, 
+                subcategories,
+                session: req.session,
+                usuario : req.session.user ? req.session.user : ""
+            })
         })
+        .catch((err) => console.log(err));
+        
     }, 
     productStore: (req, res) => {
         let errors = validationResult(req)
+        if (req.fileValidatorError) {
+            let image = {
+              param: "image",
+              msg: req.fileValidatorError,
+            };
+            errors.push(image);
+          }
 
         if(errors.isEmpty()){
-            let lastId = 1;
-
-        products.forEach(product => {
-            if(product.id > lastId){
-                lastId = product.id
-            }
-        })
-
+            
         let arrayImages = [];
         if(req.files){
             req.files.forEach(image => {
@@ -56,12 +77,31 @@ module.exports = {
             name, 
             price, 
             discount, 
-            category, 
             subcategory, 
             description
             } = req.body;
 
-        let newProduct = {
+            db.Products.create({
+                name,
+                price,
+                discount,
+                subcategoriesId: subcategory,
+                description,
+              })
+              .then(product => {
+                  if(arrayImages.length > 0){
+                      let images = arrayImages.map(image => {
+                          return {
+                              image: image,
+                              productId: product.id
+                          }
+                      })
+                      db.ProductImage.bulkCreate(images)
+                        .then(() => res.redirect('/admin/products'))
+                        .catch(err => console.log(err))
+                  }
+              })
+        /* let newProduct = {
             id: lastId + 1,
             name,
             price,
@@ -76,27 +116,61 @@ module.exports = {
 
         writeProductsJSON(products)
 
-        res.redirect('/admin/products')
+        res.redirect('/admin/products') */
     }else {
-        res.render('admin/adminProductCreateForm', {
-            subcategories,
-            categories,
-            errors: errors.mapped(),
-            old: req.body,
-            session: req.session,
-            usuario : req.session.user ? req.session.user : ""
+        let categoriesPromise = db.Category.findAll();
+        let subcategoriesPromise = db.Subcategory.findAll();
+
+        Promise.all([categoriesPromise, subcategoriesPromise])
+        .then(([categories, subcategories]) => {
+            res.render('admin/adminProductCreateForm', {
+                categories, 
+                subcategories,
+                session: req.session,
+                usuario : req.session.user ? req.session.user : ""
+            })
         })
+        .catch((err) => console.log(err));
     } 
 },
     productEdit: (req, res) => {
-        let product = products.find(product => product.id === +req.params.id)
+        db.Products.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: [
+                {association: "images"},
+                {association: 'subcategory',  
+                    include: [
+                        {association: "category"}
+                ]}
+            ]
+        })
+        .then(product =>{
+            let categoriesPromise = db.Category.findAll();
+            let subcategoriesPromise = db.Subcategory.findAll();
+
+            Promise.all([categoriesPromise, subcategoriesPromise])
+            .then(([categories, subcategories]) => {
+                /* res.send(product) */
+                res.render('admin/adminProductEditForm', {
+                    product,
+                    categories, 
+                    subcategories,
+                    session: req.session,
+                    usuario : req.session.user ? req.session.user : ""
+                })
+            })
+        })
+
+       /*  let product = products.find(product => product.id === +req.params.id)
         res.render('admin/adminProductEditForm', {
             categories, 
             subcategories,
             product,
             session: req.session,
             usuario : req.session.user ? req.session.user : ""
-        })
+        }) */
     },
     productUpdate: (req, res) => {
         let errors = validationResult(req)
@@ -161,10 +235,18 @@ module.exports = {
     },
 
     userList: (req, res) => {
-        res.render('admin/userList', {
+        db.User.findAll({
+            include: [{
+                association: 'address'
+            }]
+        })
+        .then(users =>{
+            res.render('admin/userList', {
              usuario: req.session.user ? req.session.user : "",
              usuarios:users
             })
+        })
+        
     }
 
 }

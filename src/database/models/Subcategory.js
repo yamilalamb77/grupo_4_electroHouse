@@ -11,7 +11,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING(45),
             allowNull: false
         },
-        categoryId: {
+        categoriesId: {
             type: dataTypes.INTEGER,
             allowNull: false
         },

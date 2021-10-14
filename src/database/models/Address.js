@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
         number: {
             type: dataTypes.INTEGER(11)
         },
-        postal_code: {
+        postalCode: {
             type: dataTypes.INTEGER(11)
         },
         userId: {

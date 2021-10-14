@@ -24,7 +24,7 @@
                 <select class="form-select" id="specificSizeSelect" name="subcategory">
                   <option selected hidden value="">Subcategorias</option>
                  <% subcategories.forEach(subcategory => { %>
-                    <option value="<%- subcategory%>"><%- subcategory %></option>
+                    <option value="<%- subcategory.id%>"><%- subcategory.name %></option>
                  <% }) %>
                 </select>
             </div>

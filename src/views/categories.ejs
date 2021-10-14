@@ -18,7 +18,7 @@
         <div class="container products-container">
             <aside class="subcategories_menu-desktop">
                 <% subCategories.forEach(subCategory => { %>
-                    <a class="botonSub" href="#"><%- subCategory %></a>
+                    <a class="botonSub" href="#"><%- subCategory.name %></a>
                 <% }) %>   
             </aside>
             <section class="products">
@@ -26,7 +26,7 @@
                     <div class="product">
                         <a href="/products/detail/<%- product.id %>">
                             <div class="productDiscount"><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %></div>
-                            <img src="/images/productos/<%- product.image[0] %>" alt="">
+                            <img src="/images/productos/<%- product.images.image %>" alt="">
                             <p class="productName"> 
                                 <% if (product.name.length > 30) { %>
                                     <%- `${product.name.slice(0,30)}...` %>

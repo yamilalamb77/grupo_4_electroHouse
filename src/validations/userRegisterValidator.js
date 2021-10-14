@@ -1,12 +1,13 @@
 const { check, body } = require('express-validator')
 const { users } = require('../data/dataBase')
+const db = require('../database/models')
 
 module.exports = [
     check('name')
     .notEmpty()
     .withMessage('Debe ingresar su nombre'),
 
-    check('last_name')
+    check('lastName')
     .notEmpty()
     .withMessage('Debe ingresar su apellido'),
 
@@ -18,17 +19,28 @@ module.exports = [
 
     body('email')
     .custom(value => {
-        let user = users.find(user => user.email === value)
+
+        return db.User.findOne({
+            where: {
+                email: value
+            }
+        })
+        .then(user =>{
+            if(user){
+                return Promise.reject('El email ya esta registrado')
+            }
+        })
+
+       /*  let user = users.find(user => user.email === value)
 
         if(user === undefined){
             return true
         }else{
             return false
-        }
-    })
-    .withMessage("Email ya registrado"),
+        } */
+    }),
 
-    check('pass1')
+    check('pass')
     .notEmpty()
     .withMessage('Debes escribir tu contraseña')
     .isLength({
@@ -38,7 +50,7 @@ module.exports = [
     .withMessage('La contraseña debe tener como mínimo 6 caracteres y maximo 16'),
 
     body('pass2') /* validacion custom, compara las contraseñas */
-    .custom((value, {req}) => value !== req.body.pass1 ? false : true)/*  */
+    .custom((value, {req}) => value !== req.body.pass ? false : true)/*  */
     .withMessage('Las contraseñas no coinciden'),
 
     check('terms')

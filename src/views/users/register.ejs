@@ -20,11 +20,11 @@
                         </div>
                         <div class="input-container">
                             <label>Apellido:</label>
-                            <input class="input-style" type="text" name="last_name"
-                                value="<%= locals.old && old.last_name %>">
-                            <% if (locals.errors && errors.last_name) { %>
+                            <input class="input-style" type="text" name="lastName"
+                                value="<%= locals.old && old.lastName %>">
+                            <% if (locals.errors && errors.lastName) { %>
                                 <small class="text-danger">
-                                    <%= errors.last_name.msg %>
+                                    <%= errors.lastName.msg %>
                                 </small> 
                                 <!--     <span class="error-message">Debe ingresar su email</span> -->
                                 <% } %>
@@ -41,10 +41,10 @@
                             </div>
                             <div class="input-container">
                                 <label>Contraseña:</label>
-                                <input class="input-style" type="password" name="pass1">
-                                <% if (locals.errors && errors.pass1) { %>
+                                <input class="input-style" type="password" name="pass">
+                                <% if (locals.errors && errors.pass) { %>
                                     <small class="text-danger">
-                                        <%= errors.pass1.msg %>
+                                        <%= errors.pass.msg %>
                                     </small>
                                     <% } %>
                             </div>

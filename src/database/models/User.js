@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(50),
             allowNull: false
         },
-        last_name: {
+        lastName: {
             type: dataTypes.STRING(50),
             allowNull: false
         },
@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
         }
     }
     let config = {
-        tableName: "users",
+        tableName: "user",
         timestamps: true
     }
 

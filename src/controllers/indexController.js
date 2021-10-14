@@ -6,26 +6,25 @@ const { Op } = require('sequelize')
 
 module.exports = {
     index: (req, res) => {
-        db.Product.findAll({
+        db.Products.findAll({
             where: {
                 discount: {
-                    [Op.gte]:5 //sea mayor o igual a 5
+                    [Op.gte]: 5 //sea mayor o igual a 5
                 }
             },
-            include: [{
-                association : 'images'
-            }]
+            include: [{association: "images"}]
         })
-        .then(products =>{
-            res.render('index', {
+        .then(product =>{
+            res.render("index", {
                 titleSlider: "Ofertas especiales",
-                toThousand,
-                productSlider: products,
+                toThousand, 
+                productSlider: product,
                 bannerSlides: carousel,
                 /* categories, */
-                usuario: req.session.user ? req.session.user : ""
+                usuario: req.session.user ? req.session.user : "",
             })
         })
+      
        /*let productsSlider = products.filter(product => product.discount >= 5)
  
  

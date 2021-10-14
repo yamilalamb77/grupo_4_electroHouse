@@ -24,14 +24,14 @@
                 
                 <a class="user-cerrar" href='/users/logout'>Cerrar Sesion</a>
               </li>
-                  <% if (usuario.rol=== "ROL_ADMIN") { %>
+                  <% if (usuario.rol=== 1) { %>
                     <li>
                       <a  class="user-cerrar" href="/admin">Ir al admin</a>
                     </li>    
                   <% } %>
-                  <% if (usuario.rol=== "ROL_USER") { %>
+                  <% if (usuario.rol=== 0) { %>
                     <li>
-                        <a class="user-login" href="users/editProfile/<%= usuario.id%>">
+                        <a class="user-login" href="/users/profile">
                             <i class="far fa-user-circle user-login"></i></a>
                     </li>   
                     <li>

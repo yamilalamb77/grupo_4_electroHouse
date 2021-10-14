@@ -26,10 +26,10 @@ router.get('/',userAdmin, dashboard);
 router.get('/products',userAdmin, products);
 /* Create Product*/
 router.get('/products/create',userAdmin, productsCreate);
-router.post('/products/create',userAdmin, cargaProductFile.array("image"), productTheValidator,productStore);
+router.post('/products/create',userAdmin, cargaProductFile.array("image")/* , productTheValidator */,productStore);
 /* Edit Product*/
 router.get('/products/edit/:id',userAdmin, productEdit);
-router.put('/products/edit/:id',userAdmin, cargaProductFile.array("image"), productTheValidator,productUpdate);
+router.put('/products/edit/:id',userAdmin, cargaProductFile.array("image")/* , productTheValidator */,productUpdate);
 /* Edit Product*/
 router.delete('/products/delete/:id',userAdmin, productDestroy);
 /*userList */

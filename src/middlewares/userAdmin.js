@@ -1,7 +1,5 @@
-
-
 module.exports= function(req, res, next){
-    if(req.session.user && req.session.user.rol === "ROL_ADMIN"){
+    if(req.session.user && req.session.user.rol === 1){
         next()
       }else{
           res.redirect('/')

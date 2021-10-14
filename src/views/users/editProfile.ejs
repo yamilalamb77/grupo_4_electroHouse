@@ -46,11 +46,11 @@
 
                             <div class="input-container">
                                 <label>Apellido:</label>
-                                <input class="input-style" type="text" name="last_name"
-                                    value="<%= locals.old ? old.last_name : user.last_name %>">
-                                <% if (locals.errors && errors.last_name) { %>
+                                <input class="input-style" type="text" name="lastName"
+                                    value="<%= locals.old ? old.lastName : user.lastName %>">
+                                <% if (locals.errors && errors.lastName) { %>
                                     <small class="text-danger">
-                                        <%= errors.last_name.msg %>
+                                        <%= errors.lastName.msg %>
                                     </small>
                                     <% } %>
                             </div>
@@ -65,8 +65,8 @@
                                 <h4 class="profile-subtitle">Datos de contacto</h4>
                                 <div class="input-container">
                                     <label>Teléfono:</label>
-                                    <input class="input-style" type="tel" name="tel"
-                                        value="<%= user.tel ? user.tel : "" %>">
+                                    <input class="input-style" type="tel" name="phone"
+                                        value="<%= user.phone ? user.phone : "" %>">
                                 </div>
 
                                 <!--      <div class="input-container">
@@ -117,13 +117,13 @@
                                 </div>
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
-                                    <input class="input-style" type="text" name="pc"
-                                        value="<%= user.cp ? user.cp : "" %>">
+                                    <input class="input-style" type="text" name="postalCode"
+                                        value="<%= user.postalCode ? user.postalCode : "" %>">
                                 </div>
                                 <div class="input-container">
                                     <label>Calle:</label>
-                                    <input class="input-style" type="text" name="address"
-                                        value="<%= user.address ? user.address : "" %>">
+                                    <input class="input-style" type="text" name="street"
+                                        value="<%= user.street ? user.street : "" %>">
                                     <!--     <span class="error-message">Debe ingresar un calle</span> -->
                                 </div>
                                 <div class="input-container">

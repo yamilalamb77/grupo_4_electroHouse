@@ -10,13 +10,13 @@
         <form class="row g-3" action="/admin/products/edit/<%= product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="col-12">
                 <label for="inputName" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="inputName" name="name" value="<%= product.name %>">
+                <input type="text" class="form-control" id="inputName" name="name" value='<%- product.name %> '>
             </div>
             <div class="col-12">
                 <select class="form-select" id="specificSizeSelect" name="category">
                   <option selected hidden>Categorias</option>
                  <% categories.forEach(category => { %>
-                    <option value="<%- category.id %>" <%= product.category == category.id ? "selected" : null %>><%- category.name %></option>
+                    <option value="<%- category.id %>" <%= product.subcategory.category.id == category.id ? "selected" : null %>><%- category.name %></option>
                  <% }) %>
                 </select>
             </div>
@@ -24,7 +24,7 @@
                 <select class="form-select" id="specificSizeSelect" name="subcategory">
                   <option selected hidden>Subcategorias</option>
                  <% subcategories.forEach(subcategory => { %>
-                    <option value="<%- subcategory%>" <%= product.subcategory === subcategory ? "selected" : null %> ><%- subcategory %></option>
+                    <option value="<%- subcategory.id %>" <%= product.subcategory.name == subcategory.name ? "selected" : null %>><%- subcategory.name %></option>
                  <% }) %>
                 </select>
             </div>
