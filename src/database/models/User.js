@@ -37,10 +37,7 @@ module.exports = (sequelize, dataTypes) => {
     }
     let config = {
         tableName: "users",
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: true
     }
 
     const User = sequelize.define(alias, cols, config)
@@ -50,10 +47,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "address",
             foreignKey:"userId" 
         }) 
-          User.belongsTo(models.Cart, {
-            as: "cart",
-            foreignKey: "userId" 
-        }) 
+         
     } 
 
     return User;

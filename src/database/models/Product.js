@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes){
-    let alias = "Product"; //nombre del modelo en plural
+    let alias = "Products"; //nombre del modelo en plural
     let cols = {
         id: {
             type: dataTypes.INTEGER(11).UNSIGNED,
@@ -24,7 +24,7 @@ module.exports = function(sequelize, dataTypes){
         }
     }
     let config = {
-        tableName: "product",
+        tableName: "products",
         timestamps: true 
     }
 
@@ -37,12 +37,9 @@ module.exports = function(sequelize, dataTypes){
         }) 
         Product.hasMany(models.ProductImage, {
             as: "images",
-            foreignKey: "productID"
+            foreignKey: "productId"
         })
-        Product.hasMany(models.Cart, {
-            as: "cart",
-            foreignKey: "productID"
-        })  
+          
     }
 
     return Product
