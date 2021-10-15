@@ -30,6 +30,7 @@ CREATE TABLE `address` (
   `number` int(11) DEFAULT NULL,
   `postalCode` int(11) DEFAULT NULL,
   `userId` int(11) NOT NULL,
+  `apartment or  floor` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_843500bd-d5ac-41f8-8af6-d133c617e527` (`userId`),
   CONSTRAINT `FK_843500bd-d5ac-41f8-8af6-d133c617e527` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
@@ -206,7 +207,7 @@ CREATE TABLE `users` (
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +216,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Yami','correa','yami@gmail.com','$2a$10$lNAlphjM/G/TFfwDV1X7nuzS20zwCkPfrJLTm9689vX82.5gGD0FS',NULL,1,NULL,NULL,NULL),(2,'lucho','molina','lucho@gmail.com','$2a$10$A6GAgxlA9T.lpknbH1AKQeixkNqU3sre0Hu07Mh7jyn.p1XO/QFZ2',NULL,1,NULL,NULL,NULL),(3,'vilma','toledo','vilmat@gmail.com','$2a$10$M9AqWe5R/jSMyEVkEHAN7eGZFXeVn8MjdBR/c/O7O84avL5FHxQOe',NULL,1,NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'Yami','correa','yami@gmail.com','$2a$10$lNAlphjM/G/TFfwDV1X7nuzS20zwCkPfrJLTm9689vX82.5gGD0FS',NULL,1,NULL,NULL,NULL),(2,'lucho','molina','lucho@gmail.com','$2a$10$A6GAgxlA9T.lpknbH1AKQeixkNqU3sre0Hu07Mh7jyn.p1XO/QFZ2',NULL,1,NULL,NULL,NULL),(3,'vilma','toledo','vilmat@gmail.com','$2a$10$M9AqWe5R/jSMyEVkEHAN7eGZFXeVn8MjdBR/c/O7O84avL5FHxQOe',NULL,1,NULL,NULL,NULL),(4,'mati','c8','mati@gmail.com','$2a$12$5PKVpm0FcjR/ma3efoSP0.ab70QdkarCpRTMyHkU/ARhJKVqWzk3C',NULL,0,'userimg.jpg','2021-10-15 02:17:44','2021-10-15 02:17:44');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,4 +233,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-14 16:25:44
+-- Dump completed on 2021-10-14 23:23:52
