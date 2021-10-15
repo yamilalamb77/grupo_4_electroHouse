@@ -38,7 +38,7 @@ module.exports = {
             usuario: req.session.user ? req.session.user : ""
         }) */
     },
-    search: (req, res) => {
+   /* search: (req, res) => {
         let result = []
         products.forEach(product => {
             if (product.name.toLowerCase().includes(req.query.keywords.toLowerCase())) {
@@ -51,8 +51,39 @@ module.exports = {
             search: req.query.keywords,
             usuario: req.session.user ? req.session.user : ""
         })
-    },
+    },*/
+    search : (req,res) => {
 
+        db.Products.findAll({
+            where : {
+                [Op.or] : [
+                    {
+                        name :  {
+                            [Op.substring] : req.query.keywords
+                        }
+                    },
+                    {
+                        description : {
+                            [Op.substring] : req.query.keywords
+                        }
+                    }
+                ]
+            },
+            include : [
+                {association : 'images'}
+            ]
+        }).then(result => {
+            return res.render('users/search',{
+            result,
+            toThousand,
+            busqueda : req.query.keywords,
+            usuario: req.session.user ? req.session.user : ""
+        })
+            
+        }).catch(error => console.log(error))
+
+    },
+    
     contact: (req, res) => {
         res.render('users/contact', { usuario: req.session.user ? req.session.user : "" })
 
