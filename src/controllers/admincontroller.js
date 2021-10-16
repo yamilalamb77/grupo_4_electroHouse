@@ -221,7 +221,7 @@ module.exports = {
         })
     }
 },
-    productDestroy: (req, res) => {
+    /*productDestroy: (req, res) => {
         products.forEach( product => {
             if(product.id == req.params.id){
                let productToDestroy = products.indexOf(product);
@@ -232,6 +232,21 @@ module.exports = {
         writeProductsJSON(products)
 
         res.redirect('/admin/products')
+    }*/
+    productDestroy : (req,res) => {
+        db.ProductImage.destroy({
+            where : {
+                productId : req.params.id
+            }
+        }).then( () => {
+            db.Products.destroy({
+                where : {
+                    id : req.params.id
+                }
+            }).then( () => res.redirect('/admin/products'))
+            .catch(error => console.log(error))
+        } )
+        
     },
 
     userList: (req, res) => {
