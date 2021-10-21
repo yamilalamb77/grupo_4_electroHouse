@@ -31,6 +31,7 @@ module.exports = {
             }]
         })
         .then(user =>{
+            console.log(user.address)
             res.render('users/userProfile', {
             categories,
             user,

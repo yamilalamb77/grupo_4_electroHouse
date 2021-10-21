@@ -174,16 +174,80 @@ module.exports = {
     },
     productUpdate: (req, res) => {
         let errors = validationResult(req)
+        if (req.fileValidatorError) {
+            let image = {
+                param: "image",
+                msg: req.fileValidatorError,
+            };
+            errors.push(image);
+        }
+        if (errors.isEmpty()) {
+            let arrayImages = [];
+            console.log(req.files)
+            if (req.files) {
+                req.files.forEach(image => {
+                    arrayImages.push(image.filename)
+                })
+            }
+            let {
+                name, 
+                price, 
+                discount, 
+                category, 
+                subcategory, 
+                description
+                } = req.body; 
+            db.Products.update({
+                name, 
+                price, 
+                discount, 
+                category, 
+                subcategory, 
+                description
+            },{
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(() => {
+                if (arrayImages.length > 0) {
+                    console.log(arrayImages)
+                    /* No tengo ni idea como hacer para que elimine solo las imagenes que eligen reemplazar */
+                    db.ProductImage.findOne({
+                        where: {
+                            productId: req.params.id
+                        }
+                    })
+                    .then(image => {
+                        db.ProductImage.destroy({
+                                where: {
+                                    id: image.id
+                                }
+                            })
+                        let images = arrayImages.map(image => {
+                        return {
+                            image: image,
+                            productId: req.params.id
+                            }
+                        })                             
+                        db.ProductImage.bulkCreate(images)
+                        .then(() => res.redirect('/admin/products'))
+                    })
+                }
+                res.redirect('/admin/products')
+            })
+        }
 
+
+
+        /* let errors = validationResult(req)
         if(errors.isEmpty()) {
-
         let arrayImages = [];
         if(req.files){
             req.files.forEach(image => {
                 arrayImages.push(image.filename)
             })
-        }
-        
+        }        
         let {
             name, 
             price, 
@@ -191,8 +255,7 @@ module.exports = {
             category, 
             subcategory, 
             description
-            } = req.body;
-        
+            } = req.body;        
         products.forEach( product => {
             if(product.id === +req.params.id){
                 product.id = product.id,
@@ -203,12 +266,9 @@ module.exports = {
                 product.category = category,
                 product.subcategory = subcategory,
                 product.image = req.file ? [req.file.filename] : product.image
-      /*           console.log(product) */
             }
         })
         writeProductsJSON(products)
-
-
         res.redirect('/admin/products')
     }else {
         res.render('admin/adminProductEditForm', {
@@ -219,7 +279,7 @@ module.exports = {
             session: req.session,
             usuario : req.session.user ? req.session.user : ""
         })
-    }
+    } */
 },
     /*productDestroy: (req, res) => {
         products.forEach( product => {
