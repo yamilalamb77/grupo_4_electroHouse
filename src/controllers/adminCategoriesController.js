@@ -8,6 +8,7 @@ module.exports = {
       res.render("admin/categories/adminCategories", {
         category,
         session: req.session,
+        usuario : req.session.user ? req.session.user : ""
       });
     });
   },
@@ -45,6 +46,7 @@ module.exports = {
       res.render("admin/categories/adminCategoriesEditForm", {
         categorie,
         session: req.session,
+        usuario : req.session.user ? req.session.user : ""
       });
     });
   },
@@ -80,21 +82,22 @@ module.exports = {
           errors: errors.mapped(),
           old: req.body,
           session: req.session,
+          usuario : req.session.user ? req.session.user : ""
         });
       });
     }
   },
   categoryDestroy: (req, res) => {
-    db.Subcategories.destroy({
+    db.Subcategory.destroy({
       where: {
-        categoryId: req.params.id,
+        categoriesId: req.params.id,
       },
     }).then((result) => {
-      db.Categories.findByPk(req.params.id).then((category) => {
+      db.Category.findByPk(req.params.id).then((category) => {
         fs.existsSync("./public/images/categorias/", category.banner)
           ? fs.unlinkSync("./public/images/categorias/" + category.banner)
           : console.log("-- No se encontró");
-        db.Categories.destroy({
+        db.Category.destroy({
           where: {
             id: req.params.id,
           },
