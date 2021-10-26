@@ -14,10 +14,16 @@ const{
     productDestroy,
     productUpdate,
 userList} = require('../controllers/adminController');
+let upload = require('../middlewares/uploadFiles');
 let cargaProductFile = require('../middlewares/subirProductsArchivos')
 let productTheValidator = require('../validations/productCreateValidator')
+let uploadCategoriesFile = require('../middlewares/uploadCategoriesFiles');
+let userSession = require('../middlewares/userSession')
+let {categories, categoryCreate, categoryStore, categoryEdit, categoryUpdate, categoryDestroy} = require('../controllers/adminCategoriesController')
+let categoriesValidator = require('../validations/categoriesValidator') 
+let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy} = require('../controllers/adminSubcategoriesController')
+let subcategoriesValidator = require('../validations/subcategoriesValidator')
 
-  
 
 
 /* GET - Admin Dashboard */
@@ -34,6 +40,46 @@ router.put('/products/edit/:id',userAdmin, cargaProductFile.array("image")/* , p
 router.delete('/products/delete/:id',userAdmin, productDestroy);
 /*userList */
 router.get('/userList', userAdmin, userList);
+
+/******************/
+/* CRUD CATEGORIES */
+/******************/
+
+/* GET - All categories*/
+router.get('/categories', userSession, userAdmin,categories);
+
+/* Create Category*/
+router.get('/categories/create', userSession, userAdmin,categoryCreate);
+router.post('/categories/create', uploadCategoriesFile.single('image'), categoriesValidator, categoryStore);
+
+/* Edit Category*/
+router.get('/categories/edit/:id', userSession, userAdmin,categoryEdit);
+router.put('/categories/edit/:id', uploadCategoriesFile.single('image'), categoriesValidator, categoryUpdate);
+
+/* Delete Category*/
+router.delete('/categories/delete/:id', categoryDestroy);
+
+
+
+/******************/
+/* CRUD SUBCATEGORIES */
+/******************/
+
+/* GET - All subcategories*/
+router.get('/subcategories', userSession, userAdmin,subcategories);
+
+/* Create subcategory*/
+router.get('/subcategories/create', userSession, userAdmin,subcategoryCreate);
+router.post('/subcategories/create', upload.single('image'), subcategoriesValidator, subcategoryStore);
+
+/* Edit subcategory*/
+router.get('/subcategories/edit/:id', userSession, userAdmin,subcategoryEdit);
+router.put('/subcategories/edit/:id', upload.single('image'), subcategoriesValidator, subcategoryUpdate);
+
+/* Delete subcategory*/
+router.delete('/subcategories/delete/:id', subcategoryDestroy);
+
+
 
 
 
