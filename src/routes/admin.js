@@ -21,8 +21,8 @@ let uploadCategoriesFile = require('../middlewares/uploadCategoriesFiles');
 let userSession = require('../middlewares/userSession')
 let {categories, categoryCreate, categoryStore, categoryEdit, categoryUpdate, categoryDestroy} = require('../controllers/adminCategoriesController')
 let categoriesValidator = require('../validations/categoriesValidator') 
-/*let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy} = require('../controllers/adminSubcategoriesController')
-let subcategoriesValidator = require('../validations/subcategoriesValidator')*/
+let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy} = require('../controllers/adminSubcategoriesController')
+let subcategoriesValidator = require('../validations/subcategoriesValidator')
 
 
 
@@ -66,18 +66,18 @@ router.delete('/categories/delete/:id', categoryDestroy);
 /******************/
 
 /* GET - All subcategories*/
-//router.get('/subcategories', userSession, userAdmin,subcategories);
+router.get('/subcategories', userSession, userAdmin,subcategories);
 
 /* Create subcategory*/
-//router.get('/subcategories/create', userSession, userAdmin,subcategoryCreate);
-//router.post('/subcategories/create', upload.single('image'), subcategoriesValidator, subcategoryStore);
+router.get('/subcategories/create', userSession, userAdmin,subcategoryCreate);
+router.post('/subcategories/create', upload.single('image'), subcategoriesValidator, subcategoryStore);
 
 /* Edit subcategory*/
-//router.get('/subcategories/edit/:id', userSession, userAdmin,subcategoryEdit);
-//router.put('/subcategories/edit/:id', upload.single('image'), subcategoriesValidator, subcategoryUpdate);
+router.get('/subcategories/edit/:id', userSession, userAdmin,subcategoryEdit);
+router.put('/subcategories/edit/:id', upload.single('image'), subcategoriesValidator, subcategoryUpdate);
 
 /* Delete subcategory*/
-//router.delete('/subcategories/delete/:id', subcategoryDestroy);
+router.delete('/subcategories/delete/:id', subcategoryDestroy);
 
 
 
