@@ -2,11 +2,11 @@ let db = require('../database/models')
 module.exports = (req, res, next) => {
     db.Category.findAll({
         include: [{
-            association: "subcategories"
+            association: "subcategory"
         }]
     })
-    .then(categories => {
-        res.locals.categories = categories
+    .then(category => {
+        res.locals.category = category
         next()
     })
 }

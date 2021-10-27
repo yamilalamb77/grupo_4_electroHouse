@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api/"
+const BASE_URL = "http://localhost:3030/api/"
 let $subcategoriesSelect = document.querySelector('.subcategorySelect')
 let $categoriesSelect = document.querySelector('.categorySelect')
 

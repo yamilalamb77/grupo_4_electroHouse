@@ -8,7 +8,7 @@ let localsCheck = require('./middlewares/localsCheck');
 let port = 3030;
 let methodOverride = require('method-override');
  const userLogs = require('./middlewares/userLogs');
-/*  let categoriesHeader = require('./middlewares/categoriesHeader') */ 
+//let categoriesHeader = require('./middlewares/categoriesHeader') 
 
 /*--------- ENRUTADORES ------------*/
 
@@ -16,7 +16,7 @@ userRouter = require ('./routes/userRouter'); //user
 productRouter = require('./routes/productRouter');
 indexRouter = require('./routes/indexRouter');
 adminRouter = require('./routes/admin');
-
+//apiRouter = require('./routes/apiRoutes.js');
 
 /* Middlewares */
 app.use(express.static('public'));
@@ -31,8 +31,8 @@ app.use(session({
 }))
 app.use(userLogs);
 app.use(localsCheck);
-/*app.use(categoriesHeader) 
- */
+//app.use(categoriesHeader) 
+ 
 
  /* VIEWS */
 app.set('views', path.join(__dirname, 'views'));

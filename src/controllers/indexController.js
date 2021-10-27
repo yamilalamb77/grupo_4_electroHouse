@@ -1,4 +1,4 @@
-const { carousel, categories } = require('../data/dataBase');
+const { carousel } = require('../data/dataBase');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models');
 const { Op } = require('sequelize')
@@ -20,38 +20,13 @@ module.exports = {
                 toThousand, 
                 productSlider: product,
                 bannerSlides: carousel,
-                /* categories, */
                 usuario: req.session.user ? req.session.user : "",
             })
-        })
+        }).catch(err => console.log(err))
       
-       /*let productsSlider = products.filter(product => product.discount >= 5)
- 
- 
-            console.log(req.session.user) 
-            res.render('index', {
-            titleSlider: "Ofertas especiales",
-            toThousand,
-            productsSlider,
-            bannerSlides: carousel,
-            categories,
-            usuario: req.session.user ? req.session.user : ""
-        }) */
+
     },
-   /* search: (req, res) => {
-        let result = []
-        products.forEach(product => {
-            if (product.name.toLowerCase().includes(req.query.keywords.toLowerCase())) {
-                result.push(product)
-            }
-        });
-        res.render('users/search', {
-            result,
-            toThousand,
-            search: req.query.keywords,
-            usuario: req.session.user ? req.session.user : ""
-        })
-    },*/
+
     search : (req,res) => {
 
         db.Products.findAll({

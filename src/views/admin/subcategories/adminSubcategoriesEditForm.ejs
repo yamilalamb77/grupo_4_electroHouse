@@ -19,10 +19,10 @@
                 </div>
     
                 <div class="col-12">
-                    <select class="form-select categorySelect" id="specificSizeSelect" name="categoryId">
+                    <select class="form-select categorySelect" id="specificSizeSelect" name="categoriesId">
                       <option selected hidden value="">Categorias</option>
                      <% locals.Category.forEach(categorie => { %>
-                        <option value="<%- categorie.id %>" <%- locals.old && old.categorie == categorie.id ? "selected" : categorie.id == Subcategories.categoriesId ? "selected" : "" %>><%- categorie.name %></option>
+                        <option value="<%- categorie.id %>" <%- locals.old && old.categorie == categorie.id ? "selected" : categorie.id == Subcategory.categoriesId ? "selected" : "" %>><%- categorie.name %></option>
                      <% }) %>
                     </select>
                     <% if (locals.errors && errors.categorie) { %>

@@ -22,7 +22,7 @@
                 <select class="form-select categorySelect" id="specificSizeSelect" name="category">
                   <option selected hidden value="">Categorias</option>
                  <% locals.Category.forEach(categorie => { %>
-                    <option value="<%- categorie.id %>" <%= locals.old && old.category == categorie.id ? "selected" : "" %> ><%- categorie.name %></option>
+                    <option value="<%- categorie.id %>" <%= locals.old && old.categorie == categorie.id ? "selected" : "" %> ><%- categorie.name %></option>
                  <% }) %>
                 </select>
                 <% if (locals.errors && errors.categorie) { %>
