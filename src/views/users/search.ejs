@@ -6,18 +6,17 @@
 	<%- include('../partials/header') %>
 	<!-- /Header -->
 	
-	<!-- Banner -->
-	<div class="banner"></div>
-	<!-- /Banner -->
+	  
     <main class="home-m">
-
-	
+		<section class="products">
+		<% if (result.length > 0) { %>
 			<div class="col-12">
-				<h2 class="products-title">Resultados de la búsqueda: <%= busqueda %> </h2>
+				<h2 class="products-title" style="color: white;">Resultados de la búsqueda: <%= busqueda %> </h2>
 			</div>
 
-			<% if (result.length > 0) { %> 
-				<% result.forEach(product => { %> 
+			 
+				<% result.forEach(product => { %>
+			 
                     <div class="product">
                         <a href="/products/detail/<%- product.id %>">
                             <div class="productDiscount"><%- product.discount %>% OFF</div>
@@ -31,13 +30,21 @@
                             <h4 class="productPrice">$<%- product.price %></h4>
                         </a>
                     </div>
+			
 				<% }) %> 
               <% } else { %> 
+				 <!-- CAROUSEL -->
+				 <%- include('../partials/carousel') %>
+				 <!-- END CAROUSEL -->
 				
 				<div class="col-12">
-					<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+					<h1 class="products-title" style="color: white;">No hay productos que coincidan con esa búsqueda</h1>
 				</div>
-				<% } %> 	
+				<% } %> 
+
+			</section>
+				
+			
      </main>
 	
 	

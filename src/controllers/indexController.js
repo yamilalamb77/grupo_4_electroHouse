@@ -51,6 +51,7 @@ module.exports = {
             return res.render('users/search',{
             result,
             toThousand,
+            bannerSlides: carousel,
             busqueda : req.query.keywords,
             usuario: req.session.user ? req.session.user : ""
         })
