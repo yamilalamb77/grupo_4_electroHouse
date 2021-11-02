@@ -2,8 +2,8 @@ let db = require('../../database/models')
 
 module.exports = {
     allCategories: (req, res)=>{
-        db.Categories.findAll({
-            include: [{association: "subcategories"}]
+        db.Category.findAll({
+            include: [{association: "subcategory"}]
         })
         .then(categories => {
             res.status(200).json({
@@ -16,7 +16,7 @@ module.exports = {
         })
     },
     oneCategory: (req, res) => {
-        db.Categories.findOne({where: {id:req.params.id }, include: [{association: "subcategories"}]}).then(category => {
+        db.Category.findOne({where: {id:req.params.id }, include: [{association: "subcategory"}]}).then(category => {
             res.status(200).json({
                 meta:{
                     status: 200

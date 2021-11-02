@@ -21,12 +21,12 @@
             <div class="col-12">
                 <select class="form-select categorySelect" id="specificSizeSelect" name="category">
                   <option selected hidden value="">Categorias</option>
-                 <% locals.Category.forEach(categorie => { %>
-                    <option value="<%- categorie.id %>" <%= locals.old && old.categorie == categorie.id ? "selected" : "" %> ><%- categorie.name %></option>
+                 <% locals.categories.forEach(category => { %>
+                    <option value="<%- category.id %>" <%= locals.old && old.category == category.id ? "selected" : "" %> ><%- category.name %></option>
                  <% }) %>
                 </select>
-                <% if (locals.errors && errors.categorie) { %>
-                    <small class="text-danger"><%= errors.categorie.msg %></small>
+                <% if (locals.errors && errors.category) { %>
+                    <small class="text-danger"><%= errors.category.msg %></small>
                 <% } %>
             </div>
             <button type="submit" class="btn btn-primary">
@@ -36,6 +36,6 @@
       </div>
     </div>
     <%- include('../../partials/adminScripts') %>
-    <script src="../javascripts/adminCategories.js"></script>
+    <script src="/javascripts/adminCategories.js"></script>
     </body>
 </html>

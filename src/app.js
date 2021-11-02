@@ -3,12 +3,13 @@ const app = express();   // genero instancia app
 const path = require('path');
 const router = express.Router();
 let cookieParser = require('cookie-parser')
+var logger = require('morgan');
 let session = require('express-session');
 let localsCheck = require('./middlewares/localsCheck');
 let port = 3030;
 let methodOverride = require('method-override');
  const userLogs = require('./middlewares/userLogs');
-//let categoriesHeader = require('./middlewares/categoriesHeader') 
+let categoriesHeader = require('./middlewares/categoriesHeader') 
 
 /*--------- ENRUTADORES ------------*/
 
@@ -16,9 +17,10 @@ userRouter = require ('./routes/userRouter'); //user
 productRouter = require('./routes/productRouter');
 indexRouter = require('./routes/indexRouter');
 adminRouter = require('./routes/admin');
-//apiRouter = require('./routes/apiRoutes.js');
+apiRouter = require('./routes/apiRoutes.js');
 
 /* Middlewares */
+app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.json())
 app.use(express.urlencoded({ extended : false }));
@@ -31,7 +33,7 @@ app.use(session({
 }))
 app.use(userLogs);
 app.use(localsCheck);
-//app.use(categoriesHeader) 
+app.use(categoriesHeader) 
  
 
  /* VIEWS */
