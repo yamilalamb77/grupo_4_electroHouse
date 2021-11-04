@@ -27,13 +27,7 @@ module.exports = [
             return Promise.reject('Datos invalidos')
         })
 
-        /* let user = users.find(user => user.email === value)
-
-        if(user !== undefined){
-            return true
-        }else{
-            return false
-        } */
+    
     }),
 
     /* check('pass')
