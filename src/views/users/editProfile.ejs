@@ -7,7 +7,7 @@
             <div class="form-container">
                 <h2><b> Editar mi perfil</b>│¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
 
-                <form action="/users/profile/edit/<%= user.id%>?_method=PUT" method="POST"
+                <form action="/users/profile/edit/<%= user.id%>?_method=PUT" id="form" method="POST"
                     enctype="multipart/form-data" class="form-ad">
                     <div class="profile-box" id="avatar-box">
 
@@ -17,13 +17,16 @@
                             </div> -->
                          <label for="files" ><div class="add-new-photo" id="addPhoto"><!-- <i class="fas fa-camera txt-send"></i> -->
                             <output id="list" class="img-r-avatar"></output>
-                             <img src="/images/logo/userimg.jpg" class="img-user-avatar" width="100%" height="80%" for="files" > 
+                             <img src="/images/logo/userimg.jpg" class="img-user-avatar"id="img-preview" width="100%" height="80%" for="files" > 
                              </div>
                             </label> 
                            
                             <input type="file" id="files" name="avatar" style="display: none;"/>
-    <!-- 
-                            <output id="list"></output> -->
+                                <!-- aqui va small -->
+                             <!-- <output id="list"></output> -->
+                             <small class="text-danger" id="fileserrors">
+                                
+                            </small>
                         </div>
                     </div>
 
@@ -35,24 +38,22 @@
 
                             <div class="input-container">
                                 <label>Nombre:</label>
-                                <input class="input-style" type="text" name="name"
+                                <input class="input-style" id="nameinput" type="text" name="name"
                                     value="<%= locals.old ? old.name : user.name %>">
-                                <% if (locals.errors && errors.name) { %>
-                                    <small class="text-danger">
-                                        <%= errors.name.msg %>
+                                
+                                    <small class="text-danger" id="nameErrors">
+                                
                                     </small>
-                                    <% } %>
                             </div>
 
                             <div class="input-container">
                                 <label>Apellido:</label>
-                                <input class="input-style" type="text" name="lastName"
+                                <input class="input-style" id="lastnameinput" type="text" name="lastName"
                                     value="<%= locals.old ? old.lastName : user.lastName %>">
-                                <% if (locals.errors && errors.lastName) { %>
-                                    <small class="text-danger">
-                                        <%= errors.lastName.msg %>
+                                
+                                    <small class="text-danger" id="lastnameerrors">
+                                        
                                     </small>
-                                    <% } %>
                             </div>
 
                             <!--     <div class="input-container">
@@ -65,8 +66,11 @@
                                 <h4 class="profile-subtitle">Datos de contacto</h4>
                                 <div class="input-container">
                                     <label>Teléfono:</label>
-                                    <input class="input-style" type="tel" name="phone"
-                                        value="<%= user.phone ? user.phone : "" %>">
+                                    <input class="input-style" id="phoneinput" type="tel" name="phone"
+                                        value="<%= user.phone ? user.phone : '' %>">
+                                        <small class="text-danger" id="phoneerrors">
+                                
+                                        </small>
                                 </div>
 
                                 <!--      <div class="input-container">
@@ -76,7 +80,7 @@
                             </div> -->
                                 <div class="input-container">
                                     <label>Provincia:</label>
-                                    <select name="province" id="" class="selec-city">
+                                    <select name="province" id="selectprovince" class="selec-city">
                                         <option value="">Provincia</option>
                                         <option value="">Buenos Aires</option>
                                         <option value="">Capital Federal</option>
@@ -108,40 +112,55 @@
                                 </div>
                                 <div class="input-container">
                                     <label>Localidad:</label>
-                                    <select name="city" id="" class="selec-city">
+                                    <select name="city" id="selectlocation" class="selec-city">
                                         <option value="">Localidad</option>
                                     </select>
                                     <!--  <label>Ciudad:</label>
                                 <input class="input-style" type="text" name="city">
                                 <span class="error-message">Debe ingresar una ciudad</span> -->
+                                <small class="text-danger" id="locationerrors">
+                                
+                                </small>
                                 </div>
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
-                                    <input class="input-style" type="text" name="postalCode"
-                                        value="<%= user.postalCode ? user.postalCode : "" %>">
+                                    <input class="input-style" id="codigoinput" type="text" name="postalCode"
+                                        value="<%= user.postalCode ? user.postalCode : '' %>">
+                                        <small class="text-danger" id="codigoerrors">
+                                
+                                        </small>
                                 </div>
                                 <div class="input-container">
                                     <label>Calle:</label>
-                                    <input class="input-style" type="text" name="street"
-                                        value="<%= user.street ? user.street : "" %>">
+                                    <input class="input-style" id="calleinput" type="text" name="street"
+                                        value="<%= user.street ? user.street : '' %>">
                                     <!--     <span class="error-message">Debe ingresar un calle</span> -->
+                                    <small class="text-danger" id="calleerrors">
+                                
+                                    </small>
                                 </div>
                                 <div class="input-container">
                                     <label>Piso o departamento:</label>
                                     <input class="input-style" type="text" name="flat_apartment"
-                                        value="<%= user.flat_apartment ? user.flat_apartment : "" %>">
+                                        value="<%= user.flat_apartment ? user.flat_apartment : '' %>">
                                     <!-- <span class="error-message">Debe ingresar un calle</span> -->
                                 </div>
                                 <div class="input-container">
                                     <label>Número:</label>
-                                    <input class="input-style" type="number" name="number"
-                                        value="<%= user.number ? user.number : "" %>">
+                                    <input class="input-style" id="numberinput" type="number" name="number"
+                                        value="<%= user.number ? user.number : '' %>">
                                     <span class="error-message">Debe ingresar un número</span>
+                                    <small class="text-danger" id="numbererrors">
+                                
+                                    </small>
                                 </div>
                                 <div class="input-container">
                                     <label>E-mail:</label>
-                                    <input class="input-style" type="email" name="email" readonly
+                                    <input class="input-style"id="email" type="email" name="email" readonly
                                         value="<%= user.email %>">
+                                        <small class="text-danger" id="emailerrors">
+                                
+                                        </small>
 
                                 </div>
 
@@ -151,11 +170,15 @@
                         <div class="button-container">
                             <!-- <button type="reset" class="btn btn-submit">Reset</button> -->
                             <button type="submit" class="btn btn-submit">Guardar</button>
+                            
                         </div>
+                        <small class="text-danger" id="errorsforms">
+                                
+                        </small>
 </div>
                 </form>
             </div>
-
+            <script src="/js/editprofilevalidatior.js"></script>
             <script src="/js/imageProfile.js"></script>
             <%- include('../partials/footer.ejs') %>
     </body>

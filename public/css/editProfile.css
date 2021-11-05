@@ -104,3 +104,10 @@
     border: 1px solid #000;
     margin: 10px 5px 0 0;
 }
+.is-invalid{
+  border: 1px solid red;
+
+}
+.is-valid{
+    border: 1px solid green;
+}
