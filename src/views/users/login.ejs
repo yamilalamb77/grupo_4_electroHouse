@@ -12,20 +12,20 @@
     <div class="form-container">
         <h2>Ingresa a Mi cuenta</h2>
        
-        <form action="/users/login" method="POST" class="form-ad">
-            <div class="form">
-                <div class="input-container">
+        <form action="/users/login" method="POST" class="form-ad" id="formulario">
+            <div class="form" >
+                <div class="input-container"  id="grupo__correo">
                     <label>E-mail:</label>
-                    <input class="input-style" type="email" name="email" >
+                    <input class="input-style" type="email" name="email" id="email" >
                     <% if (locals.errors && errors.email) { %>
-                        <small class="text-danger"><%= errors.email.msg %> </small>
+                        <small class="text-danger" id="emailErrors"><%= errors.email.msg %> </small>
                     <% } %>
                 </div>
-                <div class="input-container">
+                <div class="input-container" id="grupo__password">
                     <label>Contraseña:</label>
-                    <input class="input-style" type="password" name="pass" >
+                    <input class="input-style" type="password" name="pass" id="pass">
                     <% if (locals.errors && errors.pass) { %>
-                        <small class="text-danger"><%= errors.pass.msg %> </small>
+                        <small class="text-danger" id="passErrors"><%= errors.pass.msg %> </small>
                     <% } %>
                 </div>
                 
@@ -38,6 +38,9 @@
                 <% if (locals.errorMsg ) { %>
                     <small class="text-danger"><%= errorMsg %> </small>
             <% } %>
+            <div class="formulario__input-error" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Datos inválidos. </p>
+            </div>
 
                 <div class="button-container">
             <!--         <span class="error-message">Credenciales inválidas</span> -->
@@ -46,10 +49,13 @@
                 
                 <span><a href="register">Aún no tengo cuenta</a></span>
             </div>
+
         </form>
     </div>
 </main>
     <%- include('../partials/footer.ejs')  %>
+
+    <script src="/js/login.js"></script>
 
 </body>
 </html>
