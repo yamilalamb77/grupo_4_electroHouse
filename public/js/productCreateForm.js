@@ -51,10 +51,10 @@ window.addEventListener('load', ()=>{
                     inputName.style.border = '3px solid rgba(185, 14, 14, 0.66)' 
                     errorName.innerText = "Campo nombre es obligatorio"        
                     break;
-                case !regExAlpha.test(inputName.value):
+                /*case !regExAlpha.test(inputName.value):
                         inputName.style.border = '3px solid rgba(185, 14, 14, 0.66)' 
                         errorName.innerText = "No se admiten caracteres especiales"      
-                    break;
+                    break;*/
                 default:
                     inputName.style.border = '3px rgba(14, 185, 90, 0.66) solid'     
                     errorName.innerText = ""
