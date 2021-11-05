@@ -18,7 +18,8 @@
             </div>
             <div class="productData-container">
                 <h3 class="productName"><%= product.name %> </h3>
-                <div class="productPrice">$<%= product.price %> </div>
+                <div class="productDiscountd"><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %></div>
+                <div class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></div>
                 <div class="productNumber">
                     <label for="cantidad">Cantidad</label>
                     <div class="counter">

@@ -168,6 +168,13 @@ transition: all 2s ease;
     color: black;
 }
 
+.productDiscountd {
+   padding: 5px;
+   background-color: red;
+   color: white;
+   border-radius: 0px 10px 0px 10px;
+   font-size: 15px;
+}
 
 /* MEDIA QUERIES */
 
