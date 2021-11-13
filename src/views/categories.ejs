@@ -9,8 +9,8 @@
             <div id="mySidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <% subCategories.forEach(subCategory => { %>
-                    <a class="botonSub" href="#"><%- subCategory %></a>
-                <% }) %>    
+                    <a class="botonSub" href="#"><%- subCategory.name %></a>
+                <% }) %>   
             </div>
               
             <button class="openbtnl" onclick="openNav()">Subcategorias</button>
