@@ -250,8 +250,7 @@ module.exports = {
             old: req.body,
             usuario : req.session.user ? req.session.user : ""
         })
-    }
-    }
+    }}
 
 }
 

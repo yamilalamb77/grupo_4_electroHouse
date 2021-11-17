@@ -2,7 +2,7 @@ const { carousel } = require('../data/dataBase');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models');
 const { Op } = require('sequelize')
-
+const { validationResult } = require('express-validator')
 
 module.exports = {
     index: (req, res) => {
@@ -62,6 +62,39 @@ module.exports = {
     
     contact: (req, res) => {
         res.render('users/contact', { usuario: req.session.user ? req.session.user : "" })
+
+    },
+    processContact: (req, res) => {
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            
+            let {
+                name,
+                email,
+                telephone,
+                website,
+                affair,
+                message
+            } = req.body
+
+            db.Contacts.create({
+                name,
+                email,
+                telephone,
+                website,
+                affair,
+                message
+            }).then(() =>{
+                res.redirect('/')
+            })
+
+        } else {
+            res.render('users/contact', { 
+                usuario: req.session.user ? req.session.user : "",
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
 
     },
     enConstruccion: (req, res) => {

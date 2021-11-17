@@ -10,6 +10,8 @@ router.get('/', cookieCheck,controller.index);
 
 /* Ruta para Acerca de */
 router.get('/contact', controller.contact);
+/* Ruta para Acerca de */
+router.post('/contact', controller.processContact);
 /* Ruta para la búsqueda */
 router.get('/search', controller.search);
 

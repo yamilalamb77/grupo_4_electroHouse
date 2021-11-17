@@ -78,18 +78,16 @@ function qs(element) {
       let error = false;
       event.preventDefault()
       console.log($form.elements)
-      let elementosForm = this.elements
+      let elementosForm = $form.elements
       
       for (let index = 0; index < elementosForm.length-1; index++) {
-          if(elementosForm[index].value == "" ){
-              elementosForm[index].classList.add('is-invalid');
-              submitErrors.innerHTML = "Los campos señalados son obligatorios";
+          if(elementosForm[index].value == "" && elementosForm[index].name != 'province' && elementosForm[index].name != 'city' && elementosForm[index].name != 'phone' && elementosForm[index].name != 'postalCode' && elementosForm[index].name != 'street' && elementosForm[index].name != 'flat_apartment' && elementosForm[index].name != 'number' && elementosForm[index].name != 'avatar' && elementosForm[index].name != 'outputList'){
+              
+              elementosForm[index].style.border = '1px solid red';
+              $formerrors.innerHTML = "Los campos señalados son obligatorios";
               error = true;
           }
       }
-  
-     
-  
       if(!error){
            $form.submit()
         }
