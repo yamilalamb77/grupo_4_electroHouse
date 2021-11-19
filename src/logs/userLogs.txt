@@ -11647,6 +11647,7 @@ El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
@@ -11921,6 +11922,49 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+=======
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /login
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /login
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /
+>>>>>>> 2de2e4153d72d828e8ab46b3fb78c9120199c2ee
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /images/productos/1635185059278_img_.jpg
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css

@@ -64,9 +64,7 @@ module.exports = {
         res.render('users/contact', { usuario: req.session.user ? req.session.user : "" })
 
     },
-    enConstruccion: (req, res) => {
-        res.render('product/enConstruccion', { usuario: req.session.user ? req.session.user : "" })
-    },
+   
     termsYConditions: (req, res) => {
         res.render('termsYConditions', { usuario: req.session.user ? req.session.user : "" })
     },
