@@ -9,7 +9,8 @@ const { register ,
     newRegister,
     editProfile,
     updateProfile,
- productLoading,} = require('../controllers/userController');
+ productLoading,
+ deleteProfile} = require('../controllers/userController');
 
 const uploadUserAvatar = require('../middlewares/subirUserAvatar');
 const userLoginCheck = require('../middlewares/userLoginCheck');
@@ -28,7 +29,9 @@ router.post('/register', uploadUserAvatar.single('avatar'), userRegisterValidato
 
 /* GET - User profile */
 router.get('/profile',userLoginCheck, profile);
+router.delete('/profile/delete/:id', deleteProfile);
 router.get('/editProfile/:id', editProfile);
+
 /* router.get('/editProfile', editProfile);  */
 router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'),updateProfile);
 

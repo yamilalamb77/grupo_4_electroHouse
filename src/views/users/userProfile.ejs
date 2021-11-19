@@ -29,17 +29,21 @@
                 <p class="userProfile_item">Provincia: <%= user.address.province ?  user.address[0].province : "------"%></p>
                 <p class="userProfile_item">Localidad: <%= user.address.city ? user.address[0].city : "------"%></p>
             </div>
-            <div class="button-userProfile1">
-                <div class="btn-ad-btn-ad-primary">
+            <div >
+                <button class="btn-ad-btn-ad-primary">
                     <a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
                     
-                </div>
+                </button>
             </div>
             <div class="button-userProfile2">
                 <div class="btn-ad-btn-ad-primary">
                     <a href='/users/logout'>Salir</a> 
                 </div>
             </div>
+            <div >
+                <form action="/users/profile/delete/<%- user.id %>?_method=DELETE" method="POST">
+                <button id="evil-btn-submit" type="submit"  class="btn-ad-btn-ad-primary">Eliminar perfil</button>
+                </form>    
             
         </div>
     </main>
