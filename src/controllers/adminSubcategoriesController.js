@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator");
 const fs = require("fs");
 const db = require("../database/models");
 
+
 module.exports = {
   subcategories: (req, res) => {
     db.Subcategory.findAll().then((Subcategory) => {
@@ -125,5 +126,8 @@ module.exports = {
         });
       });
     })
-  },
+  }
+  
 };
+
+

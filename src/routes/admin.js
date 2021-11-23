@@ -13,6 +13,8 @@ const{
     productEdit, 
     productDestroy,
     productUpdate,
+    searchAdminProducts,
+    searchAdminUsers,
 userList} = require('../controllers/adminController');
 let upload = require('../middlewares/uploadFiles');
 let cargaProductFile = require('../middlewares/subirProductsArchivos')
@@ -79,9 +81,11 @@ router.put('/subcategories/edit/:id', upload.single('image'), subcategoriesValid
 /* Delete subcategory*/
 router.delete('/subcategories/delete/:id', subcategoryDestroy);
 
+/* Search Products */
+router.get('/searchAdminProducts', userAdmin, searchAdminProducts)
 
-
-
+/* Search Users*/
+router.get('/searchAdminUsers', userAdmin, searchAdminUsers)
 
 module.exports = router;
 

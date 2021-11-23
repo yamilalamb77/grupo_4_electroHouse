@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0; 
-   /*  background-image: url(/images/40-409499_material-wallpaper-4k.jpg); */
+
 }
 
 a {
@@ -20,30 +20,7 @@ ul {
 .text-danger{
     color: red;
 }
-/*botones*/
 
-/* 
-.btn {
-    width: fit-content;
-    width: -moz-fit-content;
-    padding: 10px 20px;
-    color: white;
- 
-    font-weight: bold;
-    border-radius: 1rem;
-}
-
-.btn-primary {
-    width: fit-content;
-    width: -moz-fit-content;
-    background: var(--primary);
-    transition: all 1s ease;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(90deg, white, var(--primary)) ;
-    color: var(--primary)    
-} */
 
 .body-iteml{
     background-image: url(/images/40-409499_material-wallpaper-4k.jpg);
