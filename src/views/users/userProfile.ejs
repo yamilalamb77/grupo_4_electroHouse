@@ -8,14 +8,14 @@
         <link rel="stylesheet" href="/css/userProfile.css">
     <%- include('../partials/head') %>
     </head>
-<body>
+<body class="body-iteml">
     <%- include('../partials/header') %>
     <main class= "userProfile">
         <div class= "avatar">
             <img src="/images/logo/<%=user.avatar %>" alt="">
         </div>
         
-        <div class="userProfile-container">
+        <div class="userProfile-container" >
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos Personales</h3>
                 <p class="userProfile_item">Nombre: <%= user.name %></p>
