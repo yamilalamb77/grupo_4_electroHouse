@@ -24,7 +24,7 @@ let uploadCategoriesFile = require('../middlewares/uploadCategoriesFiles');
 let userSession = require('../middlewares/userSession')
 let {categories, categoryCreate, categoryStore, categoryEdit, categoryUpdate, categoryDestroy,searchAdminCategories} = require('../controllers/adminCategoriesController')
 let categoriesValidator = require('../validations/categoriesValidator') 
-let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy} = require('../controllers/adminSubcategoriesController')
+let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy,searchAdminSubcategories} = require('../controllers/adminSubcategoriesController')
 let subcategoriesValidator = require('../validations/subcategoriesValidator')
 
 
@@ -96,6 +96,10 @@ router.get('/searchAdminUsers', userAdmin, searchAdminUsers)
 
 /* Search searchAdminCategories*/
 router.get('/searchAdminCategories', userAdmin, searchAdminCategories)
+
+/* Search searchAdminSubcategories*/
+router.get('/searchAdminSubcategories', userAdmin, searchAdminSubcategories)
+
 
 
 
