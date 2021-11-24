@@ -287,6 +287,21 @@ searchAdminUsers: (req, res) =>{
          usuarios:users
         })
     })
-}
-}
+},
+
+usersList: (req, res) => {
+    db.User.findAll({
+        include: [{
+            association: 'address'
+        }]
+    })
+    .then(users =>{
+        res.render('admin/usersList', {
+         usuario: req.session.user ? req.session.user : "",
+         usuarios:users
+        })
+    })
+    
+    
+}}
 

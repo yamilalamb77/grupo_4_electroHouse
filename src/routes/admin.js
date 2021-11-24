@@ -15,6 +15,7 @@ const{
     productUpdate,
     searchAdminProducts,
     searchAdminUsers,
+    usersList,
 userList} = require('../controllers/adminController');
 let upload = require('../middlewares/uploadFiles');
 let cargaProductFile = require('../middlewares/subirProductsArchivos')
@@ -42,6 +43,10 @@ router.put('/products/edit/:id',userAdmin, cargaProductFile.array("image")/* , p
 router.delete('/products/delete/:id',userAdmin, productDestroy);
 /*userList */
 router.get('/userList', userAdmin, userList);
+
+
+
+router.get('/usersList', userAdmin, usersList);
 
 /******************/
 /* CRUD CATEGORIES */
@@ -86,6 +91,8 @@ router.get('/searchAdminProducts', userAdmin, searchAdminProducts)
 
 /* Search Users*/
 router.get('/searchAdminUsers', userAdmin, searchAdminUsers)
+
+
 
 module.exports = router;
 
