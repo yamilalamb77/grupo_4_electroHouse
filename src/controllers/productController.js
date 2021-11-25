@@ -69,6 +69,35 @@ module.exports = {
         })
 
     },
+
+    
+    subcategory: (req, res) => {
+        db.Subcategory.findByPk(req.params.id, {
+          include: [
+            {
+              association: "product",
+              include: [
+                {
+                  association: "images",
+                },
+              ],
+            },
+          ],
+        })
+          .then((subcategory) => {
+            db.Category.findByPk(subcategory.categoriesId, {
+              include: [{ association: "subcategory" }],
+            }).then((category) =>
+              res.render('subcategory', {
+                category,
+                product: subcategory.product,
+                usuario : req.session.user ? req.session.user : "",
+              })
+            );
+          })
+          .catch((err) => console.log(err));
+      },
+      
     shoppingCart: (req,res) => {
 
         res.render('product/shoppingCart',{  usuario : req.session.user ? req.session.user : ""})   

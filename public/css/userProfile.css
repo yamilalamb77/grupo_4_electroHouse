@@ -1,10 +1,18 @@
 .userProfile {
     font-family: var(--font_poppins);
-    color: var(--primary);
     margin: 0 auto;
     max-width: 900px;
     border-radius: .8rem;
     padding: 2rem .5rem;
+    max-width: 380px;
+    background:#008F74;
+border-radius: 10px;
+margin: 20px auto;
+width: 100%;
+height: fit-content; /*la altura se adapte al contenido */
+height: -moz-fit-content;
+padding: 1rem;
+box-shadow: 0 0 6px black;
 }
 
 .userProfile .avatar{

@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
-const fs = require("fs");
 const db = require("../database/models");
+const Op = db.Sequelize.Op
+const fs = require("fs");
 
 module.exports = {
   categories: (req, res) => {
@@ -107,4 +108,21 @@ module.exports = {
       });
     });
   },
+  searchAdminCategories: (req, res) =>{
+    
+    db.Category.findAll({
+        where:{
+            name:{[Op.like]: `%${req.query.keywords}%`},
+           
+        }
+    })
+    .then(category =>{
+        res.render("admin/categories/adminCategories", {
+            category,
+         session: req.session,
+         usuario: req.session.user ? req.session.user : ""
+         
+        })
+    })
+}
 };

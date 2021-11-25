@@ -22,9 +22,9 @@ let cargaProductFile = require('../middlewares/subirProductsArchivos')
 let productTheValidator = require('../validations/productCreateValidator')
 let uploadCategoriesFile = require('../middlewares/uploadCategoriesFiles');
 let userSession = require('../middlewares/userSession')
-let {categories, categoryCreate, categoryStore, categoryEdit, categoryUpdate, categoryDestroy} = require('../controllers/adminCategoriesController')
+let {categories, categoryCreate, categoryStore, categoryEdit, categoryUpdate, categoryDestroy,searchAdminCategories} = require('../controllers/adminCategoriesController')
 let categoriesValidator = require('../validations/categoriesValidator') 
-let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy} = require('../controllers/adminSubcategoriesController')
+let {subcategories, subcategoryCreate, subcategoryStore, subcategoryEdit, subcategoryUpdate, subcategoryDestroy,searchAdminSubcategories} = require('../controllers/adminSubcategoriesController')
 let subcategoriesValidator = require('../validations/subcategoriesValidator')
 
 
@@ -68,6 +68,8 @@ router.delete('/categories/delete/:id', categoryDestroy);
 
 
 
+
+
 /******************/
 /* CRUD SUBCATEGORIES */
 /******************/
@@ -91,6 +93,15 @@ router.get('/searchAdminProducts', userAdmin, searchAdminProducts)
 
 /* Search Users*/
 router.get('/searchAdminUsers', userAdmin, searchAdminUsers)
+
+/* Search searchAdminCategories*/
+router.get('/searchAdminCategories', userAdmin, searchAdminCategories)
+
+/* Search searchAdminSubcategories*/
+router.get('/searchAdminSubcategories', userAdmin, searchAdminSubcategories)
+
+
+
 
 
 
