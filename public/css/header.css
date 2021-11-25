@@ -321,7 +321,7 @@ justify-content: center;
 
 header .version-desktop .list-container ul li a{
     color: white;
-	font-size: 14px;
+	font-size: 19px;
 
     
 }
@@ -334,4 +334,5 @@ header .version-desktop .list-container ul li:hover{
 	header .user-cerrar{
 		color: #008F74;
 		list-style: none;
+		font-size: 15px;
 	}
