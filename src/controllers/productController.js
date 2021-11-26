@@ -24,7 +24,7 @@ module.exports = {
                 ] 
             })
             .then(products =>{
-                res.render('productDetail', {
+                res.render('product/productDetail', {
                 titleSlider  : "Productos relacionados",
                 productSlider: products,
                 toThousand,

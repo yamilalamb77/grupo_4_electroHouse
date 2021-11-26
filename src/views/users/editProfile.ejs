@@ -5,7 +5,7 @@
     <body class="login">
         <%- include('../partials/header.ejs') %>
             <div class="form-container">
-                <h2><b> Editar mi perfil</b>│¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
+                <h2><b> Editar perfil</b></h2>
 
                 <form action="/users/profile/edit/<%= user.id%>?_method=PUT" id="form" method="POST"
                     enctype="multipart/form-data" class="form-ad">
