@@ -250,7 +250,24 @@ module.exports = {
             old: req.body,
             usuario : req.session.user ? req.session.user : ""
         })
-    }}
+    }
+    },
+    /* ELIMINAR USUARIO */
+    deleteProfile: (req, res) => {
+        db.User.destroy({
+            where: {
+                id: req.session.user.id
+            }
+        })
+        .then(() => {
+            req.session.destroy();
+            if(req.cookies.userElectroHouse){
+                res.cookie('userElectroHouse','',{maxAge:-1})
+            }
+            
+            res.redirect('/')
+        })
+    }
 
 }
 

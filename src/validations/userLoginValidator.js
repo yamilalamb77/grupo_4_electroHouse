@@ -28,16 +28,7 @@ module.exports = [
         })
 
     
-    }),
-
-    /* check('pass')
-    .notEmpty()
-    .withMessage('Debes escribir la contraseña'),
-
-    body('pass')
-    .custom((value, {req}) => {
-        let user = users.find(user => user.email === req.body.email)
-        return bcrypt.compareSync(value, user.pass)
     })
-    .withMessage('Contraseña inválida') */
+
+   
 ]

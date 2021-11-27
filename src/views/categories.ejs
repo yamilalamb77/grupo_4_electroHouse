@@ -9,7 +9,7 @@
             <div id="mySidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <% subCategories.forEach(subCategory => { %>
-                    <a class="botonSub" href="#"><%- subCategory.name %></a>
+                    <a class="botonSub" href="/products/subcategory/<%- subCategory.id %>"><%- subCategory.name %></a>
                 <% }) %>   
             </div>
               
@@ -18,7 +18,7 @@
         <div class="container products-container">
             <aside class="subcategories_menu-desktop">
                 <% subCategories.forEach(subCategory => { %>
-                    <a class="botonSub" href="#"><%- subCategory.name %></a>
+                    <a class="botonSub" href="/products/subcategory/<%- subCategory.id %>"><%- subCategory.name %></a>
                 <% }) %>   
             </aside>
             <section class="products">

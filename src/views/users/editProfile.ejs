@@ -5,7 +5,7 @@
     <body class="login">
         <%- include('../partials/header.ejs') %>
             <div class="form-container">
-                <h2><b> Editar mi perfil</b>│¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
+                <h2><b> Editar perfil</b></h2>
 
                 <form action="/users/profile/edit/<%= user.id%>?_method=PUT" id="form" method="POST"
                     enctype="multipart/form-data" class="form-ad">
@@ -41,27 +41,22 @@
                                 <input class="input-style" id="nameinput" type="text" name="name"
                                     value="<%= locals.old ? old.name : user.name %>">
                                 
-                                    <small class="text-danger" id="nameErrors">
+                                    <small class="text-danger" id="nameerrors">
                                 
                                     </small>
                             </div>
 
                             <div class="input-container">
                                 <label>Apellido:</label>
-                                <input class="input-style" id="lastnameinput" type="text" name="lastName"
-                                    value="<%= locals.old ? old.lastName : user.lastName %>">
+                                <input class="input-style" id="lastnameinput" type="text" name="last_Name"
+                                    value="<%= locals.old ? old.last_Name : user.last_Name %>">
                                 
                                     <small class="text-danger" id="lastnameerrors">
                                         
                                     </small>
                             </div>
 
-                            <!--     <div class="input-container">
-                                <label>DNI:</label>
-                                <input class="input-style" type="number" name="dni">
-                                <span class="error-message">Debe ingresar un DNI válido</span>
-                            </div>
-                        </div> -->
+                            
                             <div class="profile-box">
                                 <h4 class="profile-subtitle">Datos de contacto</h4>
                                 <div class="input-container">
@@ -73,11 +68,7 @@
                                         </small>
                                 </div>
 
-                                <!--      <div class="input-container">
-                                <label>Pais:</label>
-                                <input class="input-style" type="text" name="country">
-                                <span class="error-message">Debe ingresar un pais</span>
-                            </div> -->
+                               
                                 <div class="input-container">
                                     <label>Provincia:</label>
                                     <select name="province" id="selectprovince" class="selec-city">
@@ -124,8 +115,8 @@
                                 </div>
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
-                                    <input class="input-style" id="codigoinput" type="text" name="postalCode"
-                                        value="<%= user.postalCode ? user.postalCode : '' %>">
+                                    <input class="input-style" id="codigoinput" type="text" name="pc"
+                                        value="<%= user.pc ? user.pc : '' %>">
                                         <small class="text-danger" id="codigoerrors">
                                 
                                         </small>

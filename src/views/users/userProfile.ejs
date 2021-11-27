@@ -15,31 +15,36 @@
             <img src="/images/logo/<%=user.avatar %>" alt="">
         </div>
         
-        <div class="userProfile-container">
+        <div class="userProfile-container" >
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos Personales</h3>
                 <p class="userProfile_item">Nombre: <%= user.name %></p>
+                <p class="userProfile_item">Apellido: <%= user.las_tname %></p>
                 <p class="userProfile_item">Email: <%=user.email %></p>
-                <p class="userProfile_item">Telefono: <%= user.address.number ? user.address[0].number : "------"%></p>
+                <p class="userProfile_item">Telefono: <%= user.address.phone ? user.address[0].phone : "------"%></p>
             </div>
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos de contacto</h3>
                 <p class="userProfile_item">Direccion: <%= user.address.street ? user.address[0].street : "------" %></p>
-                <p class="userProfile_item">Codigo Postal: <%= user.address.postalCode ? user.address[0].postalCode : "-------" %></p>
+                <p class="userProfile_item">Codigo Postal: <%= user.address.pc ? user.address[0].pc : "-------" %></p>
                 <p class="userProfile_item">Provincia: <%= user.address.province ?  user.address[0].province : "------"%></p>
                 <p class="userProfile_item">Localidad: <%= user.address.city ? user.address[0].city : "------"%></p>
             </div>
-            <div class="button-userProfile1">
-                <div class="btn-ad-btn-ad-primary">
+            <div >
+                <button class="btn-ad-btn-ad-primary">
                     <a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
                     
-                </div>
+                </button>
             </div>
             <div class="button-userProfile2">
                 <div class="btn-ad-btn-ad-primary">
                     <a href='/users/logout'>Salir</a> 
                 </div>
             </div>
+            <div >
+                <form id="formDel" action="/users/profile/delete/<%- user.id %>?_method=DELETE" method="POST">
+                <button id="evil-btn-submit" type="submit"  class="btn-ad-btn-ad-primary">Eliminar perfil</button>
+                </form>    
             
         </div>
     </main>

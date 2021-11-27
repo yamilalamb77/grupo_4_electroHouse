@@ -1,15 +1,9 @@
 const { products, categories, writeProductsJSON, users } = require('../data/dataBase');
 const { validationResult } = require('express-validator')
 const db = require('../database/models');
-let bcrypt = require('bcryptjs')
+const Op = db.Sequelize.Op
+const fs = require("fs");
 
-
-/* let subcategories = [];
-products.forEach(product => {
-    if(!subcategories.includes(product.subcategory)){
-        subcategories.push(product.subcategory)
-    }  
-}); */
 
 module.exports = {
 
@@ -168,14 +162,6 @@ module.exports = {
                     })
             })
 
-        /*  let product = products.find(product => product.id === +req.params.id)
-         res.render('admin/product/adminProductEditForm', {
-             categories, 
-             subcategories,
-             product,
-             session: req.session,
-             usuario : req.session.user ? req.session.user : ""
-         }) */
     },
     productUpdate: (req, res) => {
         let errors = validationResult(req)
@@ -245,60 +231,10 @@ module.exports = {
 
 
 
-        /* let errors = validationResult(req)
-        if(errors.isEmpty()) {
-        let arrayImages = [];
-        if(req.files){
-            req.files.forEach(image => {
-                arrayImages.push(image.filename)
-            })
-        }        
-        let {
-            name, 
-            price, 
-            discount, 
-            category, 
-            subcategory, 
-            description
-            } = req.body;        
-        products.forEach( product => {
-            if(product.id === +req.params.id){
-                product.id = product.id,
-                product.name = name,
-                product.price = price,
-                product.description = description,
-                product.discount = discount,
-                product.category = category,
-                product.subcategory = subcategory,
-                product.image = req.file ? [req.file.filename] : product.image
-            }
-        })
-        writeProductsJSON(products)
-        res.redirect('/admin/product/products')
-    }else {
-        res.render('admin/product/adminProductEditForm', {
-            subcategories,
-            categories,
-            errors: errors.mapped(),
-            old: req.body,
-            session: req.session,
-            usuario : req.session.user ? req.session.user : ""
-        })
-    } */
-    },
-    /*productDestroy: (req, res) => {
-        products.forEach( product => {
-            if(product.id == req.params.id){
-               let productToDestroy = products.indexOf(product);
-               products.splice(productToDestroy, 1)
-            }
-        })
-        
-        writeProductsJSON(products)
+      
+},
 
-        res.redirect('/admin/product/products')
-    }*/
-    productDestroy: (req, res) => {
+    productDestroy : (req,res) => {
         db.ProductImage.destroy({
             where: {
                 productId: req.params.id
@@ -514,6 +450,5 @@ module.exports = {
         })
 
     },
-
 
 }
