@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/headAdmin') %>
+<body>
+    <%- include('../partials/headerAdmin') %>
+    
+    <div class="container" style="max-width: 700px;">
+      <div class="row">
+        <%- include('../partials/adminSidebar') %>
+        <form class="row g-3" id="formId" action="/admin/userList/create" method="POST" enctype="multipart/form-data">
+            <div class="col-12">
+                <label for="inputName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="inputName" name="name">
+                <% if (locals.errors && errors.name) { %>
+                    <small class="text-danger"><%= errors.name.msg %> </small>
+                <% } %>
+                <small id="errorName" class="text-danger"></small>
+                
+            </div>
+            <div class="col-12">
+                <select class="form-select" id="specificSizeSelect" name="rol">
+                  <option selected hidden value="">Roles</option>
+                  <option value="0">cliente</option>
+                  <option value="1">Admi</option>
+                  <option value="2">Encargado</option>
+               
+                </select>
+                
+                <% if (locals.errors && errors.category) { %>
+                    <small class="text-danger"><%= errors.category.msg %> </small>
+                <% } %>
+                <small id="errorCategory" class="text-danger"></small>
+            </div>
+            <div class="col-12">
+                <label for="inputlast_name" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="inputlast_name" name="last_name">
+            </div>
+            <div class="col-12">
+                <label for="inputemail" class="form-label">Email</label>
+                <input id="inputemail" class="form-control" type="email" name="email">
+                                <% if (locals.errors && errors.email) { %>
+                                    <small class="text-danger">
+                                        <%= errors.email.msg %>
+                                    </small>
+                                    <% } %>
+            </div>
+            <div class="col-12">
+                <label for="inputpass" class="form-label">Contraseña</label>
+                <input id="inputpass" class= "form-control" type="password" name="pass">
+                <% if (locals.errors && errors.pass) { %>
+                    <small class="text-danger">
+                        <%= errors.pass.msg %>
+                    </small>
+                    <% } %>
+            </div>
+            <div class="col-12">
+                <label for="inputstreet" class="form-label">Calle</label>
+                <input type="text" class="form-control" id="inputstreet" name="street">
+            </div>
+            <div class="col-12">
+                <label for="inputnumber" class="form-label">Numero</label>
+                <input type="number" class="form-control" id="inputnumber" name="number">
+            </div>
+            <div class="col-12">
+                <label for="inputpc" class="form-label">Codigo Postal</label>
+                <input type="text" class="form-control" id="inputpc" name="pc">
+            </div>
+            <div class="col-12">
+                <label for="inputcity" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="inputcity" name="city">
+            </div>
+            <div class="col-12">
+                <label for="inputprovince" class="form-label">Provincia</label>
+                <input type="text" class="form-control" id="inputprovince" name="province">
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                CREAR
+            </button>
+            <small id="errorForm" class="text-danger"></small>
+        </form>
+      </div>
+    </div>
+    <%- include('../partials/adminScripts') %>
+
+    </body>
+    
+</html>

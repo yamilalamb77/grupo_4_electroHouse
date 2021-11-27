@@ -13,7 +13,12 @@ const{
     productEdit, 
     productDestroy,
     productUpdate,
-userList} = require('../controllers/adminController');
+    userList,
+    userCreate, 
+    userStore,
+    userEdit, 
+    userDestroy,
+    userUpdate,} = require('../controllers/adminController');
 let upload = require('../middlewares/uploadFiles');
 let cargaProductFile = require('../middlewares/subirProductsArchivos')
 let productTheValidator = require('../validations/productCreateValidator')
@@ -78,6 +83,26 @@ router.put('/subcategories/edit/:id', upload.single('image'), subcategoriesValid
 
 /* Delete subcategory*/
 router.delete('/subcategories/delete/:id', subcategoryDestroy);
+
+/******************/
+/* CRUD USUARIO */
+/******************/
+
+
+
+/* Create User*/
+router.get('/userList/create',userAdmin, userCreate);
+router.post('/userList/create',userAdmin, userStore);
+/* Edit User*/
+router.get('/userList/edit/:id',userAdmin, userEdit);
+router.put('/userList/edit/:id',userAdmin, userUpdate);
+/* Edit User*/
+router.delete('/userList/delete/:id',userAdmin, userDestroy);
+/*userList */
+router.get('/userList', userAdmin, userList);
+
+
+
 
 
 

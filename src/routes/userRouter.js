@@ -29,8 +29,10 @@ router.post('/register', uploadUserAvatar.single('avatar'), userRegisterValidato
 /* GET - User profile */
 router.get('/profile',userLoginCheck, profile);
 router.get('/editProfile/:id', editProfile);
-/* router.get('/editProfile', editProfile);  */
+ router.get('/editProfile', editProfile);  
 router.put('/profile/edit/:id', uploadUserAvatar.single('avatar'),updateProfile);
+
+
 
 
 

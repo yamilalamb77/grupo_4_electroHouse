@@ -64,42 +64,7 @@ module.exports = {
         res.render('users/contact', { usuario: req.session.user ? req.session.user : "" })
 
     },
-    processContact: (req, res) => {
-        let errors = validationResult(req)
-        if (errors.isEmpty()) {
-            
-            let {
-                name,
-                email,
-                telephone,
-                website,
-                affair,
-                message
-            } = req.body
-
-            db.Contacts.create({
-                name,
-                email,
-                telephone,
-                website,
-                affair,
-                message
-            }).then(() =>{
-                res.redirect('/')
-            })
-
-        } else {
-            res.render('users/contact', { 
-                usuario: req.session.user ? req.session.user : "",
-                errors: errors.mapped(),
-                old: req.body
-            })
-        }
-
-    },
-    enConstruccion: (req, res) => {
-        res.render('product/enConstruccion', { usuario: req.session.user ? req.session.user : "" })
-    },
+   
     termsYConditions: (req, res) => {
         res.render('termsYConditions', { usuario: req.session.user ? req.session.user : "" })
     },

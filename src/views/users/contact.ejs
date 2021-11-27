@@ -27,7 +27,7 @@
           <h3>En breve nos pondremos en contacto contigo</h3>
 
 
-          <form action="/contact" method="post">       
+          <form action="/contact" id="form" method="post">       
 
             
                 <p>
@@ -42,12 +42,19 @@
                     <span class="obligatorio">*</span>
                   </label>
                     <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    <small class="text-danger" id="emailerrors">
+                                
+                    </small>
                 </p>
             
                 <p>
                   <label for="telefone" class="colocar_telefono">Teléfono
+                    <span class="obligatorio">*</span>
                   </label>
                     <input type="tel" name="telephone" id="telefono" placeholder="Escribe tu teléfono">
+                    <small class="text-danger" id="telefonoerrors">
+                                
+                    </small>
                 </p>    
               
                 <p>
@@ -67,18 +74,26 @@
                   <label for="mensaje" class="colocar_mensaje">Mensaje
                     <span class="obligatorio">*</span>
                   </label>                     
-                                    <textarea name="message" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                    <textarea name="message" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                                    <small class="text-danger" id="mensajeerrors">
+                                
+                                    </small>
                                 </p>                    
               
                 <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
 
                 <p class="aviso">
                   <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p>          
+                </p> 
+                <small class="text-danger" id="formerrors">
+                                
+                        </small>         
             
           </form>
+
       
   </div>
+  <script src="/js/contacvalidation.js"></script>
   <%- include('../partials/footer') %>
 </body>
 </html>

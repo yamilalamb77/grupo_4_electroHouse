@@ -11,7 +11,7 @@
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    background-color: blanchedalmond;
+    background-color:white;
     margin: 1rem auto;
 }
 
@@ -27,16 +27,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
+    box-shadow: 0px 0px 10px rgba(172, 112, 135, 0.25);
     padding: 1rem;
     border-radius: .8rem;
 }
 
 .userProfile_box {
     margin: 1rem 0;
+    background-color:  #73dba7;
+
 }
 .button-userProfile1{
-    background-color: #008F74;
+    background-color: #d6d5d5;
     font-family:cursive;
 
 }
@@ -49,10 +51,12 @@
 .userProfile_title {
     border-bottom: 1px solid var(--primary);
     margin-bottom: 1rem;
+    
 }
 
 .userProfile_item {
     margin: 1rem 0;
+    
 }
 
 @media screen and (min-width: 768px) {

@@ -9,8 +9,12 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2"> Lista de usuarios:</h1>
+          <a class="btn btn-primary" href='/admin/userList/create'>Crear Usuario</a>
+    
 
     </div>
+    
+    
     <div class="table-responsive">
     <% usuarios.forEach(user => { %>
         <p> id: <%- user.id %> </p>
@@ -22,8 +26,10 @@
         <p>Dirección: <%- user.address %> </p>
         <p>Codigo Postal: <%- user.pc %> </p>
         <p>Provincia: <%- user.province %> </p>
-        <p>Ciudad: <%- user.city %> </p>        
+        <p>Ciudad: <%- user.city %> </p> 
+        <a class="btn btn-primary" href='/admin/userList/edit/<%- user.id %> '>Editar Usuario</a>       
         <p>--------------------</p>
+        
         <% })%>
         </div>
         </div>
