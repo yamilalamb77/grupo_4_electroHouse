@@ -184,6 +184,7 @@ header .container{
 		width: 100%;
 		max-width: 300px;
 		background: #1c1c1c;
+		border: 1px solid white;
 		height: 100vh;
 	 	position: relative;  
 		transition: all 500ms ease;

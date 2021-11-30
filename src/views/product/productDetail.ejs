@@ -17,9 +17,25 @@
                 </div>
             </div>
             <div class="productData-container">
+
+
                 <h3 class="productName"><%= product.name %> </h3>
-                <div class="productDiscountd"><%- product.discount !== 0 ? `${product.discount}% OFF` : "" %></div>
-                <div class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></div>
+                <% if (product.discount > 0) { %>
+                    <p class="productPrice small">	
+                        <span>$<%= toThousand(product.price) %></span>
+                        /
+                        <b class="productDiscountd"><%= product.discount %>% OFF</b>
+                    </p>
+                    <p class="productPrice">
+                        $<%= toThousand(product.price - product.price * product.discount / 100)%>
+                    </p>
+
+                    <% }else{ %>
+                        <p class="productPrice">
+                            $<%= toThousand(product.price) %> 
+                        </p>
+                    <% } %>
+
                 <div class="productNumber">
                     <label for="cantidad">Cantidad</label>
                     <div class="counter">
@@ -35,12 +51,7 @@
                    
                 </div>
                 
-                <div class="button-addToCart">
-                    <div class="btn-ad-btn-ad-primary">
-                        <a href='/products/shoppingCart'> Agregar al carrito</a>
-                       
-                    </div>
-                </div>
+                <a href='/products/shoppingCart' class="buy-now-button">Agregar al carrito</a>
                
             </div>
         </section>
