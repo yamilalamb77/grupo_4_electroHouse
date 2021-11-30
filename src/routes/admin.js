@@ -18,6 +18,8 @@ const{
     userStore,
     userEdit, 
     userDestroy,
+    searchAdminProducts,
+    searchAdminUsers,
     userUpdate,} = require('../controllers/adminController');
 let upload = require('../middlewares/uploadFiles');
 let cargaProductFile = require('../middlewares/subirProductsArchivos')
@@ -114,7 +116,11 @@ router.delete('/userList/delete/:id',userAdmin, userDestroy);
 router.get('/userList', userAdmin, userList);
 
 
+/* Search Products */
+router.get('/searchAdminProducts', userAdmin, searchAdminProducts)
 
+/* Search Users*/
+router.get('/searchAdminUsers', userAdmin, searchAdminUsers)
 
 
 

@@ -460,4 +460,45 @@ module.exports = {
 
     },
 
+    searchAdminProducts: (req, res) =>{
+    
+        db.Products.findAll({
+            where:{
+                name:{[Op.like]: `%${req.query.keywords}%`}
+            },
+            include: [
+                {association: "images"},
+                {association: 'subcategory',  
+                    include: [
+                        {association: "category"}
+                ]}
+            ]
+        })
+        .then(products =>{
+            res.render('admin/product/adminProducts', {
+                products,
+                session: req.session,
+                usuario : req.session.user ? req.session.user : ""
+        })
+        })
+    },
+    
+    searchAdminUsers: (req, res) =>{
+        
+        db.User.findAll({
+            where:{
+                name:{[Op.like]: `%${req.query.keywords}%`}
+            },
+            include: [{
+                association: 'address'
+            }]
+        })
+        .then(users =>{
+            res.render('admin/userList', {
+             usuario: req.session.user ? req.session.user : "",
+             usuarios:users
+            })
+        })
+    }
+
 }
