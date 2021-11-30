@@ -12,23 +12,23 @@
     <%- include('../partials/header') %>
     <main class= "userProfile">
         <div class= "avatar">
-            <img src="/images/logo/<%=user.avatar %>" alt="">
+            <img src="/images/userAvatars/<%=user.avatar %>" alt="">
         </div>
         
         <div class="userProfile-container" >
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos Personales</h3>
                 <p class="userProfile_item">Nombre: <%= user.name %></p>
-                <p class="userProfile_item">Apellido: <%= user.las_tname %></p>
+                <p class="userProfile_item">Apellido: <%= user.lastName %></p>
                 <p class="userProfile_item">Email: <%=user.email %></p>
-                <p class="userProfile_item">Telefono: <%= user.address.phone ? user.address[0].phone : "------"%></p>
+                <p class="userProfile_item">Telefono: <%= user.phone ? user.phone : "------"%></p>
             </div>
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos de contacto</h3>
-                <p class="userProfile_item">Direccion: <%= user.address.street ? user.address[0].street : "------" %></p>
-                <p class="userProfile_item">Codigo Postal: <%= user.address.pc ? user.address[0].pc : "-------" %></p>
-                <p class="userProfile_item">Provincia: <%= user.address.province ?  user.address[0].province : "------"%></p>
-                <p class="userProfile_item">Localidad: <%= user.address.city ? user.address[0].city : "------"%></p>
+                <p class="userProfile_item">Direccion: <%= user.address[0] !== undefined ? user.address[0].street : "------" %></p>
+                <p class="userProfile_item">Codigo Postal: <%= user.address[0] !== undefined ? user.address[0].postalCode : "-------" %></p>
+                <p class="userProfile_item">Provincia: <%= user.address[0] !== undefined ?  user.address[0].province : "------"%></p>
+                <p class="userProfile_item">Localidad: <%= user.address[0] !== undefined ? user.address[0].city : "------"%></p>
             </div>
             <div >
                 <button class="btn-ad-btn-ad-primary">

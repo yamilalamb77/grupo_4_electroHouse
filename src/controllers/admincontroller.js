@@ -257,6 +257,7 @@ module.exports = {
             }]
         })
             .then(users => {
+                //res.send(users)
                 res.render('admin/userList', {
                     usuario: req.session.user ? req.session.user : "",
                     usuarios: users
@@ -287,13 +288,13 @@ module.exports = {
                 email,
                 tel,
                 pass,
-                address,
+                street,
                 pc,
                 province,
                 city,
                 number,
             } = req.body;
-            console.log(req.body)
+            //res.send(req.body)
             db.User.create({
                 rol,
                 name,
@@ -301,25 +302,23 @@ module.exports = {
                 email,
                 tel,
                 pass,
-            })
-                .then(usuario => {
+            }).then(usuario => {
+                //res.send(usuario)
                     db.Address.create({
-                        street: address,
+                        street,
                         number,
                         province,
                         city,
                         postalCode: pc,
                         userId: usuario.id,
                     })
-                        .then(address => {
-                            res.redirect('admin/product/userList', {
-                                usuario: req.session.user ? req.session.user : "",
-                                usuarios: users
-                            })
-                        })
-                        .catch((err) => console.log(err));
+                        
 
+                }).then(() => {
+                    //res.send('usuario creado')
+                    res.redirect('/admin/userList')
                 })
+                .catch((err) => console.log(err));
         } else {
             console.log("else")
             res.render('admin/adminUserCreateForm', {
@@ -366,29 +365,46 @@ module.exports = {
                 name,
                 last_name,
                 email,
-                tel,
+                //tel,
                 pass,
-                address,
-                pc,
-                province,
-                city,
+                street,
                 number,
+                pc,
+                city,
+                province,
 
             } = req.body;
-            console.log(req.body)
+            //res.send(req.body)
             db.User.update({
-                rol,
                 name,
+                rol,
                 lastName: last_name,
                 email,
-                tel,
+                //tel,
                 pass,
             }, {
                 where: { id: +req.params.id }
+            }).then(() =>{
+                db.Address.update({
+                    street,
+                    number,
+                    postalCode: pc,
+                    city,
+                    province,
+                    userId: req.params.id
+                },{
+                    where: {
+                        userId: req.params.id
+                    }
+                })
+            }).then(() => {
+                res.redirect('/admin/userList')
             })
-                .then(usuario => {
+            .catch((err) => console.log(err));
+                /* .then((usuario) => {
+                    res.send(usuario)
                     db.Address.update({
-                        street: address,
+                        street,
                         number,
                         province,
                         city,
@@ -397,19 +413,12 @@ module.exports = {
                     }, {
                         where: { userId: usuario.id }
                     })
-                        .then(address => {
-                            res.redirect('admin/userList', {
-                                usuario: req.session.user ? req.session.user : "",
-                                /* usuarios: users */
-                            })
-                        })
-                        .catch((err) => console.log(err));
+                        
 
-                })
+                }) */
 
 
-        }
-        else{
+        }else{
             db.User.findOne({
                 where: {
                     id: req.params.id
@@ -445,7 +454,7 @@ module.exports = {
                 where: {
                     id: req.params.id
                 }
-            }).then(() => res.redirect('admin/userList'))
+            }).then(() => res.redirect('/admin/userList'))
                 .catch(error => console.log(error))
         })
 

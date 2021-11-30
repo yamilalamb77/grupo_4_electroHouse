@@ -17,7 +17,7 @@
                             </div> -->
                          <label for="files" ><div class="add-new-photo" id="addPhoto"><!-- <i class="fas fa-camera txt-send"></i> -->
                             <output name="outputList" id="list" class="img-r-avatar"></output>
-                             <img src="/images/logo/userimg.jpg" class="img-user-avatar"id="img-preview" width="100%" height="80%" for="files" > 
+                             <img src="/images/userAvatars/<%- user.avatar %> " class="img-user-avatar"id="img-preview" width="100%" height="80%" for="files" > 
                              </div>
                             </label> 
                            
@@ -49,7 +49,7 @@
                             <div class="input-container">
                                 <label>Apellido:</label>
                                 <input class="input-style" id="lastnameinput" type="text" name="last_Name"
-                                    value="<%= locals.old ? old.last_Name : user.last_Name %>">
+                                    value="<%= locals.old ? old.last_Name : user.lastName %>">
                                 
                                     <small class="text-danger" id="lastnameerrors">
                                         
@@ -72,11 +72,11 @@
                                 <div class="input-container">
                                     <label>Provincia:</label>
                                     <select name="province" id="selectprovince" class="selec-city">
-                                        <option value="">Provincia</option>
-                                        <option value="">Buenos Aires</option>
-                                        <option value="">Capital Federal</option>
-                                        <option value="">Catamarca</option>
-                                        <option value="">Chaco</option>
+                                        <option selected hidden value="<%= user.address[0] !== undefined ? user.address[0].province : ''%>"><%= user.address[0] !== undefined ? user.address[0].province : ''%></option>
+                                        <option value="Buenos Aires">Buenos Aires</option>
+                                        <option value="Capital Federal">Capital Federal</option>
+                                        <option value="Catamarca">Catamarca</option>
+                                        <option value="Chaco">Chaco</option>
                                         <option value="">Chubut</option>
                                         <option value="">Córdoba</option>
                                         <option value="">Corrientes</option>
@@ -104,7 +104,7 @@
                                 <div class="input-container">
                                     <label>Localidad:</label>
                                     <select name="city" id="selectlocation" class="selec-city">
-                                        <option value="">Localidad</option>
+                                        <option value="<%= user.address[0].city %>"><%= user.address[0].city %></option>
                                     </select>
                                     <!--  <label>Ciudad:</label>
                                 <input class="input-style" type="text" name="city">
@@ -115,8 +115,8 @@
                                 </div>
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
-                                    <input class="input-style" id="codigoinput" type="text" name="pc"
-                                        value="<%= user.pc ? user.pc : '' %>">
+                                    <input class="input-style" id="codigoinput" type="text" name="postalCode"
+                                    value="<%= user.address[0].postalCode %>">
                                         <small class="text-danger" id="codigoerrors">
                                 
                                         </small>
@@ -124,7 +124,7 @@
                                 <div class="input-container">
                                     <label>Calle:</label>
                                     <input class="input-style" id="calleinput" type="text" name="street"
-                                        value="<%= user.street ? user.street : '' %>">
+                                        value="<%= user.address[0] !== undefined ? user.address[0].street : '' %>">
                                     <!--     <span class="error-message">Debe ingresar un calle</span> -->
                                     <small class="text-danger" id="calleerrors">
                                 
@@ -133,13 +133,13 @@
                                 <div class="input-container">
                                     <label>Piso o departamento:</label>
                                     <input class="input-style" type="text" name="flat_apartment"
-                                        value="<%= user.flat_apartment ? user.flat_apartment : '' %>">
+                                        value="<%= user.address[0] !== undefined ? user.address[0].flat_apartment : '' %>">
                                     <!-- <span class="error-message">Debe ingresar un calle</span> -->
                                 </div>
                                 <div class="input-container">
                                     <label>Número:</label>
                                     <input class="input-style" id="numberinput" type="number" name="number"
-                                        value="<%= user.number ? user.number : '' %>">
+                                        value="<%= user.address[0].number ? user.address[0].number : '' %>">
                                     <span class="error-message">Debe ingresar un número</span>
                                     <small class="text-danger" id="numbererrors">
                                 

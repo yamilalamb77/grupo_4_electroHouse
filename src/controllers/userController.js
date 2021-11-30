@@ -31,6 +31,7 @@ module.exports = {
             }]
         })
         .then(user =>{
+            //res.send(user)
             console.log(user.address)
             res.render('users/userProfile', {
             categories,
@@ -68,7 +69,8 @@ module.exports = {
                 phone,
                 street,
                 number,
-                postalCode
+                postalCode,
+                province
             } = req.body
 
             db.User.update({
@@ -83,16 +85,20 @@ module.exports = {
                 }
             })
             .then(() =>{
-                db.Address.create({
+                db.Address.update({
                     street,
                     number,
                     postalCode,
+                    province,
                     userId: req.params.id
+                },{
+                    where: {
+                        userId: req.params.id
+                    }
                 })
-                .then(() =>{
+            }).then(() =>{
                     res.redirect('/users/profile')
                 })
-            })
 
             /* let user = users.find(user => user.id === +req.params.id)
 

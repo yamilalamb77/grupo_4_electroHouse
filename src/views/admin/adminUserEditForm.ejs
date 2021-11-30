@@ -7,7 +7,7 @@
     <div class="container" style="max-width: 700px;">
       <div class="row">
         <%- include('../partials/adminSidebar') %>
-        <form class="row g-3" id="formId" action='/admin/userList/edit/<%- user.id %>?_method=PUT' method="POST" enctype="multipart/form-data">
+        <form class="row g-3" id="formId" action='/admin/userList/edit/<%- user.id %>?_method=PUT' method="POST">
             <div class="col-12">
                 <label for="inputName" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="inputName" name="name"value='<%- user.name %> '>
@@ -55,24 +55,23 @@
             </div>
             <div class="col-12">
                 <label for="inputstreet" class="form-label">Calle</label>
-                <input type="text" class="form-control" id="inputstreet" name="street">
-                <%console.log(user)%>
+                <input type="text" class="form-control" id="inputstreet" name="street" value="<%= user.address[0] !== undefined ? user.address[0].street : '' %>">
             </div>
             <div class="col-12">
                 <label for="inputnumber" class="form-label">Numero</label>
-                <input type="number" class="form-control" id="inputnumber" name="number">
+                <input type="number" class="form-control" id="inputnumber" name="number" value="<%= user.address[0] !== undefined ? user.address[0].number : '' %>">
             </div>
             <div class="col-12">
                 <label for="inputpc" class="form-label">Codigo Postal</label>
-                <input type="text" class="form-control" id="inputpc" name="pc">
+                <input type="text" class="form-control" id="inputpc" name="pc" value="<%= user.address[0] !== undefined ? user.address[0].postalCode : '' %>">
             </div>
             <div class="col-12">
                 <label for="inputcity" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="inputcity" name="city">
+                <input type="text" class="form-control" id="inputcity" name="city" value="<%= user.address[0] !== undefined ? user.address[0].city : '' %>">
             </div>
             <div class="col-12">
                 <label for="inputprovince" class="form-label">Provincia</label>
-                <input type="text" class="form-control" id="inputprovince" name="province">
+                <input type="text" class="form-control" id="inputprovince" name="province" value="<%= user.address[0] !== undefined ? user.address[0].province : '' %>">
             </div>
             </div>
             <button type="submit" class="btn btn-primary">
