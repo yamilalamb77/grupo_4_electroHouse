@@ -68,6 +68,9 @@ router.put('/categories/edit/:id', uploadCategoriesFile.single('image'), categor
 /* Delete Category*/
 router.delete('/categories/delete/:id', categoryDestroy);
 
+/* Search searchAdminCategories*/
+router.get('/searchAdminCategories', userAdmin, searchAdminCategories)
+
 
 
 
@@ -89,6 +92,9 @@ router.put('/subcategories/edit/:id', upload.single('image'), subcategoriesValid
 
 /* Delete subcategory*/
 router.delete('/subcategories/delete/:id', subcategoryDestroy);
+
+/* Search searchAdminSubcategories*/
+router.get('/searchAdminSubcategories', userAdmin, searchAdminSubcategories)
 
 /******************/
 /* CRUD USUARIO */
