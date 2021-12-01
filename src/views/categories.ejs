@@ -40,9 +40,17 @@
                                 <% } else { %>
                                     <%= product.name %>
                                 <% } %></p>
-                            <h4 class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></h4>
-                            
+                            <h4 class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></h4>  
                         </a>
+                        <% if (usuario !== undefined) { %>
+                            <div class="buy-now-button" onclick="addToCart(`<%- product.id %>`, 1,`<%= usuario %>`)">
+                                Agregar al carrito
+                            </div>
+                    <% } else { %>
+                        <div class="buy-now-button" onclick="notLog()">
+                            Agregar al carrito Sin log
+                        </div>
+                    <% } %>
                     </div>
                 <% }) %> 
             </section>
@@ -50,5 +58,11 @@
     </main>
     <%- include('./partials/footer.ejs')%>
     <script src="/js/categoriesIdePanel.js"></script>
+    <script>
+        function notLog () {
+            alert("Tiene que logearse")
+        }
+    </script>
+    <script src="/js/cart.js"></script>
 </body>
 </html>
