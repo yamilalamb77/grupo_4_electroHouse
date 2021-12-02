@@ -39,6 +39,10 @@ module.exports = function(sequelize, dataTypes){
             as: "images",
             foreignKey: "productId"
         })
+        Product.hasMany(models.Order_items, {
+            as: "order_items",
+            foreignKey: "productId"
+        })
           
     }
 

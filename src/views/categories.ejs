@@ -42,7 +42,7 @@
                                 <% } %></p>
                             <h4 class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></h4>  
                         </a>
-                        <% if (usuario !== undefined) { %>
+                        <% if (usuario) { %>
                             <div class="buy-now-button" onclick="addToCart(`<%- product.id %>`, 1,`<%= usuario %>`)">
                                 Agregar al carrito
                             </div>
