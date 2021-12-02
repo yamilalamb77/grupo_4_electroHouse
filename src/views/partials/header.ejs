@@ -18,17 +18,17 @@
     <div class="login-cart">
         <% if (usuario){ %>
           
-         <!--    <a class="user-login" href="/users/profile"><img src="/images/userAvatars/<%= usuario.avatar%>" alt="" width="25px" height="25px"
-              class="rounded-circle avatar"></a> -->
+        <a class="user-login" href="/users/profile"><img src="/images/userAvatars/<%= usuario.avatar%>" alt="" width="25px" height="25px"
+              class="rounded-circle avatar"></a> 
               <li>
                 <a class="user-login" href="/users/profile">
-                    <i class="far fa-user-circle user-login"></i></a>
+                  <!--   <i class="far fa-user-circle user-login"></i></a> -->
                
                 <a class="user-cerrar" href='/users/logout'>Cerrar Sesion</a>
               </li>
                  <% if (usuario.rol=== 1) { %>
                     <li>
-                      <a  class="user-cerrar" href="/admin">Ir al admin</a>
+                      <a  class="user-cerrar" href="/admin"> Ir al admin</a>
                     </li>    
                   <% } %>
                   <% if (usuario.rol=== 0) { %>

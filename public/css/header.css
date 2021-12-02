@@ -21,7 +21,7 @@ header .main-header {
     width: 100%;
  
 }
-
+ 
 
 header .main-header .user-icons-desktop {
      display: none;
@@ -281,6 +281,7 @@ header .main-header {
 header .login-cart {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-end;
 }
 
 /*menu desktop*/
@@ -322,7 +323,7 @@ justify-content: center;
 
 header .version-desktop .list-container ul li a{
     color: white;
-	font-size: 19px;
+	font-size: 17px;
 
     
 }
@@ -336,4 +337,8 @@ header .version-desktop .list-container ul li:hover{
 		color: #008F74;
 		list-style: none;
 		font-size: 15px;
+	}
+
+	header .login-cart .rounded-circle{
+		margin: 10px 0px -8px 0px;
 	}
