@@ -1,111 +1,100 @@
 <header>
-<div class="main-header">
-    <nav class="navigation-bar" id="navigation-bar-mobile">
+    <div class="main-header">
+        <nav class="navigation-bar" id="navigation-bar-mobile">
 
 
-        <!-- Buscador mobile -->
+            <!-- Buscador mobile -->
 
-        <form action="/search" method="GET" class="search-form-mobile" id="search">
+            <form action="/search" method="GET" class="search-form-mobile" id="search">
 
-            <input type="text" name="keywords" id="" placeholder="Buscar producto...">
-            <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" name="keywords" id="" placeholder="Buscar producto...">
+                <button type="submit"><i class="fas fa-search"></i></button>
 
-        </form>
-    </nav>
-    <div class="logo">
-        <a href="/"><img src="/images/logo/logo.jpeg" alt=""></a>
-    </div>
-    <div class="login-cart">
-        <% if (usuario){ %>
-          
-         <!--    <a class="user-login" href="/users/profile"><img src="/images/userAvatars/<%= usuario.avatar%>" alt="" width="25px" height="25px"
-              class="rounded-circle avatar"></a> -->
-              <li>
-                <a class="user-login" href="/users/profile">
-                    <i class="far fa-user-circle user-login"></i></a>
-               
-                <a class="user-cerrar" href='/users/logout'>Cerrar Sesion</a>
-              </li>
-                 <% if (usuario.rol=== 1) { %>
+            </form>
+        </nav>
+        <div class="logo">
+            <a href="/"><img src="/images/logo/logo.jpeg" alt=""></a>
+        </div>
+        <div class="login-cart">
+            <% if (usuario){ %>
+
+                <a class="user-login" href="/users/profile"><img src="/images/userAvatars/<%= usuario.avatar%>" alt=""
+                        width="25px" height="25px" class="rounded-circle avatar"></a>
+                <li>
+                    <a class="user-login" href="/users/profile">
+
+
+                        <a class="user-cerrar" href='/users/logout'>Cerrar Sesion</a>
+                </li>
+                <% if (usuario.rol===1) { %>
                     <li>
-                      <a  class="user-cerrar" href="/admin">Ir al admin</a>
-                    </li>    
-                  <% } %>
-                  <% if (usuario.rol=== 0) { %>
-                      
-                    <li>
-                        <a class="shopping-cart" href="/products/shoppingCart">
-                            <i class="fas fa-shopping-cart shopping-cart"></i></a> 
-                    </li> 
-                  <% } %>
+                        <a class="user-cerrar" href="/admin"> Ir al admin</a>
+                    </li>
+                    <% } %>
+                        <% if (usuario.rol===0) { %>
 
-        <%} else { %>
-            
-        <a class="user-login" href="/users/login">
-            <i class="far fa-user-circle user-login"></i></a>
-            <a class="shopping-cart" href="/products/shoppingCart">
-                <i class="fas fa-shopping-cart shopping-cart"></i></a>
-        <% } %> 
+                            <li>
+                                <a class="shopping-cart" href="/products/shoppingCart">
+                                    <i class="fas fa-shopping-cart shopping-cart"></i></a>
+                            </li>
+                            <% } %>
 
-    
-    </div>
-    <!-- Menú de navegación mobile-->
+                                <%} else { %>
 
-    <div>
-        <form action="">
-            <div class="container">
+                                    <a class="user-login" href="/users/login">
+                                        <i class="far fa-user-circle user-login"></i></a>
+                                    <a class="shopping-cart" href="/products/shoppingCart">
+                                        <i class="fas fa-shopping-cart shopping-cart"></i></a>
+                                    <% } %>
 
-                <div class="btn-menu">
-                    <label for="btn-menu" class="burguer-menu-icon">☰</label>
 
-                    <input type="checkbox" id="btn-menu">
-                    <div class="container-menu">
-                        <div class="cont-menu">
-                            <nav>
-                                <a href="/products/category/1">TV y Sonido</a>
-                                <a href="/products/category/2">Heladeras y Lavado</a>
-                                <a href="/products/category/3">Climatización</a>
-                                <a href="/products/category/4">Pequeños Electros</a>
-                                <a href="mailto:electrohouse.g4@gmail.com">Contacto</a>
+        </div>
+        <!-- Menú de navegación mobile-->
 
-                            </nav>
-                            <div> <label for="btn-menu">✖️ </label>
-                                <a href="/products/shoppingCart">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </a>
+        <div>
+            <form action="">
+                <div class="container">
+
+                    <div class="btn-menu">
+                        <label for="btn-menu" class="burguer-menu-icon">☰</label>
+
+                        <input type="checkbox" id="btn-menu">
+                        <div class="container-menu">
+                            <div class="cont-menu">
+                                <nav>
+                                    <a href="/products/category/1">TV y Sonido</a>
+                                    <a href="/products/category/2">Heladeras y Lavado</a>
+                                    <a href="/products/category/3">Climatización</a>
+                                    <a href="/products/category/4">Pequeños Electros</a>
+                                    <a href="mailto:electrohouse.g4@gmail.com">Contacto</a>
+
+                                </nav>
+                                <div> <label for="btn-menu">✖️ </label>
+                                    <a href="/products/shoppingCart">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
     </div>
 
-</div>
-
-</div>
-<!-- version escritorio-->
-<section class="version-desktop">
-    <div class="list-container">
-        <ul>
-            <li> <a href="/products/category/1">TV y Sonido</a></li>
-            <li><a href="/products/category/2">Heladeras y Lavado</a></li>
-            <li> <a href="/products/category/3">Climatización</a></li>
-            <li><a href="/products/category/4">Pequeños Electros</a></li>
-            <li><a href="mailto:electrohouse.g4@gmail.com">Contacto</a></li>
-        </ul>
     </div>
-</section>
+    <!-- version escritorio-->
+    <section class="version-desktop">
+        <div class="list-container">
+            <ul>
+                <li> <a href="/products/category/1">TV y Sonido</a></li>
+                <li><a href="/products/category/2">Heladeras y Lavado</a></li>
+                <li> <a href="/products/category/3">Climatización</a></li>
+                <li><a href="/products/category/4">Pequeños Electros</a></li>
+                <li><a href="mailto:electrohouse.g4@gmail.com">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
 
 </header>
-
-
-
-
-
-
-
-
-
-
-
