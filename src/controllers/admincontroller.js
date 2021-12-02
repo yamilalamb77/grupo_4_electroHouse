@@ -94,7 +94,7 @@ module.exports = {
                             }
                         })
                         db.ProductImage.bulkCreate(images)
-                            .then(() => res.redirect('/admin/product/products'))
+                            .then(() => res.redirect('/admin/products'))
                             .catch(err => console.log(err))
                     }
                 })
@@ -222,10 +222,10 @@ module.exports = {
                                     }
                                 })
                                 db.ProductImage.bulkCreate(images)
-                                    .then(() => res.redirect('/admin/product/products'))
+                                    .then(() => res.redirect('/admin/products'))
                             })
                     }
-                    res.redirect('/admin/product/products')
+                    res.redirect('/admin/products')
                 })
         }
 
@@ -244,7 +244,7 @@ module.exports = {
                 where: {
                     id: req.params.id
                 }
-            }).then(() => res.redirect('/admin/product/products'))
+            }).then(() => res.redirect('/admin/products'))
                 .catch(error => console.log(error))
         })
 
