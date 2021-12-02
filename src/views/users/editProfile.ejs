@@ -72,7 +72,7 @@
                                 <div class="input-container">
                                     <label>Provincia:</label>
                                     <select name="province" id="selectprovince" class="selec-city">
-                                        <option selected hidden value="<%= user.address[0] !== undefined ? user.address[0].province : ''%>"><%= user.address[0] !== undefined ? user.address[0].province : ''%></option>
+                                        <option selected hidden value="<%- user.address[0] ? user.address[0].province : ''%>"><%- user.address[0] ? user.address[0]?.province : ''%></option>
                                         <option value="Buenos Aires">Buenos Aires</option>
                                         <option value="Capital Federal">Capital Federal</option>
                                         <option value="Catamarca">Catamarca</option>
@@ -104,7 +104,7 @@
                                 <div class="input-container">
                                     <label>Localidad:</label>
                                     <select name="city" id="selectlocation" class="selec-city">
-                                        <option value="<%= user.address[0].city %>"><%= user.address[0].city %></option>
+                                        <option value="<%= user.address[0]?.city %>"><%= user.address[0]?.city %></option>
                                     </select>
                                     <!--  <label>Ciudad:</label>
                                 <input class="input-style" type="text" name="city">
@@ -116,7 +116,7 @@
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
                                     <input class="input-style" id="codigoinput" type="text" name="postalCode"
-                                    value="<%= user.address[0].postalCode %>">
+                                    value="<%= user.address[0]?.postalCode %>">
                                         <small class="text-danger" id="codigoerrors">
                                 
                                         </small>
@@ -124,7 +124,7 @@
                                 <div class="input-container">
                                     <label>Calle:</label>
                                     <input class="input-style" id="calleinput" type="text" name="street"
-                                        value="<%= user.address[0] !== undefined ? user.address[0].street : '' %>">
+                                        value="<%= user.address[0] !== undefined ? user.address[0]?.street : '' %>">
                                     <!--     <span class="error-message">Debe ingresar un calle</span> -->
                                     <small class="text-danger" id="calleerrors">
                                 
@@ -133,13 +133,13 @@
                                 <div class="input-container">
                                     <label>Piso o departamento:</label>
                                     <input class="input-style" type="text" name="flat_apartment"
-                                        value="<%= user.address[0] !== undefined ? user.address[0].flat_apartment : '' %>">
+                                        value="<%= user.address[0] !== undefined ? user.address[0]?.flat_apartment : '' %>">
                                     <!-- <span class="error-message">Debe ingresar un calle</span> -->
                                 </div>
                                 <div class="input-container">
                                     <label>Número:</label>
                                     <input class="input-style" id="numberinput" type="number" name="number"
-                                        value="<%= user.address[0].number ? user.address[0].number : '' %>">
+                                        value="<%= user.address[0]?.number ? user.address[0]?.number : '' %>">
                                     <span class="error-message">Debe ingresar un número</span>
                                     <small class="text-danger" id="numbererrors">
                                 

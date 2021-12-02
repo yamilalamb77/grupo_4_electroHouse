@@ -23,6 +23,8 @@ module.exports = {
         })
     },
     /* User profile */
+
+    
     profile: (req, res) => {
        /*  let user = users.find(user => user.id === req.session.user.id) */
         db.User.findByPk(req.session.user.id, {
@@ -73,12 +75,13 @@ module.exports = {
                 province
             } = req.body
 
+
             db.User.update({
                 name, 
                 lastName,
                 email,
                 phone,
-                avatar: req.file ? req.file.filename : req.session.user.avatar
+                avatar: req.file ? req.file.filename : this.avatar
             },{
             where: {
                 id: req.params.id
@@ -100,34 +103,7 @@ module.exports = {
                     res.redirect('/users/profile')
                 })
 
-            /* let user = users.find(user => user.id === +req.params.id)
-
-            let {
-                name,
-                last_name,
-                tel,
-                address,
-                pc,
-                province,
-                city
-            } = req.body
-
-            user.name = name
-            user.last_name = last_name
-            user.tel = tel
-            user.address = address
-            user.pc = pc
-            user.province = province
-            user.city = city
-            user.avatar = req.file ? req.file.filename : user.avatar
-
-            writeUsersJSON(users)
-
-            delete user.pass
-
-            req.session.user = user
-
-            res.redirect('/users/profile') */
+     
 
         } else {
             res.render('users/editProfile', {
@@ -168,24 +144,7 @@ module.exports = {
 
             })
 
-           /*  let user = users.find(user => user.email === req.body.email)
-
-            req.session.user = {
-                id: user.id,
-                name: user.name,
-                last_name: user.last_name,
-                email: user.email,
-                avatar: user.avatar,
-                rol: user.rol
-            }
-
-            if (req.body.remember) {
-                res.cookie("userElectroHouse", req.session.user, { expires: new Date(Date.now() + 900000), httpOnly: true })
-            }
-
-            res.locals.user = req.session.user
-
-            res.redirect('/') */
+ 
         } else {
             res.render('users/login', {
                 categories,
@@ -217,6 +176,9 @@ module.exports = {
                 pass
             } = req.body
 
+       
+       
+
             db.User.create({
                 name, 
                 lastName,
@@ -225,29 +187,22 @@ module.exports = {
                 avatar: 'userimg.jpg',
                 rol: 0
             })
-            .then(() =>{
-                res.redirect('/users/login')
+            .then(user => {
+                db.Address.create({
+                    street: '',
+                    city: '',
+                    province: '',
+                    postalCode: '',
+                    number: '',
+                    userId: user.id
+                })
+                .then(() => {
+                    res.redirect('/users/login');
+                })
             })
+            
 
-            /* let newRegisterUser = {
-                id: lastId + 1,
-                name,
-                last_name,
-                email,
-                pass: bcrypt.hashSync(pass1, 10),
-                addPhoto: req.file ? req.file.filename : "default-image.png", 
-                rol: "ROL_USER",
-                tel: "",
-                address: "",
-                pc: "",
-                province: "",
-                city: ""
-
-            }
-            users.push(newRegisterUser)
-            writeUsersJSON(users)
-            res.redirect('/users/login') */
-
+           
 
         } else {
             res.render('users/register', {
