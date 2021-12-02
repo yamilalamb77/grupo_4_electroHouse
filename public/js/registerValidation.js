@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
           Inputname.style.boxShadow = '0 0 10px red';
           break;
         case !regExAlpha.test(Inputname.value):
-          errorName.innerHTML = "Debes ingresar un nombre válido";
+          errorName.innerHTML = "Debe tener al menos 3 caracteres";
           Inputname.style.boxShadow = '0 0 10px red';
           break;
         default:
@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
             apellido.style.boxShadow = '0 0 10px red';
             break;
           case !regExAlpha.test(apellido.value):
-            errorlastName.innerHTML = "Debes ingresar un apellido válido";
+            errorlastName.innerHTML = "Debe tener al menos 3 caracteres";
             apellido.style.boxShadow = '0 0 10px red';
             break;
           default:
@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
             pass.style.boxShadow = '0 0 10px red';
             break;
           case !regExPassword.test(pass.value):
-            errorpass.innerHTML = "Debes ingresar un password válido";
+            errorpass.innerHTML = "Debe tener al menos 4 caracteres,una mayuscula,una minuscula y un numero";
             pass.style.boxShadow = '0 0 10px red';
             break;
           default:
