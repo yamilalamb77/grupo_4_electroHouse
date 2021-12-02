@@ -191,10 +191,21 @@ margin: 10px auto;
   font-family: --roboto;
   font-size: 1.5rem;
   padding: 2rem 1rem;
-  border: 1px solid var white;
+  border: 1px solid white;
   border-radius: 10px;
   width: 50%;
   background-color: black;
+  -webkit-transition: background-color,transform 1s ease-in-out;
+    transition        : background-color,transform 1s ease-in-out;
+    outline: none;
 }
+
+.products-container aside:hover {
+  transform: scale(1.03);
+  color           : white;
+  border: 1px solid white;
+  box-shadow      : 0 0 10px 0 white inset, 0 0 10px 4px var(--fondo);
+}
+
 
 }

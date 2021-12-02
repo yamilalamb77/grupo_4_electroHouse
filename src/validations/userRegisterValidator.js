@@ -47,7 +47,7 @@ module.exports = [
         min: 4,
         max:16
 })
-    .withMessage('La contraseña debe tener como mínimo 6 caracteres y maximo 16'),
+    .withMessage('La contraseña debe tener como mínimo 4 caracteres y maximo 16'),
 
     body('pass2') /* validacion custom, compara las contraseñas */
     .custom((value, {req}) => value !== req.body.pass ? false : true)/*  */
