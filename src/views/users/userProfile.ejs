@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Perfil de usuario</title>
-        <link rel="stylesheet" href="/css/userProfile.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="/css/userProfile.css">
     <%- include('../partials/head') %>
-    </head>
+</head>
+
 <body class="body-iteml">
     <%- include('../partials/header') %>
-    <main class= "userProfile">
-        <div class= "avatar">
-            <img src="/images/userAvatars/<%=user.avatar%>" alt="">
-        </div>
-        
-        <div class="userProfile-container" >
-            <div class="userProfile_box">
-                <h3 class="userProfile_title">Datos Personales</h3>
-                <p class="userProfile_item">Nombre: <%= user.name %></p>
-                <p class="userProfile_item">Apellido: <%= user.lastName %></p>
-                <p class="userProfile_item">Email: <%=user.email %></p>
-                <p class="userProfile_item">Telefono: <%= user.phone ? user.phone : "------"%></p>
+        <main class="userProfile">
+            <div class="avatar">
+                <img src="/images/userAvatars/<%=user.avatar%>" alt="">
             </div>
-            <div class="userProfile_box">
-                <h3 class="userProfile_title">Datos de contacto</h3>
-                <p class="userProfile_item">Direccion: <%= user.address[0] !== undefined ? user.address[0].street : "------" %></p>
-                <p class="userProfile_item">Codigo Postal: <%= user.address[0] !== undefined ? user.address[0].postalCode : "-------" %></p>
-                <p class="userProfile_item">Provincia: <%= user.address[0] !== undefined ?  user.address[0].province : "------"%></p>
-                <p class="userProfile_item">Localidad: <%= user.address[0] !== undefined ? user.address[0].city : "------"%></p>
-            </div>
-            <div >
-                <button class="btn-ad-btn-ad-primary">
-                    <a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
-                    
-                </button>
-            </div>
-            <div class="button-userProfile2">
-                <div class="btn-ad-btn-ad-primary">
-                    <a href='/users/logout'>Salir</a> 
+
+            <div class="userProfile-container">
+                <div class="userProfile_box">
+                    <h2 class="userProfile_title">Datos Personales</h2>
+                    <p class="userProfile_item"> Nombre: <%= user.name %>
+                    </p>
+                    <p class="userProfile_item">Apellido: <%= user.lastName %>
+                    </p>
+                    <p class="userProfile_item">Email: <%=user.email %>
+                    </p>
+                    <p class="userProfile_item">Telefono: <%= user.phone ? user.phone : "------" %>
+                    </p>
+                </div>
+                <div class="userProfile_box">
+                    <h2 class="userProfile_title">Datos de contacto</h2>
+                    <p class="userProfile_item">Direccion: <%= user.address[0] !==undefined ? user.address[0].street
+                            : "------" %>
+                    </p>
+                    <p class="userProfile_item">Codigo Postal: <%= user.address[0] !==undefined ?
+                            user.address[0].postalCode : "-------" %>
+                    </p>
+                    <p class="userProfile_item">Provincia: <%= user.address[0] !==undefined ? user.address[0].province
+                            : "------" %>
+                    </p>
+                    <p class="userProfile_item">Localidad: <%= user.address[0] !==undefined ? user.address[0].city
+                            : "------" %>
+                    </p>
+                </div>
+                <div class="btn12">
+                    <button class="btn-ad-btn-ad-primary">
+                        <a href="/users/editProfile/<%= user.id %>">Editar Perfil</a>
+
+                    </button>
                 </div>
             </div>
-            <div >
-                <form id="formDel" action="/users/profile/delete/<%- user.id %>?_method=DELETE" method="POST">
-                <button id="evil-btn-submit" type="submit"  class="btn-ad-btn-ad-primary">Eliminar perfil</button>
-                </form>    
-            
-        </div>
-    </main>
 
-    <%- include('../partials/footer') %>
+
+        </main>
+
+        <%- include('../partials/footer') %>
 </body>
+
 </html>
