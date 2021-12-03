@@ -58,7 +58,16 @@
 
                                     </div>
 
-                                    <a href='/products/shoppingCart' class="buy-now-button">Agregar al carrito</a>
+                                    <% if (usuario) { %>
+                                        <div class="buy-now-button"
+                                            onclick="addToCart(`<%- product.id %>`, 1,`<%= usuario %>`)">
+                                            Agregar al carrito
+                                        </div>
+                                        <% } else { %>
+                                            <div class="buy-now-button" onclick="notLog()">
+                                                Agregar al carrito Sin log
+                                            </div>
+                                            <% } %>
 
                     </div>
                 </section>
@@ -93,6 +102,12 @@
                 <!-- JavaScript -->
                 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
                 <script src="/js/productDetail.js"></script>
+                <script>
+                    function notLog() {
+                        alert("Tiene que logearse")
+                    }
+                </script>
+                    <script src="/js/cart.js"></script>
     </body>
 
 </html>
