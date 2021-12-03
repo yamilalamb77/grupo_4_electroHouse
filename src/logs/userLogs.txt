@@ -17101,6 +17101,47 @@ El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /admin/products/delete/21?_method=DELETE
 El usuario ingreso a la ruta: /admin/products
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+=======
 El usuario ingreso a la ruta: /admin/products
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
@@ -17186,10 +17227,17 @@ El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /products/category/3
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /api/cart/9/1/[object%20Object]
+=======
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
@@ -17200,26 +17248,66 @@ El usuario ingreso a la ruta: /users/profile/edit/1?_method=PUT
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
+=======
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /users/logout
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /products/category/3
+=======
+El usuario ingreso a la ruta: /users/login
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /css/productSlider.css
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /products/subcategory/5
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/subcategory/6
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/3
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/4
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/shoppingCart
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
-El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/register
 El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+=======
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
@@ -17269,10 +17357,22 @@ El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/register
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+=======
 El usuario ingreso a la ruta: /users/logout
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
@@ -17286,10 +17386,33 @@ El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/shoppingCart
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/1
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+=======
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
@@ -17313,6 +17436,7 @@ El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/logout
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
@@ -17321,6 +17445,35 @@ El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /api/cart/5/1/[object%20Object]
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+=======
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/profile
@@ -17338,6 +17491,7 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
@@ -17345,6 +17499,15 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /api/cart/28/1/[object%20Object]
+El usuario ingreso a la ruta: /products/category/2
+=======
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
@@ -17367,6 +17530,7 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
@@ -17374,6 +17538,19 @@ El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/login
 El usuario ingreso a la ruta: /
+<<<<<<< HEAD
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /products/category/2
+El usuario ingreso a la ruta: /css/productSlider.css
+El usuario ingreso a la ruta: /manifest.json
+El usuario ingreso a la ruta: /api/cart/5/1/2
+El usuario ingreso a la ruta: /api/cart/5/1/2
+El usuario ingreso a la ruta: /api/cart/5/1/2
+El usuario ingreso a la ruta: /api/cart/5/1/2
+El usuario ingreso a la ruta: /api/cart/5/1/2
+El usuario ingreso a la ruta: /api/cart/5/1/2
+=======
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
@@ -17394,6 +17571,7 @@ El usuario ingreso a la ruta: /manifest.json
 El usuario ingreso a la ruta: /users/editProfile/5
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+<<<<<<< HEAD
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /
 El usuario ingreso a la ruta: /css/productSlider.css
@@ -17899,3 +18077,6 @@ El usuario ingreso a la ruta: /users/profile/edit/8?_method=PUT
 El usuario ingreso a la ruta: /users/profile
 El usuario ingreso a la ruta: /css/productSlider.css
 El usuario ingreso a la ruta: /manifest.json
+=======
+>>>>>>> 89fb253bb68cbc42852dfdd6fe2e2511c4e8c8d5
+>>>>>>> 4da99cb55a0f3b211b824761ed15e960e794df33

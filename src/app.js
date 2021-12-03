@@ -10,7 +10,7 @@ let port = 3030;
 let methodOverride = require('method-override');
  const userLogs = require('./middlewares/userLogs');
 let categoriesHeader = require('./middlewares/categoriesHeader') 
-
+var cookieSession = require('cookie-session')
 /*--------- ENRUTADORES ------------*/
 
 userRouter = require ('./routes/userRouter'); //user
@@ -48,6 +48,7 @@ app.use('/',indexRouter);
 app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/admin',adminRouter);
+app.use('/api', apiRouter); // APIs
 
 
 

@@ -9,19 +9,37 @@
             <% if (products.length === 0) { %>
                 <h2>No hay productos en su carrito</h2>
                 <h4>Selecciona alguna de nuestras categorías para encontrar los mejores productos:</h4>
-                <section class="categories-section">
-                    <div class="home-categories">
+                 <!-- CATEGORIES -->
+
+                  
+
+                 <section class="categories-section">
+                    <div class="categoriesH">
                         <div class="category-card">
-                            <a href="/products/category/1"><img src="/images/categorias/cat_escolar.jpg" alt=""></a>
+                            <a href="/products/category/1"><img src="/images/categorias/cat_tvYSonido.jpg"
+                                    alt=""></a>
+                            <p class="fondo" href="#">TV Y SONIDO</p>
                         </div>
                         <div class="category-card">
-                            <a href="/products/category/2"> <img src="/images/categorias/cat_artistica.jpg" alt=""></a>
+                            <a href="/products/category/3"> <img src="/images/categorias/cat_climatizacion.jpg"
+                                    alt=""></a>
+                            <p class="fondo" href="#">CLIMATIZACIÓN</p>
                         </div>
                         <div class="category-card">
-                            <a href="/products/category/3"> <img src="/images/categorias/cat_oficina.jpg" alt=""></a>
+                            <a href="/products/category/4"> <img src="/images/categorias/cat_pequeñosElectro.jpg"
+                                    alt=""></a>
+                            <p class="fondo" href="#">PEQUEÑOS ELECTRO</p>
                         </div>
-                    </div> 
+                        <div class="category-card">
+                            <a href="/products/category/2"> <img src="/images/categorias/cat_HeladeraYLavado.jpg"
+                                    alt=""></a>
+                            <p class="fondo" href="#">HELADERA Y LAVADO</p>
+                        </div>
+                    </div>
+
                 </section>
+                <!-- END CATEGORIES -->
+
             <% } else { %>
             <h2>Productos en su Carrito</h2>
             <form action="#">

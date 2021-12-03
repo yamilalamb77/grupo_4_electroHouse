@@ -67,7 +67,7 @@ module.exports = {
                 products,
                 toThousand,
                 subCategories,
-                usuario : req.session.user ? req.session.user : ""
+                usuario : req.session.user ? req.session.user.id : ""
             }) 
         })
 
