@@ -341,4 +341,5 @@ header .version-desktop .list-container ul li:hover{
 
 	header .login-cart .rounded-circle{
 		margin: 10px 0px -8px 0px;
+		border-radius: 50%;
 	}

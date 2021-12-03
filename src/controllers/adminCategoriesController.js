@@ -9,7 +9,7 @@ module.exports = {
       res.render("admin/categories/adminCategories", {
         category,
         session: req.session,
-        usuario : req.session.user ? req.session.user : ""
+        usuario: req.session.user ? req.session.user : ""
       });
     });
   },
@@ -47,7 +47,7 @@ module.exports = {
       res.render("admin/categories/adminCategoriesEditForm", {
         categorie,
         session: req.session,
-        usuario : req.session.user ? req.session.user : ""
+        usuario: req.session.user ? req.session.user : ""
       });
     });
   },
@@ -83,7 +83,7 @@ module.exports = {
           errors: errors.mapped(),
           old: req.body,
           session: req.session,
-          usuario : req.session.user ? req.session.user : ""
+          usuario: req.session.user ? req.session.user : ""
         });
       });
     }
@@ -108,21 +108,21 @@ module.exports = {
       });
     });
   },
-  searchAdminCategories: (req, res) =>{
-    
+  searchAdminCategories: (req, res) => {
+
     db.Category.findAll({
-        where:{
-            name:{[Op.like]: `%${req.query.keywords}%`},
-           
-        }
+      where: {
+        name: { [Op.like]: `%${req.query.keywords}%` },
+
+      }
     })
-    .then(category =>{
+      .then(category => {
         res.render("admin/categories/adminCategories", {
-            category,
-         session: req.session,
-         usuario: req.session.user ? req.session.user : ""
-         
+          category,
+          session: req.session,
+          usuario: req.session.user ? req.session.user : ""
+
         })
-    })
-}
+      })
+  }
 };

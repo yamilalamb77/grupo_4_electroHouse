@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head') %> 
-<body class="body-iteml">
-    <%- include('./partials/header') %> 
-    <main class="home-m">
-      
-        <div class="subcategories_menu-mobile">
-            <div id="mySidepanel" class="sidepanel">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <% subCategories.forEach(subCategory => { %>
-                    <a class="botonSub" href="/products/subcategory/<%- subCategory.id %>"><%- subCategory.name %></a>
-                <% }) %>   
-            </div>
-              
-            <button class="openbtnl" onclick="openNav()">Subcategorias</button>
-        </div>
-        <div class="container products-container">
-            <aside class="subcategories_menu-desktop">
-                <% subCategories.forEach(subCategory => { %>
-                    <a class="botonSub" href="/products/subcategory/<%- subCategory.id %>"><%- subCategory.name %></a>
-                <% }) %>   
-            </aside>
-            <section class="products">
-                <% products.forEach(product => { %>
-                    <div class="product">
-                        <a href="/products/detail/<%- product.id %>">
-                            <% if (product.discount > 0) { %>
-                            <div class="productDiscount"><%= product.discount %>% OFF</div>
+<%- include('./partials/head') %>
 
-                            <% }else{ %>
-                                <p  background-color= "white" >
-                                    <%= "" %> 
-                                </p>
-                            <% } %>
-                            <img src="/images/productos/<%- product.images[0]?.image %>" alt="">
-                            <p class="productName"> 
-                                <% if (product.name.length > 30) { %>
-                                    <%- `${product.name.slice(0,30)}...` %>
-                                <% } else { %>
-                                    <%= product.name %>
-                                <% } %></p>
-                            <h4 class="productPrice">$<%- toThousand(product.price - product.price * product.discount / 100)%></h4>  
-                        </a>
-                        <% if (usuario) { %>
-                            <div class="buy-now-button" onclick="addToCart(`<%- product.id %>`, 1,`<%= usuario %>`)">
-                                Agregar al carrito
-                            </div>
-                    <% } else { %>
-                        <div class="buy-now-button" onclick="notLog()">
-                            Agregar al carrito Sin log
-                        </div>
-                    <% } %>
+    <body class="body-iteml">
+        <%- include('./partials/header') %>
+            <main class="home-m">
+
+                <div class="subcategories_menu-mobile">
+                    <div id="mySidepanel" class="sidepanel">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <% subCategories.forEach(subCategory=> { %>
+                            <a class="botonSub" href="/products/subcategory/<%- subCategory.id %>">
+                                <%- subCategory.name %>
+                            </a>
+                            <% }) %>
                     </div>
-                <% }) %> 
-            </section>
-        </div>
-    </main>
-    <%- include('./partials/footer.ejs')%>
-    <script src="/js/categoriesIdePanel.js"></script>
-    <script>
-        function notLog () {
-            alert("Tiene que logearse")
-        }
-    </script>
-    <script src="/js/cart.js"></script>
-</body>
+
+                    <button class="openbtnl" onclick="openNav()">Subcategorias</button>
+                </div>
+                <div class="container products-container">
+                    <aside class="subcategories_menu-desktop">
+                        <% subCategories.forEach(subCategory=> { %>
+                            <a class="botonSub" href="/products/subcategory/<%- subCategory.id %>">
+                                <%- subCategory.name %>
+                            </a>
+                            <% }) %>
+                    </aside>
+                    <section class="products">
+                        <% products.forEach(product=> { %>
+                            <div class="product">
+                                <a href="/products/detail/<%- product.id %>">
+                                    <% if (product.discount> 0) { %>
+                                        <div class="productDiscount">
+                                            <%= product.discount %>% OFF
+                                        </div>
+
+                                        <% }else{ %>
+                                            <p background-color="white">
+                                                <%= "" %>
+                                            </p>
+                                            <% } %>
+                                                <img src="/images/productos/<%- product.images[0]?.image %>" alt="">
+                                                <p class="productName">
+                                                    <% if (product.name.length> 30) { %>
+                                                        <%- `${product.name.slice(0,30)}...` %>
+                                                            <% } else { %>
+                                                                <%= product.name %>
+                                                                    <% } %>
+                                                </p>
+                                                <h4 class="productPrice">$<%- toThousand(product.price - product.price *
+                                                        product.discount / 100)%>
+                                                </h4>
+                                </a>
+                                <% if (usuario) { %>
+                                    <div class="buy-now-button"
+                                        onclick="addToCart(`<%- product.id %>`, 1,`<%= usuario %>`)">
+                                        Agregar al carrito
+                                    </div>
+                                    <% } else { %>
+                                        <div class="buy-now-button" onclick="notLog()">
+                                            Agregar al carrito Sin log
+                                        </div>
+                                        <% } %>
+                            </div>
+                            <% }) %>
+                    </section>
+                </div>
+            </main>
+            <%- include('./partials/footer.ejs')%>
+                <script src="/js/categoriesIdePanel.js"></script>
+                <script>
+                    function notLog() {
+                        alert("Tiene que logearse")
+                    }
+                </script>
+                <script src="/js/cart.js"></script>
+    </body>
+
 </html>

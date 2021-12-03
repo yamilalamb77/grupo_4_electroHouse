@@ -1,99 +1,104 @@
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario de contacto</title>
-  
+
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  
+
 
   <!-- Enlace al documento css. no aplicable en codepen.
   <link rel="stylesheet" type="text/css" href="contact-form.css">
 -->
-<%- include('../partials/head') %> 
-  </head>
+  <%- include('../partials/head') %>
+</head>
 
 
-<body class="body-iteml"> 
-    <%- include('../partials/header.ejs')  %> 
-  
-  <!-- formulario de contacto en html y css -->  
+<body class="body-iteml">
+  <%- include('../partials/header.ejs') %>
 
-  <div class="contact_form">
+    <!-- formulario de contacto en html y css -->
 
-         
-          <h1>Formulario de contacto</h1>
-          <h3>En breve nos pondremos en contacto contigo</h3>
+    <div class="contact_form">
 
 
-          <form action="/contact" id="form" method="post">       
+      <h1>Formulario de contacto</h1>
+      <h3>En breve nos pondremos en contacto contigo</h3>
 
-            
-                <p>
-                  <label for="nombre" class="colocar_nombre">Nombre
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="text" name="name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                </p>
-              
-                <p>
-                  <label for="email" class="colocar_email">Email
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                    <small class="text-danger" id="emailerrors">
-                                
-                    </small>
-                </p>
-            
-                <p>
-                  <label for="telefone" class="colocar_telefono">Teléfono
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="tel" name="telephone" id="telefono" placeholder="Escribe tu teléfono">
-                    <small class="text-danger" id="telefonoerrors">
-                                
-                    </small>
-                </p>    
-              
-                <p>
-                  <label for="website" class="colocar_website">Sitio web
-                  </label>
-                    <input type="url" name="website" id="website" placeholder="Escribe la URL de tu web">
-                </p>    
-              
-                <p>
-                  <label for="asunto" class="colocar_asunto">Asunto
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="text" name="affair" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                </p>    
-              
-                <p>
-                  <label for="mensaje" class="colocar_mensaje">Mensaje
-                    <span class="obligatorio">*</span>
-                  </label>                     
-                                    <textarea name="message" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                                    <small class="text-danger" id="mensajeerrors">
-                                
-                                    </small>
-                                </p>                    
-              
-                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
 
-                <p class="aviso">
-                  <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p> 
-                <small class="text-danger" id="formerrors">
-                                
-                        </small>         
-            
-          </form>
+      <form action="/contact" id="form" method="post">
 
-      
-  </div>
-  <script src="/js/contacvalidation.js"></script>
-  <%- include('../partials/footer') %>
+
+        <p>
+          <label for="nombre" class="colocar_nombre">Nombre
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+        </p>
+
+        <p>
+          <label for="email" class="colocar_email">Email
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+          <small class="text-danger" id="emailerrors">
+
+          </small>
+        </p>
+
+        <p>
+          <label for="telefone" class="colocar_telefono">Teléfono
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="tel" name="telephone" id="telefono" placeholder="Escribe tu teléfono">
+          <small class="text-danger" id="telefonoerrors">
+
+          </small>
+        </p>
+
+        <p>
+          <label for="website" class="colocar_website">Sitio web
+          </label>
+          <input type="url" name="website" id="website" placeholder="Escribe la URL de tu web">
+        </p>
+
+        <p>
+          <label for="asunto" class="colocar_asunto">Asunto
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="affair" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+        </p>
+
+        <p>
+          <label for="mensaje" class="colocar_mensaje">Mensaje
+            <span class="obligatorio">*</span>
+          </label>
+          <textarea name="message" class="texto_mensaje" id="mensaje" required="obligatorio"
+            placeholder="Deja aquí tu comentario..."></textarea>
+          <small class="text-danger" id="mensajeerrors">
+
+          </small>
+        </p>
+
+        <button type="submit" name="enviar_formulario" id="enviar">
+          <p>Enviar</p>
+        </button>
+
+        <p class="aviso">
+          <span class="obligatorio"> * </span>los campos son obligatorios.
+        </p>
+        <small class="text-danger" id="formerrors">
+
+        </small>
+
+      </form>
+
+
+    </div>
+    <script src="/js/contacvalidation.js"></script>
+    <%- include('../partials/footer') %>
 </body>
+
 </html>

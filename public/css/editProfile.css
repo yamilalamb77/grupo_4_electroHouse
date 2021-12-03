@@ -86,7 +86,10 @@
 
 .login .form-container a{
     font-size: small;
-} 
+    text-decoration: underline;
+    color: darkblue;
+}
+
 
 .login .form-container b{
     font-size: medium;

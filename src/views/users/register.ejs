@@ -7,17 +7,19 @@
             <div class="form-container">
                 <h2><b>Registrate</b>│ ¿Ya tenes cuenta? <a href="login">Ingresá</a></h2>
 
-                <form id="Registro" action="/users/register" method="POST" enctype="multipart/form-data" class="form-ad">
+                <form id="Registro" action="/users/register" method="POST" enctype="multipart/form-data"
+                    class="form-ad">
                     <div class="form">
                         <div class="input-container">
                             <label>Nombre:</label>
-                            <input id="Nombre" class="input-style" type="text" name="name" value="<%= locals.old && old.name %>">
+                            <input id="Nombre" class="input-style" type="text" name="name"
+                                value="<%= locals.old && old.name %>">
                             <% if (locals.errors && errors.name) { %>
                                 <small class="text-danger">
                                     <%= errors.name.msg %>
                                 </small>
                                 <% } %>
-                                <small id="errorfirstName" class="text-danger"></small>
+                                    <small id="errorfirstName" class="text-danger"></small>
                         </div>
                         <div class="input-container">
                             <label>Apellido:</label>
@@ -26,65 +28,67 @@
                             <% if (locals.errors && errors.lastName) { %>
                                 <small class="text-danger">
                                     <%= errors.lastName.msg %>
-                                </small> 
+                                </small>
                                 <!--     <span class="error-message">Debe ingresar su email</span> -->
                                 <% } %>
-                                <small id="errorlastName" class="text-danger"></small>
-                                
-                            </div>
-                        
-                            <div class="input-container">
-                                <label>E-mail:</label>
-                                <input id="Email" class="input-style" type="email" name="email">
-                                <% if (locals.errors && errors.email) { %>
-                                    <small class="text-danger">
-                                        <%= errors.email.msg %>
-                                    </small>
-                                    <% } %>
+                                    <small id="errorlastName" class="text-danger"></small>
+
+                        </div>
+
+                        <div class="input-container">
+                            <label>E-mail:</label>
+                            <input id="Email" class="input-style" type="email" name="email">
+                            <% if (locals.errors && errors.email) { %>
+                                <small class="text-danger">
+                                    <%= errors.email.msg %>
+                                </small>
+                                <% } %>
                                     <small id="errorEmail" class="text-danger"></small>
-                            </div>
-                            <div class="input-container">
-                                <label>Contraseña:</label>
-                                <input id="Password" class="input-style" type="password" name="pass">
-                                <% if (locals.errors && errors.pass) { %>
-                                    <small class="text-danger">
-                                        <%= errors.pass.msg %>
-                                    </small>
-                                    <% } %>
+                        </div>
+                        <div class="input-container">
+                            <label>Contraseña:</label>
+                            <input id="Password" class="input-style" type="password" name="pass">
+                            <% if (locals.errors && errors.pass) { %>
+                                <small class="text-danger">
+                                    <%= errors.pass.msg %>
+                                </small>
+                                <% } %>
                                     <small id="errorPassword" class="text-danger"></small>
-                            </div>
-                            <div class="input-container">
-                                <label>Repita la contraseña:</label>
-                                <input id="Password2" class="input-style" type="password" name="pass2">
-                                <% if (locals.errors && errors.pass2) { %>
-                                    <small class="text-danger">
-                                        <%= errors.pass2.msg %>
-                                    </small>
-                                    <% } %>
+                        </div>
+                        <div class="input-container">
+                            <label>Repita la contraseña:</label>
+                            <input id="Password2" class="input-style" type="password" name="pass2">
+                            <% if (locals.errors && errors.pass2) { %>
+                                <small class="text-danger">
+                                    <%= errors.pass2.msg %>
+                                </small>
+                                <% } %>
                                     <small id="errorPassword2" class="text-danger"></small>
-                            </div>
-                            <span  class="qp"><a href="recoverView">¿Olvidaste tu contraseña?</a></span>
-                            <div class="check">
-                                <label for="terms"> Acepto los <a href="../termsYConditions">términos y condiciones</a>
-                                </label>
-                                <input type="checkbox" name="terms" id="term">
-                                <span class="error-message">Debe aceptar los términos y condiciones</span>
-                            </div>
-                            <% if (locals.errors && errors.terms) { %> 
-                                <small class="errors-validation_register"><%= errors.terms.msg %></small>
-                            <% } %> 
-                            <small id="errorTerm" class="text-danger"></small>
-                            <small id="errorForm" class="text-danger"></small>
-                            <div class="button-container">
-                                <span class="error-message">Credenciales inválidas</span>
-                                <button type="submit" class="btn btn-submit">Registrarme</button>
-                            </div>
+                        </div>
+                       
+                        <div class="check">
+                            <label for="terms"> Acepto los <a href="../termsYConditions">términos y condiciones</a>
+                            </label>
+                            <input type="checkbox" name="terms" id="term">
+                            <span class="error-message">Debe aceptar los términos y condiciones</span>
+                        </div>
+                        <% if (locals.errors && errors.terms) { %>
+                            <small class="errors-validation_register">
+                                <%= errors.terms.msg %>
+                            </small>
+                            <% } %>
+                                <small id="errorTerm" class="text-danger"></small>
+                                <small id="errorForm" class="text-danger"></small>
+                                <div class="button-container">
+                                    <span class="error-message">Credenciales inválidas</span>
+                                    <button type="submit" class="btn btn-submit">Registrarme</button>
+                                </div>
 
                     </div>
                 </form>
             </div>
             <%- include('../partials/footer.ejs') %>
-            <script src="/js/registerValidation.js"></script> 
+                <script src="/js/registerValidation.js"></script>
     </body>
 
 </html>

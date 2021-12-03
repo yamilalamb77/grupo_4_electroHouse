@@ -15,7 +15,7 @@ module.exports = {
         },
         include: [
           {
-            association: "order_items", include: [{association: "products"}]
+            association: "order_items", include: [{ association: "products" }]
           },
         ],
       }).then((result) => {
@@ -256,7 +256,7 @@ module.exports = {
   },
   productsInCart: (req, res) => {
     let user = req.params.user
-    
+
     db.Orders.findOne({
       where: {
         userId: user,
@@ -267,17 +267,17 @@ module.exports = {
           include: [
             {
               association: "products",
-              include: [{association: "productImages"}]
+              include: [{ association: "productImages" }]
             },
           ],
         },
       ],
     }).then((order) => {
-      if(order){
+      if (order) {
         res.json({
           data: order,
         });
-      }else{
+      } else {
         res.json({
           status: 404,
           msg: "No hay una orden creada"

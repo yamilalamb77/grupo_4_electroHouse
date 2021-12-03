@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('../partials/headAdmin') %>
-<body>
+<%- include('../partials/headAdmin') %>
+
+  <body>
     <%- include('../partials/headerAdmin') %>
-    
+
       <div class="container-fluid">
         <div class="row">
           <%- include('../partials/adminSidebar') %>
-          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-              <h1 class="h2"></h1>
-         <!--      <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group me-2">
-                 
-                </div>
-                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                  <span data-feather="calendar"></span>
-                  Esta semana
-                </button>
-              </div> -->
-            </div>
-          </main>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+              <div
+                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2"></h1>
+                <h4>Hola <%= usuario.name%>
+                </h4>
+              </div>
+              <div class="box-dashadmin">
+                <h4>Cantidad de productos:</h4>
+                <h5>
+                  <%- products.length %>
+                </h5>
+              </div>
+              <div class="box-dashadmin">
+                <h4>Cantidad de usuarios:</h4>
+                <h5>
+                  <%- users.length %>
+                </h5>
+              </div>
+            </main>
         </div>
       </div>
-    <%- include('../partials/adminScripts') %>
-      </body>
+      <%- include('../partials/adminScripts') %>
+  </body>
+
 </html>

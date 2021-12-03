@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('../partials/head') %>
-<script src="/js/apiLocation.js" defer></script>
+    <script src="/js/apiLocation.js" defer></script>
+
     <body class="login">
         <%- include('../partials/header.ejs') %>
             <div class="form-container">
@@ -12,20 +13,23 @@
                     <div class="profile-box" id="avatar-box">
 
                         <div class="input-file-container">
-                          <!--   <div class="add-new-photo" id="addPhoto">
+                            <!--   <div class="add-new-photo" id="addPhoto">
                                <span><i class="fas fa-camera txt-send"></i></span> 
                             </div> -->
-                         <label for="files" ><div class="add-new-photo" id="addPhoto"><!-- <i class="fas fa-camera txt-send"></i> -->
-                            <output name="outputList" id="list" class="img-r-avatar"></output>
-                             <img src="/images/userAvatars/<%- user.avatar %> " class="img-user-avatar"id="img-preview" width="100%" height="80%" for="files" > 
-                             </div>
-                            </label> 
-                           
-                            <input type="file" id="files" name="avatar" style="display: none;"/>
-                                <!-- aqui va small -->
-                             <!-- <output id="list"></output> -->
-                             <small class="text-danger" id="fileserrors">
-                                
+                            <label for="files">
+                                <div class="add-new-photo" id="addPhoto">
+                                    <!-- <i class="fas fa-camera txt-send"></i> -->
+                                    <output name="outputList" id="list" class="img-r-avatar"></output>
+                                    <img src="/images/userAvatars/<%- user.avatar %> " class="img-user-avatar"
+                                        id="img-preview" width="100%" height="80%" for="files">
+                                </div>
+                            </label>
+
+                            <input type="file" id="files" name="avatar" style="display: none;" />
+                            <!-- aqui va small -->
+                            <!-- <output id="list"></output> -->
+                            <small class="text-danger" id="fileserrors">
+
                             </small>
                         </div>
                     </div>
@@ -40,42 +44,42 @@
                                 <label>Nombre:</label>
                                 <input class="input-style" id="nameinput" type="text" name="name"
                                     value="<%= locals.old ? old.name : user.name %>">
-                                
-                                    <small class="text-danger" id="nameerrors">
-                                
-                                    </small>
+
+                                <small class="text-danger" id="nameerrors">
+
+                                </small>
                             </div>
 
                             <div class="input-container">
                                 <label>Apellido:</label>
                                 <input class="input-style" id="lastnameinput" type="text" name="last_Name"
                                     value="<%= locals.old ? old.last_Name : user.lastName %>">
-                                
-                                    <small class="text-danger" id="lastnameerrors">
-                                        
-                                    </small>
+
+                                <small class="text-danger" id="lastnameerrors">
+
+                                </small>
                             </div>
 
-                            
+
                             <div class="profile-box">
                                 <h4 class="profile-subtitle">Datos de contacto</h4>
                                 <div class="input-container">
                                     <label>Teléfono:</label>
                                     <input class="input-style" id="phoneinput" type="tel" name="phone"
                                         value="<%= user.phone ? user.phone : '' %>">
-                                        <small class="text-danger" id="phoneerrors">
-                                
-                                        </small>
+                                    <small class="text-danger" id="phoneerrors">
+
+                                    </small>
                                 </div>
 
                                 <div class="input-container">
-                                <label>Provincia:</label>
-                            </div>
+                                    <label>Provincia:</label>
+                                </div>
                                 <div class="input-api">
-                                    <select  class="input-style" name="province" id="provinceList">
+                                    <select class="input-style" name="province" id="provinceList">
 
                                     </select>
-                               <!--      <select name="province" id="selectprovince" class="selec-city">
+                                    <!--      <select name="province" id="selectprovince" class="selec-city">
                                         <option selected hidden value="<%- user.address[0] ? user.address[0].province : ''%>"><%- user.address[0] ? user.address[0]?.province : ''%></option>
                                         <option value="Buenos Aires">Buenos Aires</option>
                                         <option value="Capital Federal">Capital Federal</option>
@@ -105,32 +109,32 @@
                                     <!-- <input class="input-style" type="text" name="Province">
                                 <span class="error-message">Debe ingresar un provincia</span> -->
                                 </div>
-                               
+
                                 <div class="input-container">
-                                <label>Localidad:</label>
+                                    <label>Localidad:</label>
                                 </div>
                                 <div class="input-api">
                                     <select class="input-style" name="city" id="citiesList">
 
                                     </select>
-                               <!--      <select name="city" id="selectlocation" class="selec-city">
+                                    <!--      <select name="city" id="selectlocation" class="selec-city">
                                         <option value="<%= user.address[0]?.city %>"><%= user.address[0]?.city %></option>
                                     </select> -->
                                     <!--  <label>Ciudad:</label>
                                 <input class="input-style" type="text" name="city">
                                 <span class="error-message">Debe ingresar una ciudad</span> -->
-                                <small class="text-danger" id="locationerrors">
-                                
-                                </small>
+                                    <small class="text-danger" id="locationerrors">
+
+                                    </small>
                                 </div>
-                             
+
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
                                     <input class="input-style" id="codigoinput" type="text" name="postalCode"
-                                    value="<%= user.address[0]?.postalCode %>">
-                                        <small class="text-danger" id="codigoerrors">
-                                
-                                        </small>
+                                        value="<%= user.address[0]?.postalCode %>">
+                                    <small class="text-danger" id="codigoerrors">
+
+                                    </small>
                                 </div>
                                 <div class="input-container">
                                     <label>Calle:</label>
@@ -138,26 +142,26 @@
                                         value="<%= user.address[0] !== undefined ? user.address[0]?.street : '' %>">
                                     <!--     <span class="error-message">Debe ingresar un calle</span> -->
                                     <small class="text-danger" id="calleerrors">
-                                
+
                                     </small>
                                 </div>
-                    
+
                                 <div class="input-container">
                                     <label>Número:</label>
                                     <input class="input-style" id="numberinput" type="number" name="number"
                                         value="<%= user.address[0]?.number ? user.address[0]?.number : '' %>">
                                     <span class="error-message">Debe ingresar un número</span>
                                     <small class="text-danger" id="numbererrors">
-                                
+
                                     </small>
                                 </div>
                                 <div class="input-container">
                                     <label>E-mail:</label>
-                                    <input class="input-style"id="email" type="email" name="email" readonly
+                                    <input class="input-style" id="email" type="email" name="email" readonly
                                         value="<%= user.email %>">
-                                        <small class="text-danger" id="emailerrors">
-                                
-                                        </small>
+                                    <small class="text-danger" id="emailerrors">
+
+                                    </small>
 
                                 </div>
 
@@ -167,12 +171,12 @@
                         <div class="button-container">
                             <!-- <button type="reset" class="btn btn-submit">Reset</button> -->
                             <button type="submit" class="btn btn-submit">Guardar</button>
-                            
+
                         </div>
                         <small class="text-danger" id="formerrors">
-                                
+
                         </small>
-</div>
+                    </div>
                 </form>
             </div>
             <script src="/js/editprofilevalidatior.js"></script>

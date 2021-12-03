@@ -10,14 +10,14 @@ module.exports = {
       res.render("admin/subcategories/adminSubcategories", {
         Subcategory,
         session: req.session,
-        usuario : req.session.user ? req.session.user : ""
+        usuario: req.session.user ? req.session.user : ""
       });
     });
   },
   subcategoryCreate: (req, res) => {
     res.render("admin/subcategories/adminSubcategoriesCreateForm", {
       session: req.session,
-      usuario : req.session.user ? req.session.user : ""
+      usuario: req.session.user ? req.session.user : ""
     });
   },
   subcategoryStore: (req, res) => {
@@ -41,7 +41,7 @@ module.exports = {
         errors: errors.mapped(),
         old: req.body,
         session: req.session,
-        usuario : req.session.user ? req.session.user : ""
+        usuario: req.session.user ? req.session.user : ""
       });
     }
   },
@@ -50,7 +50,7 @@ module.exports = {
       res.render("admin/subcategories/adminSubcategoriesEditForm", {
         Subcategories,
         session: req.session,
-        usuario : req.session.user ? req.session.user : ""
+        usuario: req.session.user ? req.session.user : ""
       });
     });
   },
@@ -64,27 +64,27 @@ module.exports = {
       errors.push(image);
     }
     if (errors.isEmpty()) {
-        db.Subcategory.update(
-          {
-            name: req.body.name,
-            categoriesId: req.body.categoriesId
+      db.Subcategory.update(
+        {
+          name: req.body.name,
+          categoriesId: req.body.categoriesId
+        },
+        {
+          where: {
+            id: req.params.id,
           },
-          {
-            where: {
-              id: req.params.id,
-            },
-          }
-        ).then((result) => {
-          res.redirect("/admin/subcategories");
-        });
+        }
+      ).then((result) => {
+        res.redirect("/admin/subcategories");
+      });
     } else {
       db.Subcategory.findByPk(req.params.id).then((Subcategories) => {
         res.render("admin/subcategories/adminSubcategoriesEditForm", {
-            Subcategories,
+          Subcategories,
           errors: errors.mapped(),
           old: req.body,
           session: req.session,
-          usuario : req.session.user ? req.session.user : ""
+          usuario: req.session.user ? req.session.user : ""
         });
       });
     }
@@ -111,7 +111,7 @@ module.exports = {
           where: {
             productId: product.id
           }
-        }).then((result)=> {})
+        }).then((result) => { })
       })
       db.Products.destroy({
         where: {
@@ -128,27 +128,27 @@ module.exports = {
       });
     })
   },
-  searchAdminSubcategories: (req, res) =>{
-    
+  searchAdminSubcategories: (req, res) => {
+
     db.Subcategory.findAll({
-        where:{
-            name:{[Op.like]: `%${req.query.keywords}%`}
-           
-        },
-        include: [{
-          association: 'category'
+      where: {
+        name: { [Op.like]: `%${req.query.keywords}%` }
+
+      },
+      include: [{
+        association: 'category'
       }]
     })
-    .then(Subcategory =>{
+      .then(Subcategory => {
         res.render("admin/subcategories/adminSubcategories", {
           Subcategory,
-         session: req.session,
-         usuario: req.session.user ? req.session.user : ""
-         
+          session: req.session,
+          usuario: req.session.user ? req.session.user : ""
+
         })
-    })
-}
-  
+      })
+  }
+
 };
 
 

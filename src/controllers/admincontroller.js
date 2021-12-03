@@ -8,11 +8,19 @@ const fs = require("fs");
 module.exports = {
 
     dashboard: (req, res) => {
-        res.render('admin/adminIndex', {
-            session: req.session,
-            usuario: req.session.user ? req.session.user : ""
+ 
+        db.Products.findAll()
+        .then(products=>{
+            db.User.findAll()
+            .then(users=>{
+                res.render('admin/adminIndex', {
+                    session: req.session,
+                    usuario: req.session.user ? req.session.user : "",
+                    products,
+                    users
+                })   
+            })
         })
-
     },
     products: (req, res) => {
         db.Products.findAll({
@@ -98,22 +106,7 @@ module.exports = {
                             .catch(err => console.log(err))
                     }
                 })
-            /* let newProduct = {
-                id: lastId + 1,
-                name,
-                price,
-                description,
-                discount,
-                category,
-                subcategory,
-                image: arrayImages.length > 0 ? arrayImages : "userimg.jpg"
-            };
-            
-            products.push(newProduct);
-    
-            writeProductsJSON(products)
-    
-            res.redirect('/admin/product/products') */
+         
         } else {
             let categoriesPromise = db.Category.findAll();
             let subcategoriesPromise = db.Subcategory.findAll();
@@ -231,10 +224,10 @@ module.exports = {
 
 
 
-      
-},
 
-    productDestroy : (req,res) => {
+    },
+
+    productDestroy: (req, res) => {
         db.ProductImage.destroy({
             where: {
                 productId: req.params.id
@@ -272,7 +265,7 @@ module.exports = {
             usuario: req.session.user ? req.session.user : ""
         })
 
-            
+
     },
     userStore: (req, res) => {
         let errors = validationResult(req)
@@ -281,8 +274,8 @@ module.exports = {
 
 
 
-            let{
-                 rol,
+            let {
+                rol,
                 name,
                 last_name,
                 email,
@@ -304,20 +297,20 @@ module.exports = {
                 pass,
             }).then(usuario => {
                 //res.send(usuario)
-                    db.Address.create({
-                        street,
-                        number,
-                        province,
-                        city,
-                        postalCode: pc,
-                        userId: usuario.id,
-                    })
-                        
-
-                }).then(() => {
-                    //res.send('usuario creado')
-                    res.redirect('/admin/userList')
+                db.Address.create({
+                    street,
+                    number,
+                    province,
+                    city,
+                    postalCode: pc,
+                    userId: usuario.id,
                 })
+
+
+            }).then(() => {
+                //res.send('usuario creado')
+                res.redirect('/admin/userList')
+            })
                 .catch((err) => console.log(err));
         } else {
             console.log("else")
@@ -384,7 +377,7 @@ module.exports = {
                 pass,
             }, {
                 where: { id: +req.params.id }
-            }).then(() =>{
+            }).then(() => {
                 db.Address.update({
                     street,
                     number,
@@ -392,7 +385,7 @@ module.exports = {
                     city,
                     province,
                     userId: req.params.id
-                },{
+                }, {
                     where: {
                         userId: req.params.id
                     }
@@ -400,32 +393,32 @@ module.exports = {
             }).then(() => {
                 res.redirect('/admin/userList')
             })
-            .catch((err) => console.log(err));
-                /* .then((usuario) => {
-                    res.send(usuario)
-                    db.Address.update({
-                        street,
-                        number,
-                        province,
-                        city,
-                        postalCode: pc,
+                .catch((err) => console.log(err));
+            /* .then((usuario) => {
+                res.send(usuario)
+                db.Address.update({
+                    street,
+                    number,
+                    province,
+                    city,
+                    postalCode: pc,
 
-                    }, {
-                        where: { userId: usuario.id }
-                    })
-                        
+                }, {
+                    where: { userId: usuario.id }
+                })
+                    
 
-                }) */
+            }) */
 
 
-        }else{
+        } else {
             db.User.findOne({
                 where: {
                     id: req.params.id
                 },
                 include: [
                     { association: "address" },
-    
+
                 ]
             })
                 .then(user => {
@@ -435,10 +428,10 @@ module.exports = {
                         session: req.session,
                         usuario: req.session.user ? req.session.user : "",
                         old: local.old ? local.old : "",
-                        errors:errors
+                        errors: errors
                     })
                 })
-    
+
         }
     },
 
@@ -460,45 +453,47 @@ module.exports = {
 
     },
 
-    searchAdminProducts: (req, res) =>{
-    
+    searchAdminProducts: (req, res) => {
+
         db.Products.findAll({
-            where:{
-                name:{[Op.like]: `%${req.query.keywords}%`}
+            where: {
+                name: { [Op.like]: `%${req.query.keywords}%` }
             },
             include: [
-                {association: "images"},
-                {association: 'subcategory',  
+                { association: "images" },
+                {
+                    association: 'subcategory',
                     include: [
-                        {association: "category"}
-                ]}
+                        { association: "category" }
+                    ]
+                }
             ]
         })
-        .then(products =>{
-            res.render('admin/product/adminProducts', {
-                products,
-                session: req.session,
-                usuario : req.session.user ? req.session.user : ""
-        })
-        })
+            .then(products => {
+                res.render('admin/product/adminProducts', {
+                    products,
+                    session: req.session,
+                    usuario: req.session.user ? req.session.user : ""
+                })
+            })
     },
-    
-    searchAdminUsers: (req, res) =>{
-        
+
+    searchAdminUsers: (req, res) => {
+
         db.User.findAll({
-            where:{
-                name:{[Op.like]: `%${req.query.keywords}%`}
+            where: {
+                name: { [Op.like]: `%${req.query.keywords}%` }
             },
             include: [{
                 association: 'address'
             }]
         })
-        .then(users =>{
-            res.render('admin/userList', {
-             usuario: req.session.user ? req.session.user : "",
-             usuarios:users
+            .then(users => {
+                res.render('admin/userList', {
+                    usuario: req.session.user ? req.session.user : "",
+                    usuarios: users
+                })
             })
-        })
     }
 
 }

@@ -12,59 +12,59 @@ module.exports = {
                     [Op.gte]: 5 //sea mayor o igual a 5
                 }
             },
-            include: [{association: "images"}]
+            include: [{ association: "images" }]
         })
-        .then(product =>{
-            res.render("index", {
-                titleSlider: "Ofertas especiales",
-                toThousand, 
-                productSlider: product,
-                bannerSlides: carousel,
-                usuario: req.session.user ? req.session.user : "",
-            })
-        }).catch(err => console.log(err))
-      
+            .then(product => {
+                res.render("index", {
+                    titleSlider: "Ofertas especiales",
+                    toThousand,
+                    productSlider: product,
+                    bannerSlides: carousel,
+                    usuario: req.session.user ? req.session.user : "",
+                })
+            }).catch(err => console.log(err))
+
 
     },
 
-    search : (req,res) => {
+    search: (req, res) => {
 
         db.Products.findAll({
-            where : {
-                [Op.or] : [
+            where: {
+                [Op.or]: [
                     {
-                        name :  {
-                            [Op.substring] : req.query.keywords
+                        name: {
+                            [Op.substring]: req.query.keywords
                         }
                     },
                     {
-                        description : {
-                            [Op.substring] : req.query.keywords
+                        description: {
+                            [Op.substring]: req.query.keywords
                         }
                     }
                 ]
             },
-            include : [
-                {association : 'images'}
+            include: [
+                { association: 'images' }
             ]
         }).then(result => {
-            return res.render('users/search',{
-            result,
-            toThousand,
-            bannerSlides: carousel,
-            busqueda : req.query.keywords,
-            usuario: req.session.user ? req.session.user : ""
-        })
-            
+            return res.render('users/search', {
+                result,
+                toThousand,
+                bannerSlides: carousel,
+                busqueda: req.query.keywords,
+                usuario: req.session.user ? req.session.user : ""
+            })
+
         }).catch(error => console.log(error))
 
     },
-    
+
     contact: (req, res) => {
         res.render('users/contact', { usuario: req.session.user ? req.session.user : "" })
 
     },
-   
+
     termsYConditions: (req, res) => {
         res.render('termsYConditions', { usuario: req.session.user ? req.session.user : "" })
     },

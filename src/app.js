@@ -51,6 +51,9 @@ app.use('/admin',adminRouter);
 app.use('/api', apiRouter); // APIs
 
 
+app.use(function(req, res, next) {
+    next(createError(404));
+});
 
 
 app.listen(port, () => console.log(`Servidor levantado en el puerto ${port}\n http://localhost:${port}`));
