@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('../partials/head') %>
-
+<script src="/js/apiLocation.js" defer></script>
     <body class="login">
         <%- include('../partials/header.ejs') %>
             <div class="form-container">
@@ -68,10 +68,14 @@
                                         </small>
                                 </div>
 
-                               
                                 <div class="input-container">
-                                    <label>Provincia:</label>
-                                    <select name="province" id="selectprovince" class="selec-city">
+                                <label>Provincia:</label>
+                            </div>
+                                <div class="input-api">
+                                    <select  class="input-style" name="province" id="provinceList">
+
+                                    </select>
+                               <!--      <select name="province" id="selectprovince" class="selec-city">
                                         <option selected hidden value="<%- user.address[0] ? user.address[0].province : ''%>"><%- user.address[0] ? user.address[0]?.province : ''%></option>
                                         <option value="Buenos Aires">Buenos Aires</option>
                                         <option value="Capital Federal">Capital Federal</option>
@@ -97,15 +101,21 @@
                                         <option value="">Santiago del Estero</option>
                                         <option value="">Tierra del Fuego</option>
                                         <option value="">Tucumán</option>
-                                    </select>
+                                    </select> -->
                                     <!-- <input class="input-style" type="text" name="Province">
                                 <span class="error-message">Debe ingresar un provincia</span> -->
                                 </div>
+                               
                                 <div class="input-container">
-                                    <label>Localidad:</label>
-                                    <select name="city" id="selectlocation" class="selec-city">
-                                        <option value="<%= user.address[0]?.city %>"><%= user.address[0]?.city %></option>
+                                <label>Localidad:</label>
+                                </div>
+                                <div class="input-api">
+                                    <select class="input-style" name="city" id="citiesList">
+
                                     </select>
+                               <!--      <select name="city" id="selectlocation" class="selec-city">
+                                        <option value="<%= user.address[0]?.city %>"><%= user.address[0]?.city %></option>
+                                    </select> -->
                                     <!--  <label>Ciudad:</label>
                                 <input class="input-style" type="text" name="city">
                                 <span class="error-message">Debe ingresar una ciudad</span> -->
@@ -113,6 +123,7 @@
                                 
                                 </small>
                                 </div>
+                             
                                 <div class="input-container">
                                     <label>Codigo Postal:</label>
                                     <input class="input-style" id="codigoinput" type="text" name="postalCode"

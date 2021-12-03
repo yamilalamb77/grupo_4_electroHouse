@@ -8,6 +8,7 @@
     <title>Perfil de usuario</title>
     <link rel="stylesheet" href="/css/userProfile.css">
     <%- include('../partials/head') %>
+    
 </head>
 
 <body class="body-iteml">
@@ -19,7 +20,7 @@
 
             <div class="userProfile-container">
                 <div class="userProfile_box">
-                    <h2 class="userProfile_title">Datos Personales</h2>
+                    <h2 class="userProfile_title">Datos personales</h2>
                     <p class="userProfile_item"> Nombre: <%= user.name %>
                     </p>
                     <p class="userProfile_item">Apellido: <%= user.lastName %>
@@ -37,9 +38,9 @@
                     <p class="userProfile_item">Codigo Postal: <%= user.address[0] !==undefined ?
                             user.address[0].postalCode : "-------" %>
                     </p>
-                    <p class="userProfile_item">Provincia: <%= user.address[0] !==undefined ? user.address[0].province
+                   <!--  <p class="userProfile_item">Provincia: <%= user.address[0] !==undefined ? user.address[0].province
                             : "------" %>
-                    </p>
+                    </p> -->
                     <p class="userProfile_item">Localidad: <%= user.address[0] !==undefined ? user.address[0].city
                             : "------" %>
                     </p>

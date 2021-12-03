@@ -72,7 +72,8 @@ module.exports = {
                 street,
                 number,
                 postalCode,
-                province
+                province,
+                city,
             } = req.body
 
 
@@ -93,6 +94,7 @@ module.exports = {
                     number,
                     postalCode,
                     province,
+                    city,
                     userId: req.params.id
                 },{
                     where: {

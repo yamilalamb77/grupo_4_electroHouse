@@ -48,7 +48,37 @@
     padding-top: 15px;
   
 }
-
+/* 
+.input-api{
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 15px;
+    width: 90%;
+    height: 43px; 
+   
+} */
+#citiesList{
+    width: 315px;
+}
+#provinceList{
+    width: 90%;
+}
+#provinceList,
+#citiesList{
+   /*  border-style: none; */
+   border-radius: 0.5rem;
+   height: 2.5rem;
+   padding: 0.5rem;
+   background-color: white;
+   border: 1px solid black;
+   margin-left: 15px;
+  /*  width: 90%; */
+   height: 39px; 
+ /*   border-style: none; */
+}
 
 .login .form-container h2{
     font-size: medium;
